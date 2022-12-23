@@ -1379,7 +1379,7 @@ data-kt-sticky-animation="false" data-kt-sticky-offset="{default: '200px', lg: '
                 <!--end::Menu item-->
                 <!--begin::Menu item-->
                 <div class="menu-item px-5">
-                    <a href="authentication/layouts/corporate/sign-in.html"
+                    <a href="{{ route('logout') }}"
                         class="menu-link px-5">Sign Out</a>
                 </div>
                 <!--end::Menu item-->

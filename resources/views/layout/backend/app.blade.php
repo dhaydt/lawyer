@@ -122,7 +122,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-                                            <img src="assets/media/avatars/300-14.jpg" alt="img" />
+                                            <img src="assets_metronic/media/avatars/300-14.jpg" alt="img" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -148,12 +148,12 @@
                                         <div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px pe-2">
                                             <!--begin::User-->
                                             <div class="symbol symbol-circle symbol-25px">
-                                                <img src="assets/media/avatars/300-2.jpg" alt="img" />
+                                                <img src="assets_metronic/media/avatars/300-2.jpg" alt="img" />
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
                                             <div class="symbol symbol-circle symbol-25px">
-                                                <img src="assets/media/avatars/300-14.jpg" alt="img" />
+                                                <img src="assets_metronic/media/avatars/300-14.jpg" alt="img" />
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
@@ -193,7 +193,7 @@
                                         <div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px">
                                             <!--begin::User-->
                                             <div class="symbol symbol-circle symbol-25px">
-                                                <img src="assets/media/avatars/300-20.jpg" alt="img" />
+                                                <img src="assets_metronic/media/avatars/300-20.jpg" alt="img" />
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
@@ -262,7 +262,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Alan Nilson">
-                                            <img src="assets/media/avatars/300-1.jpg" alt="img" />
+                                            <img src="assets_metronic/media/avatars/300-1.jpg" alt="img" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -313,7 +313,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Jan Hummer">
-                                            <img src="assets/media/avatars/300-23.jpg" alt="img" />
+                                            <img src="assets_metronic/media/avatars/300-23.jpg" alt="img" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -327,7 +327,7 @@
                                         <!--begin::Item-->
                                         <div class="d-flex flex-aligns-center pe-10 pe-lg-20">
                                             <!--begin::Icon-->
-                                            <img alt="" class="w-30px me-3" src="assets/media/svg/files/pdf.svg" />
+                                            <img alt="" class="w-30px me-3" src="assets_metronic/media/svg/files/pdf.svg" />
                                             <!--end::Icon-->
                                             <!--begin::Info-->
                                             <div class="ms-1 fw-semibold">
@@ -347,7 +347,7 @@
                                         <div class="d-flex flex-aligns-center pe-10 pe-lg-20">
                                             <!--begin::Icon-->
                                             <img alt="/metronic8/demo18/../demo18/apps/projects/project.html"
-                                                class="w-30px me-3" src="assets/media/svg/files/doc.svg" />
+                                                class="w-30px me-3" src="assets_metronic/media/svg/files/doc.svg" />
                                             <!--end::Icon-->
                                             <!--begin::Info-->
                                             <div class="ms-1 fw-semibold">
@@ -366,7 +366,7 @@
                                         <div class="d-flex flex-aligns-center">
                                             <!--begin::Icon-->
                                             <img alt="/metronic8/demo18/../demo18/apps/projects/project.html"
-                                                class="w-30px me-3" src="assets/media/svg/files/css.svg" />
+                                                class="w-30px me-3" src="assets_metronic/media/svg/files/css.svg" />
                                             <!--end::Icon-->
                                             <!--begin::Info-->
                                             <div class="ms-1 fw-semibold">
@@ -430,7 +430,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-                                            <img src="assets/media/avatars/300-14.jpg" alt="img" />
+                                            <img src="assets_metronic/media/avatars/300-14.jpg" alt="img" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -480,7 +480,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Marcus Dotson">
-                                            <img src="assets/media/avatars/300-2.jpg" alt="img" />
+                                            <img src="assets_metronic/media/avatars/300-2.jpg" alt="img" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -496,7 +496,7 @@
                                             <!--begin::Image-->
                                             <div class="overlay-wrapper">
                                                 <img alt="img" class="rounded w-150px"
-                                                    src="assets/media/stock/600x400/img-29.jpg" />
+                                                    src="assets_metronic/media/stock/600x400/img-29.jpg" />
                                             </div>
                                             <!--end::Image-->
                                             <!--begin::Link-->
@@ -511,7 +511,7 @@
                                             <!--begin::Image-->
                                             <div class="overlay-wrapper">
                                                 <img alt="img" class="rounded w-150px"
-                                                    src="assets/media/stock/600x400/img-31.jpg" />
+                                                    src="assets_metronic/media/stock/600x400/img-31.jpg" />
                                             </div>
                                             <!--end::Image-->
                                             <!--begin::Link-->
@@ -526,7 +526,7 @@
                                             <!--begin::Image-->
                                             <div class="overlay-wrapper">
                                                 <img alt="img" class="rounded w-150px"
-                                                    src="assets/media/stock/600x400/img-40.jpg" />
+                                                    src="assets_metronic/media/stock/600x400/img-40.jpg" />
                                             </div>
                                             <!--end::Image-->
                                             <!--begin::Link-->
@@ -636,7 +636,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Robert Rich">
-                                            <img src="assets/media/avatars/300-4.jpg" alt="img" />
+                                            <img src="assets_metronic/media/avatars/300-4.jpg" alt="img" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -895,7 +895,7 @@
                             <div class="d-flex align-items-center mb-2">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                    <img alt="Pic" src="assets_metronic/media/avatars/300-25.jpg" />
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -929,7 +929,7 @@
                                 <!--end::Details-->
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                    <img alt="Pic" src="assets_metronic/media/avatars/300-1.jpg" />
                                 </div>
                                 <!--end::Avatar-->
                             </div>
@@ -951,7 +951,7 @@
                             <div class="d-flex align-items-center mb-2">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                    <img alt="Pic" src="assets_metronic/media/avatars/300-25.jpg" />
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -984,7 +984,7 @@
                                 <!--end::Details-->
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                    <img alt="Pic" src="assets_metronic/media/avatars/300-1.jpg" />
                                 </div>
                                 <!--end::Avatar-->
                             </div>
@@ -1006,7 +1006,7 @@
                             <div class="d-flex align-items-center mb-2">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                    <img alt="Pic" src="assets_metronic/media/avatars/300-25.jpg" />
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -1042,7 +1042,7 @@
                                 <!--end::Details-->
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                    <img alt="Pic" src="assets_metronic/media/avatars/300-1.jpg" />
                                 </div>
                                 <!--end::Avatar-->
                             </div>
@@ -1063,7 +1063,7 @@
                             <div class="d-flex align-items-center mb-2">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                    <img alt="Pic" src="assets_metronic/media/avatars/300-25.jpg" />
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -1097,7 +1097,7 @@
                                 <!--end::Details-->
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                    <img alt="Pic" src="assets_metronic/media/avatars/300-1.jpg" />
                                 </div>
                                 <!--end::Avatar-->
                             </div>
@@ -1118,7 +1118,7 @@
                             <div class="d-flex align-items-center mb-2">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-35px symbol-circle">
-                                    <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                    <img alt="Pic" src="assets_metronic/media/avatars/300-25.jpg" />
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Details-->
@@ -1294,7 +1294,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo1.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo1.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo1"
@@ -1310,7 +1310,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo2.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo2.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo2"
@@ -1326,7 +1326,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo3.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo3.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo3"
@@ -1342,7 +1342,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo4.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo4.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo4"
@@ -1358,7 +1358,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo5.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo5.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo5"
@@ -1374,7 +1374,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo6.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo6.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo6"
@@ -1390,7 +1390,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo7.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo7.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo7"
@@ -1406,7 +1406,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo8.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo8.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo8"
@@ -1422,7 +1422,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo9.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo9.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo9"
@@ -1438,7 +1438,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo10.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo10.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo10"
@@ -1454,7 +1454,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo11.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo11.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo11"
@@ -1470,7 +1470,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo12.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo12.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo12"
@@ -1486,7 +1486,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo13.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo13.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo13"
@@ -1502,7 +1502,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo14.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo14.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo14"
@@ -1518,7 +1518,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo15.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo15.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo15"
@@ -1534,7 +1534,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo16.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo16.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo16"
@@ -1550,7 +1550,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo17.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo17.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo17"
@@ -1566,7 +1566,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-success rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo18.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo18.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo18"
@@ -1582,7 +1582,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo19.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo19.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo19"
@@ -1598,7 +1598,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo20.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo20.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo20"
@@ -1614,7 +1614,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo21.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo21.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo21"
@@ -1630,7 +1630,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo22.png" alt="demo" class="w-100" />
+                                            <img src="assets_metronic/media/demos/demo22.png" alt="demo" class="w-100" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
                                             <a href="https://preview.keenthemes.com/metronic8/demo22"
@@ -1646,7 +1646,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo23.png" alt="demo"
+                                            <img src="assets_metronic/media/demos/demo23.png" alt="demo"
                                                 class="w-100 opacity-25" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
@@ -1663,7 +1663,7 @@
                                     <div
                                         class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
                                         <div class="overlay-wrapper">
-                                            <img src="assets/media/demos/demo24.png" alt="demo"
+                                            <img src="assets_metronic/media/demos/demo24.png" alt="demo"
                                                 class="w-100 opacity-25" />
                                         </div>
                                         <div class="overlay-layer bg-dark bg-opacity-10">
@@ -2643,7 +2643,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-6.jpg" />
+                                                            <img alt="Pic" src="assets_metronic/media/avatars/300-6.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -2708,7 +2708,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                                            <img alt="Pic" src="assets_metronic/media/avatars/300-1.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -2740,7 +2740,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-5.jpg" />
+                                                            <img alt="Pic" src="assets_metronic/media/avatars/300-5.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -2772,7 +2772,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                                            <img alt="Pic" src="assets_metronic/media/avatars/300-25.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -2837,7 +2837,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-9.jpg" />
+                                                            <img alt="Pic" src="assets_metronic/media/avatars/300-9.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -2937,7 +2937,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-23.jpg" />
+                                                            <img alt="Pic" src="assets_metronic/media/avatars/300-23.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -3002,7 +3002,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-12.jpg" />
+                                                            <img alt="Pic" src="assets_metronic/media/avatars/300-12.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -3067,7 +3067,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-13.jpg" />
+                                                            <img alt="Pic" src="assets_metronic/media/avatars/300-13.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -3132,7 +3132,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="assets/media/avatars/300-21.jpg" />
+                                                            <img alt="Pic" src="assets_metronic/media/avatars/300-21.jpg" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -3464,7 +3464,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px">
-                                                            <img src="assets/media/svg/files/pdf.svg" alt="icon" />
+                                                            <img src="assets_metronic/media/svg/files/pdf.svg" alt="icon" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -3496,7 +3496,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px">
-                                                            <img src="assets/media/svg/files/doc.svg" alt="icon" />
+                                                            <img src="assets_metronic/media/svg/files/doc.svg" alt="icon" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -3528,7 +3528,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px">
-                                                            <img src="assets/media/svg/files/css.svg" alt="icon" />
+                                                            <img src="assets_metronic/media/svg/files/css.svg" alt="icon" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -3560,7 +3560,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px">
-                                                            <img src="assets/media/svg/files/ai.svg" alt="icon" />
+                                                            <img src="assets_metronic/media/svg/files/ai.svg" alt="icon" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -3591,7 +3591,7 @@
                                                     <div class="d-flex align-items-center">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px">
-                                                            <img src="assets/media/svg/files/tif.svg" alt="icon" />
+                                                            <img src="assets_metronic/media/svg/files/tif.svg" alt="icon" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
@@ -3686,7 +3686,7 @@
                                         <!--end::Actions-->
                                         <!--begin::Illustration-->
                                         <div class="text-center px-4">
-                                            <img src="assets/media/illustrations/sketchy-1/9.png" alt=""
+                                            <img src="assets_metronic/media/illustrations/sketchy-1/9.png" alt=""
                                                 class="mww-100 mh-350px" />
                                         </div>
                                         <!--end::Illustration-->
@@ -3807,7 +3807,7 @@
                                         class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle me-5">
-                                            <img alt="Pic" src="assets/media/avatars/300-6.jpg" />
+                                            <img alt="Pic" src="assets_metronic/media/avatars/300-6.jpg" />
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Info-->
@@ -3839,7 +3839,7 @@
                                         class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle me-5">
-                                            <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                            <img alt="Pic" src="assets_metronic/media/avatars/300-1.jpg" />
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Info-->
@@ -3855,7 +3855,7 @@
                                         class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle me-5">
-                                            <img alt="Pic" src="assets/media/avatars/300-5.jpg" />
+                                            <img alt="Pic" src="assets_metronic/media/avatars/300-5.jpg" />
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Info-->
@@ -3871,7 +3871,7 @@
                                         class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
                                         <!--begin::Avatar-->
                                         <div class="symbol symbol-35px symbol-circle me-5">
-                                            <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                            <img alt="Pic" src="assets_metronic/media/avatars/300-25.jpg" />
                                         </div>
                                         <!--end::Avatar-->
                                         <!--begin::Info-->
@@ -3903,7 +3903,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-6.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-6.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -3986,7 +3986,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-1.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -4027,7 +4027,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-5.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-5.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -4068,7 +4068,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-25.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -4151,7 +4151,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-9.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-9.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -4276,7 +4276,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-23.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-23.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -4359,7 +4359,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-12.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-12.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -4441,7 +4441,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-13.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-13.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -4524,7 +4524,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-21.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-21.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -4565,7 +4565,7 @@
                                             <!--end::Checkbox-->
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-35px symbol-circle">
-                                                <img alt="Pic" src="assets/media/avatars/300-12.jpg" />
+                                                <img alt="Pic" src="assets_metronic/media/avatars/300-12.jpg" />
                                             </div>
                                             <!--end::Avatar-->
                                             <!--begin::Details-->
@@ -4612,7 +4612,7 @@
                                 <!--end::Message-->
                                 <!--begin::Illustration-->
                                 <div class="text-center px-5">
-                                    <img src="assets/media/illustrations/sketchy-1/1.png" alt=""
+                                    <img src="assets_metronic/media/illustrations/sketchy-1/1.png" alt=""
                                         class="w-100 h-200px h-sm-325px" />
                                 </div>
                                 <!--end::Illustration-->
@@ -4671,7 +4671,7 @@
                     <!--end::Heading-->
                     <!--begin::Google Contacts Invite-->
                     <div class="btn btn-light-primary fw-bold w-100 mb-8">
-                        <img alt="Logo" src="assets/media/svg/brand-logos/google-icon.svg" class="h-20px me-3" />Invite
+                        <img alt="Logo" src="assets_metronic/media/svg/brand-logos/google-icon.svg" class="h-20px me-3" />Invite
                         Gmail Contacts
                     </div>
                     <!--end::Google Contacts Invite-->
@@ -4697,7 +4697,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-6.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-6.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -4757,7 +4757,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-1.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-1.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -4787,7 +4787,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-5.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-5.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -4817,7 +4817,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-25.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-25.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -4877,7 +4877,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-9.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-9.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -4967,7 +4967,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-23.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-23.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -5027,7 +5027,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-12.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-12.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -5087,7 +5087,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-13.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-13.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -5147,7 +5147,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-21.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-21.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -5177,7 +5177,7 @@
                                 <div class="d-flex align-items-center">
                                     <!--begin::Avatar-->
                                     <div class="symbol symbol-35px symbol-circle">
-                                        <img alt="Pic" src="assets/media/avatars/300-5.jpg" />
+                                        <img alt="Pic" src="assets_metronic/media/avatars/300-5.jpg" />
                                     </div>
                                     <!--end::Avatar-->
                                     <!--begin::Details-->
@@ -5228,10 +5228,9 @@
         </div>
         <!--end::Modal dialog-->
     </div>
-    <!--end::Modal - Invite Friend-->
-    <!--end::Modals-->
     <!--begin::Javascript-->
     @include('layout.backend.partials.foot')
+    @stack('script')
 </body>
 <!--end::Body-->
 

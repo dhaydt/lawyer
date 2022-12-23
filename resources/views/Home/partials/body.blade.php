@@ -34,7 +34,7 @@
         </div>
     </div>
 </div>
-    @include('Home.components.floating')
+    {{-- @include('Home.components.floating') --}}
 <div id="purchase-now">
     <a href="https://themeforest.net/cart/add_items?ref=designesia&amp;item_ids=29485331"><span>$</span>14</a>
     <div class="pn-hover">Buy Now</div>

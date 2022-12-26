@@ -9,4 +9,5 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
 
     // USER ROUTE
     Route::get('list_admin', [UserController::class, 'index'])->name('user.list');
+    Route::post('add_admin', [UserController::class, 'add_admin'])->name('post-admin');
 });

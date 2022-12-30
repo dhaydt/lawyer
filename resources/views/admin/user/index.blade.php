@@ -121,7 +121,6 @@
                                     <th class="min-w-125px">Admin Name</th>
                                     <th class="min-w-125px">Email</th>
                                     <th class="min-w-125px">Phone</th>
-                                    <th class="min-w-125px">Created Date</th>
                                     <th class="text-end min-w-70px">Actions</th>
                                 </tr>
                             </thead>
@@ -142,7 +141,6 @@
                                     <td data-filter="visa">
                                         {{ $u->phone }}
                                     </td>
-                                    <td>01 Dec 2020, 10:12 am</td>
                                     <td class="text-end">
                                         <a href="#" class="btn btn-sm btn-light btn-active-light-primary"
                                             data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions

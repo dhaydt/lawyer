@@ -74,4 +74,18 @@ class BannerController extends Controller
 
         return back();
     }
+
+    public function delete($id)
+    {
+        $banner = Banner::find($id);
+        if (!$banner) {
+            Toastr::warning('Banner not found!');
+        }
+
+        ImageManager::delete('banner/', $banner['photo']);
+        $banner->delete();
+        Toastr::success('Banner deleted successfully!');
+
+        return redirect()->back();
+    }
 }

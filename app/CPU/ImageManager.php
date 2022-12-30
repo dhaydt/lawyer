@@ -45,4 +45,11 @@ class ImageManager
 
         return $imageName;
     }
+
+    public static function delete(string $dir, $old_image)
+    {
+        if (Storage::disk('public')->exists($dir.$old_image)) {
+            Storage::disk('public')->delete($dir.$old_image);
+        }
+    }
 }

@@ -14,3 +14,7 @@
 <link id="colors" href="{{ asset('assets/css/colors/scheme-01.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/css/coloring.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="{{ asset('assets_metronic/owl/assets/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets_metronic/owl/assets/owl.theme.default.min.css') }}">
+@stack('css')

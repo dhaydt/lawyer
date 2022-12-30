@@ -18,6 +18,7 @@
 <script src="cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
 <script src="cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
 <script src="cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('assets_metronic/plugins/custom/datatables/datatables.bundle.js') }}"></script>
 <!--end::Vendors Javascript-->
 <!--begin::Custom Javascript(used by this page)-->

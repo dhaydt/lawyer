@@ -17,5 +17,6 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
         Route::get('/', [BannerController::class, 'index'])->name('list');
         Route::post('post', [BannerController::class, 'post'])->name('post');
         Route::post('update/{id}', [BannerController::class, 'update'])->name('update');
+        Route::get('delete/{id}', [BannerController::class, 'delete'])->name('delete');
     });
 });

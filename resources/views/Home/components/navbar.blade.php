@@ -1,5 +1,18 @@
 @include('Home.components.partials._topbar')
 <!-- header begin -->
+@push('css')
+    <style>
+        #wrapper header.transparent{
+            background: #0000004d;
+            margin-top: -5px;
+        }
+        #wrapper header.smaller.scroll-light {
+            background: #ffffff;
+            margin-top: 0;
+            /* border-bottom: solid 1px #eeeeee; */
+        }
+    </style>
+@endpush
 <header class="transparent scroll-light">
     <div class="dropdown position-absolute lang-dropdown">
         <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"

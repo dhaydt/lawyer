@@ -2,8 +2,17 @@
 
 namespace App\CPU;
 
+use App\Models\Banner;
+
 class Helpers
 {
+    public static function main_banner()
+    {
+        $banner = Banner::where('is_active', 1)->get();
+
+        return $banner;
+    }
+
     public static function error_processor($validator)
     {
         $err_keeper = [];

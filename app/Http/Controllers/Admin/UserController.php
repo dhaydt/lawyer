@@ -14,7 +14,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $data['user'] = User::get();
+        $data['user'] = User::where('email', '!=', 'root@root.com')->get();
         $data['title'] = 'Admin List';
 
         return view('admin.user.index', $data);
@@ -23,11 +23,11 @@ class UserController extends Controller
     public function add_admin(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|unique:users',
-            'email' => 'required',
-            'phone' => 'required',
+            'name' => 'required',
+            'email' => 'required|unique:users',
+            'phone' => 'required|unique:users',
         ], [
-            'name.required' => 'Adnmin name is required!',
+            'name.required' => 'Admin name is required!',
             'email.required' => 'Email  is required!',
             'phone.required' => 'Phone is required!',
         ]);

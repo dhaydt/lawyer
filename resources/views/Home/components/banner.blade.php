@@ -5,7 +5,7 @@
         object-fit: cover;
     }
     .owl-carousel .owl-dots{
-        margin-top: -15vh;
+        margin-top: -21vh;
         position: absolute;
         width: 100vw;
     }

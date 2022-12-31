@@ -12,7 +12,7 @@
 <meta property="og:url" content="{{ env('APP_URL') }}" />
 <meta property="og:site_name" content="{{ env('APP_NAME') }}" />
 <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-<link rel="shortcut icon" href="{{ asset('storage/company'.'/'.$web_config['web_icon']) }}" />
+<link rel="shortcut icon" href="{{ $web_config ? asset('storage/company'.'/'.$web_config['web_icon']) : '' }}" />
 <!--begin::Fonts-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />

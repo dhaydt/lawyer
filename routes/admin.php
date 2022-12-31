@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\WebConfigController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function () {
@@ -20,5 +21,10 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
         Route::post('post', [BannerController::class, 'post'])->name('post');
         Route::post('update/{id}', [BannerController::class, 'update'])->name('update');
         Route::get('delete/{id}', [BannerController::class, 'delete'])->name('delete');
+    });
+
+    Route::group(['prefix' => 'webconfig', 'as' => 'webconfig.'], function () {
+        Route::get('/', [WebConfigController::class, 'index'])->name('index');
+        Route::post('update', [WebConfigController::class, 'update_config'])->name('update');
     });
 });

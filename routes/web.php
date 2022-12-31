@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\AutentikasiController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -20,9 +21,7 @@ Route::get('/storage-link', function () {
     Artisan::call('storage:link');
 });
 
-Route::get('/', function () {
-    return view('Home.index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 if (file_exists(app_path('Http/Controllers/LocalizationController.php'))) {
     Route::get('lang/{locale}', [LocalizationController::class, 'lang']);

@@ -11,6 +11,10 @@
             margin-top: 0;
             /* border-bottom: solid 1px #eeeeee; */
         }
+        header #logo .logo, header #logo .logo-2{
+            max-height: 65px;
+            width: auto;
+        }
     </style>
 @endpush
 <header class="transparent scroll-light">
@@ -32,9 +36,9 @@
                     <div class="de-flex-col">
                         <!-- logo begin -->
                         <div id="logo">
-                            <a href="index.html">
-                                <img alt="" class="logo" src="{{ asset('assets/images/logo-light.png') }}" />
-                                <img alt="" class="logo-2" src="{{ asset('assets/images/logo.png') }}" />
+                            <a href="{{ route('home') }}">
+                                <img alt="" class="logo" src="{{ asset('storage/company'.'/'.$web_config['web_logo']) }}"/>
+                                <img alt="" class="logo-2" src="{{ asset('storage/company'.'/'.$web_config['web_logo']) }}"/>
                             </a>
                         </div>
                         <!-- logo close -->

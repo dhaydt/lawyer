@@ -66,6 +66,15 @@ class WebConfigController extends Controller
         }
         $data['logo'] = $logo->value;
 
+        $icon = WebConfig::where('type', 'web_icon')->first();
+        if (!$icon) {
+            $icon = new WebConfig();
+            $icon->type = 'web_icon';
+            $icon->value = 'def.png';
+            $icon->save();
+        }
+        $data['icon'] = $icon->value;
+
         $data['title'] = 'Web Configuration';
 
         return view('admin.web_config.index', $data);
@@ -81,7 +90,17 @@ class WebConfigController extends Controller
             Toastr::success('Web Logo updated successfully');
             $data['logo'] = $logo->value;
         }
-        $data['logo'] = $logo->value;
+
+        $icon = WebConfig::where('type', 'web_icon')->first();
+        if ($request->has('icon')) {
+            $icon->value = ImageManager::update('company/', $icon->value, 'png', $request->file('icon'));
+            $icon->save();
+
+            Toastr::success('Web icon updated successfully');
+            $data['icon'] = $icon->value;
+        }
+        $data['icon'] = $logo->value;
+
         $web_name = WebConfig::where('type', 'web_name')->first();
         if ($web_name->value !== $request->web_name) {
             $web_name->value = $request->web_name;

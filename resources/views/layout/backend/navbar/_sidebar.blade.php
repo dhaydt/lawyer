@@ -60,7 +60,7 @@
                 <div data-kt-menu-trigger="click"
                     class="menu-item menu-accordion {{Request::is('admin/list_admin')?'show':''}}">
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('admin.banner.list') }}">
+                        <a class="menu-link {{Request::is('admin/banner*')?'active':''}}" href="{{ route('admin.banner.list') }}">
                             <span class="menu-icon">
                                 <span class="svg-icon svg-icon-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
@@ -75,7 +75,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('admin.webconfig.index') }}">
+                        <a class="menu-link {{Request::is('admin/webconfig*')?'active':''}}" href="{{ route('admin.webconfig.index') }}" >
                             <span class="menu-icon">
                                 <span class="svg-icon svg-icon-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

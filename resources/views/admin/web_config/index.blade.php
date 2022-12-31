@@ -82,6 +82,38 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="">
+                                        <label for="bg_color" class="required form-label">Web Logo</label>
+                                        <div class="pt-4">
+                                            <div class="image-input image-input-outline" data-kt-image-input="true">
+                                                <div class="image-input-wrapper w-150px h-150px"
+                                                    style="background-image: url({{ asset('storage/company'.'/'.$logo) }})"></div>
+                                                <label
+                                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                    data-kt-image-input-action="change" data-bs-toggle="tooltip"
+                                                    title="Change web logo" data-kt-initialized="1">
+                                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                                    <input type="file" name="img" accept=".png, .jpg, .jpeg">
+                                                    <input type="hidden" name="avatar_remove">
+                                                </label>
+                                                <span
+                                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                    data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
+                                                    aria-label="Cancel avatar" data-kt-initialized="1">
+                                                    <i class="bi bi-x fs-2"></i>
+                                                </span>
+                                                <span
+                                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                    data-kt-image-input-action="remove" data-bs-toggle="tooltip"
+                                                    aria-label="Remove avatar" data-kt-initialized="1">
+                                                    <i class="bi bi-x fs-2"></i>
+                                                </span>
+                                            </div>
+                                            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="">
                                         <label for="bg_color" class="required form-label">Background Color</label>
                                         <input type="color" name="bg_color" class="form-control form-control-solid" value="{{ $bg_color }}"/>
                                     </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\CPU\ImageManager;
 use App\Http\Controllers\Controller;
 use App\Models\WebConfig;
 use Illuminate\Http\Request;
@@ -56,6 +57,15 @@ class WebConfigController extends Controller
         }
         $data['bg_color'] = $bg_color->value;
 
+        $logo = WebConfig::where('type', 'web_logo')->first();
+        if (!$logo) {
+            $logo = new WebConfig();
+            $logo->type = 'web_logo';
+            $logo->value = 'def.png';
+            $logo->save();
+        }
+        $data['logo'] = $logo->value;
+
         $data['title'] = 'Web Configuration';
 
         return view('admin.web_config.index', $data);
@@ -63,49 +73,58 @@ class WebConfigController extends Controller
 
     public function update_config(Request $request)
     {
+        $logo = WebConfig::where('type', 'web_logo')->first();
+        if ($request->has('img')) {
+            $logo->value = ImageManager::update('company/', $logo->value, 'png', $request->file('img'));
+            $logo->save();
+
+            Toastr::success('Web Logo updated successfully');
+            $data['logo'] = $logo->value;
+        }
+        $data['logo'] = $logo->value;
         $web_name = WebConfig::where('type', 'web_name')->first();
-        if ($web_name->value != $request->web_name) {
+        if ($web_name->value !== $request->web_name) {
             $web_name->value = $request->web_name;
             $web_name->save();
-            Toastr::success('Web Name Saved Successfully!');
+            Toastr::success('Web Name Changed Successfully!');
         }
         $data['web_name'] = $web_name->value;
 
         $phone = WebConfig::where('type', 'phone')->first();
-        if ($phone != $request->phone) {
+        if ($phone->value !== $request->phone) {
             $phone->value = $request->phone;
             $phone->save();
-            Toastr::success('Company Phone Saved Successfully!');
+            Toastr::success('Company Phone Changed Successfully!');
         }
         $data['phone'] = $phone->value;
 
         $fax = WebConfig::where('type', 'fax')->first();
-        if ($fax != $request->fax) {
+        if ($fax->value !== $request->fax) {
             $fax->value = $request->fax;
             $fax->save();
-            Toastr::success('Company Fax Saved Successfully!');
+            Toastr::success('Company Fax Changed Successfully!');
         }
         $data['fax'] = $fax->value;
 
         $address = WebConfig::where('type', 'address')->first();
-        if ($address != $request->address) {
+        if ($address->value !== $request->address) {
             $address->value = $request->address;
             $address->save();
-            Toastr::success('Company Address Saved Successfully!');
+            Toastr::success('Company Address Changed Successfully!');
         }
         $data['address'] = $address->value;
 
         $bg_color = WebConfig::where('type', 'bg_color')->first();
-        if ($bg_color != $request->bg_color) {
+        if ($bg_color->value !== $request->bg_color) {
             $bg_color->value = $request->bg_color;
             $bg_color->save();
 
-            Toastr::success('Background Color Saved Successfully!');
+            Toastr::success('Background Color Changed Successfully!');
         }
         $data['bg_color'] = $bg_color->value;
 
         $data['title'] = 'Web Configuration';
 
-        return view('admin.web_config.index', $data);
+        return redirect()->back();
     }
 }

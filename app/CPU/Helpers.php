@@ -3,9 +3,25 @@
 namespace App\CPU;
 
 use App\Models\Banner;
+use App\Models\WebConfig;
 
 class Helpers
 {
+    public static function get_config($name)
+    {
+        $config = null;
+
+        $data = WebConfig::where(['type' => $name])->first();
+        if (isset($data)) {
+            $config = json_decode($data['value'], true);
+            if (is_null($config)) {
+                $config = $data['value'];
+            }
+        }
+
+        return $config;
+    }
+
     public static function main_banner()
     {
         $banner = Banner::where('is_active', 1)->get();

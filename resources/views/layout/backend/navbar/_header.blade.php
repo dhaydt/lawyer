@@ -26,7 +26,7 @@ data-kt-sticky-animation="false" data-kt-sticky-offset="{default: '200px', lg: '
             <!--end::Aside toggle-->
             <!--begin::Header Logo-->
             <a href="javascript:">
-                <img alt="Logo" src="{{ asset('storage/company'.'/'.$web_config['web_icon']) }}" onerror="this.src='{{ asset('assets_metronic/media/logos/default-small.svg') }}'"
+                <img alt="Logo" src="{{ $web_config ? asset('storage/company'.'/'.$web_config['web_icon']) : '' }}" onerror="this.src='{{ asset('assets_metronic/media/logos/default-small.svg') }}'"
                     class="h-30px h-lg-35px" />
             </a>
             <!--end::Header Logo-->

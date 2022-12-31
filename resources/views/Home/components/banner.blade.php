@@ -38,7 +38,7 @@
                     <h1 class="wow fadeInUp text-uppercase" data-wow-delay=".6s">We Have 95% Case Winning Rate
                     </h1>
                     <div class="spacer-20"></div>
-                    <a class="btn-custom wow fadeInUp" data-wow-delay="1s" href="features.html">Contact Us</a>
+                    {{-- <a class="btn-custom wow fadeInUp" data-wow-delay="1s" href="features.html">Contact Us</a> --}}
                 </div>
             </div>
         </div>

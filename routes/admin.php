@@ -11,6 +11,8 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     // USER ROUTE
     Route::get('list_admin', [UserController::class, 'index'])->name('user.list');
     Route::post('add_admin', [UserController::class, 'add_admin'])->name('post-admin');
+    Route::post('update_admin', [UserController::class, 'update_admin'])->name('update-admin');
+    Route::get('delete-admin/{id}', [UserController::class, 'delete_admin'])->name('delete-admin');
 
     // BANNER ROUTE
     Route::group(['prefix' => 'banner', 'as' => 'banner.'], function () {

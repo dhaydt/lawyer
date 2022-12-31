@@ -67,11 +67,11 @@
                                         {{ $u->is_active }}
                                     </td>
                                     <td class="text-end">
-                                        <button class="btn btn-sm btn-warning" data-bs-toggle="modal"
+                                        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" title="Edit banner"
                                             data-bs-target="#editBanner{{ $u->id }}">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                         </button>
-                                        <button onclick="hapus({{ $u->id }})" class="btn btn-sm btn-danger">
+                                        <button onclick="hapus({{ $u->id }})" data-bs-toggle="tooltip" title="Delete banner" class="btn btn-sm btn-danger">
                                             <i class="fa-solid fa-trash"></i>
                                         </button>
                                     </td>

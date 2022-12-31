@@ -55,4 +55,53 @@ class UserController extends Controller
 
         return redirect()->back();
     }
+
+    public function update_admin(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'phone' => 'required',
+        ], [
+            'name.required' => 'Admin name is required!',
+            'phone.required' => 'Phone is required!',
+        ]);
+
+        if ($validator->errors()->count() > 0) {
+            $errors = Helpers::error_processor($validator);
+            foreach ($errors as $e) {
+                Toastr::warning($e['message']);
+            }
+
+            return redirect()->back();
+        }
+
+        $password = env('ADMINPASS', 'adminamar');
+        $user = User::find($request->id);
+        if (!$user) {
+            Toastr::warning('User not found!');
+
+            return redirect()->back();
+        }
+        $user->name = $request->name;
+        $user->phone = $request->phone;
+
+        $user->save();
+
+        Toastr::success('Admin updated Successfully!');
+
+        return redirect()->back();
+    }
+
+    public function delete_admin($id)
+    {
+        $user = User::find($id);
+        if (!$user) {
+            Toastr::warning('Admin not found!');
+        }
+
+        $user->delete();
+        Toastr::success('Admin deleted successfully!');
+
+        return redirect()->back();
+    }
 }

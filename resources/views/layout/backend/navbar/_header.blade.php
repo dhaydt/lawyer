@@ -1000,11 +1000,11 @@ data-kt-sticky-animation="false" data-kt-sticky-offset="{default: '200px', lg: '
     <!--begin::Toolbar wrapper-->
     <div class="d-flex align-items-stretch flex-shrink-0">
         <!--begin::Button-->
-        <a href="#" class="btn btn-light-success me-1" data-bs-toggle="modal"
-            data-bs-target="#kt_modal_create_project">Create</a>
+        {{-- <a href="#" class="btn btn-light-success me-1" data-bs-toggle="modal"
+            data-bs-target="#kt_modal_create_project">Create</a> --}}
         <!--end::Button-->
         <!--begin::Activities-->
-        <div class="d-flex align-items-center ms-1 ms-lg-3">
+        {{-- <div class="d-flex align-items-center ms-1 ms-lg-3">
             <!--begin::drawer toggle-->
             <div class="position-relative btn btn-color-gray-800 btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px"
                 id="kt_drawer_chat_toggle">
@@ -1026,7 +1026,7 @@ data-kt-sticky-animation="false" data-kt-sticky-offset="{default: '200px', lg: '
                     class="bullet bullet-dot bg-danger h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>
             </div>
             <!--end::drawer toggle-->
-        </div>
+        </div> --}}
         <!--end::Activities-->
         <!--begin::Theme mode-->
         <div class="d-flex align-items-center ms-1 ms-lg-3">
@@ -1391,12 +1391,12 @@ data-kt-sticky-animation="false" data-kt-sticky-offset="{default: '200px', lg: '
         </div>
         <!--end::User menu-->
         <!--begin::Chat-->
-        <div class="d-flex align-items-center ms-1 ms-lg-3">
+        {{-- <div class="d-flex align-items-center ms-1 ms-lg-3">
             <!--begin::Drawer wrapper-->
             <div class="btn btn-icon btn-danger position-relative w-30px h-30px w-md-40px h-md-40px"
                 id="kt_drawer_chat_toggle">3</div>
             <!--end::Drawer wrapper-->
-        </div>
+        </div> --}}
         <!--end::Chat-->
     </div>
     <!--end::Toolbar wrapper-->

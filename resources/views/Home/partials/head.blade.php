@@ -26,5 +26,18 @@
         --primary-color-rgb: 234, 166, 54;
         --primary-color: {{ $web_config['bg_color'] }};
     }
+
+    .f-box.f-icon-rounded img {
+        display: block;
+        text-align: center;
+        padding: 22px;
+        width: 80px;
+        height: 80px;
+        border-radius: 3px;
+    }
+    .f-box.f-icon-left img {
+        margin-right: 30px;
+    }
+
 </style>
 @stack('css')

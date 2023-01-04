@@ -3,76 +3,22 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <h2>Practice Areas</h2>
+                    <h2 class="text-capitalize">scope of legal services</h2>
                     <div class="small-border"></div>
                 </div>
             </div>
+            @foreach ($services as $service)
             <div class="col-lg-4 col-md-6 mb30">
                 <div class="f-box f-icon-left f-icon-rounded">
-                    <i class="icofont-group bg-color text-light"></i>
+                    <img src="{{ asset('storage/services'.'/'.$service->logo) }}" alt="" class="icofont-group bg-color text-light">
                     <div class="fb-text">
-                        <h4>Labor</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem.
-                        </p>
+                        <h4>{{ $service->title }}</h4>
+                        <p>{{ $service->description }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-rounded">
-                    <i class="icofont-medical-sign-alt bg-color text-light"></i>
-                    <div class="fb-text">
-                        <h4>Medical &amp; Health Care</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-rounded">
-                    <i class="icofont-mining bg-color text-light"></i>
-                    <div class="fb-text">
-                        <h4>Mining</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-rounded">
-                    <i class="icofont-law-order bg-color text-light"></i>
-                    <div class="fb-text">
-                        <h4>Civil &amp; Criminal</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-rounded">
-                    <i class="icofont-group-students bg-color text-light"></i>
-                    <div class="fb-text">
-                        <h4>Family &amp; Marriage</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="f-box f-icon-left f-icon-rounded">
-                    <i class="icofont-money bg-color text-light"></i>
-                    <div class="fb-text">
-                        <h4>Corporate &amp; Investment</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </section>

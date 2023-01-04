@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\WebConfigController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,14 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
         Route::post('post', [BannerController::class, 'post'])->name('post');
         Route::post('update/{id}', [BannerController::class, 'update'])->name('update');
         Route::get('delete/{id}', [BannerController::class, 'delete'])->name('delete');
+    });
+
+    // LEGAL SERVICES
+    Route::group(['prefix' => 'services', 'as' => 'services.'], function () {
+        Route::get('/', [ServicesController::class, 'index'])->name('list');
+        Route::post('post', [ServicesController::class, 'post'])->name('post');
+        Route::post('update/{id}', [ServicesController::class, 'update'])->name('update');
+        Route::get('delete/{id}', [ServicesController::class, 'delete'])->name('delete');
     });
 
     Route::group(['prefix' => 'webconfig', 'as' => 'webconfig.'], function () {

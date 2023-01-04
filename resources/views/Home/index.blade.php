@@ -1,7 +1,6 @@
 @extends('layout.frontend.app')
 @section('content')
-<div id="wrapper">
-    @include('Home.components.navbar')
+
     <!-- content begin -->
     <div class="no-bottom no-top" id="content">
         @include('Home.components.banner')
@@ -24,21 +23,5 @@
         </section>
     </div>
     <!-- content close -->
-    <a href="#" id="back-to-top"></a>
-    <!-- footer begin -->
-    @include('Home.components.footer')
-    <!-- footer close -->
-    <div id="preloader">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
-    </div>
-</div>
 {{-- @include('Home.components.floating') --}}
-<div id="purchase-now">
-    <a href="https://themeforest.net/cart/add_items?ref=designesia&amp;item_ids=29485331"><span>$</span>14</a>
-    <div class="pn-hover">Buy Now</div>
-</div>
 @endsection

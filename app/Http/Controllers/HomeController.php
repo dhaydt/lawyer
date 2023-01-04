@@ -13,4 +13,25 @@ class HomeController extends Controller
 
         return view('Home.index', $data);
     }
+
+    public function about_us()
+    {
+        $data['title'] = 'About Us';
+
+        return view('Home.about.index', $data);
+    }
+
+    public function organization()
+    {
+        $data['title'] = 'Company & Organization';
+
+        return view('Home.organization.index', $data);
+    }
+
+    public function posting()
+    {
+        $data['title'] = 'Posts & Journals';
+
+        return view('Home.content.index', $data);
+    }
 }

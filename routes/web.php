@@ -22,6 +22,9 @@ Route::get('/storage-link', function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('about_us', [HomeController::class, 'about_us'])->name('about_us');
+Route::get('organization', [HomeController::class, 'organization'])->name('organization');
+Route::get('posting', [HomeController::class, 'posting'])->name('posting');
 
 if (file_exists(app_path('Http/Controllers/LocalizationController.php'))) {
     Route::get('lang/{locale}', [LocalizationController::class, 'lang']);

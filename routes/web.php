@@ -20,6 +20,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/storage-link', function () {
     Artisan::call('storage:link');
 });
+Route::get('/migrate', function () {
+    Artisan::call('migrate', [
+        '--force' => true,
+    ]);
+    dd('migrated!');
+});
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('about_us', [HomeController::class, 'about_us'])->name('about_us');

@@ -5,7 +5,7 @@
     <div class="no-bottom no-top" id="content">
         @include('Home.components.banner')
         @include('Home.components.jarralax')
-        @include('Home.components.services')
+        {{-- @include('Home.components.services') --}}
         @include('Home.components.counter')
         @include('Home.components.testimoni')
         @include('Home.components.latest')

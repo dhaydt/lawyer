@@ -11,7 +11,7 @@
 
 <body>
     <div id="wrapper">
-        @include('Home.components.navbar')
+        @include('Home.components.navbars')
         @yield('content')
         <a href="#" id="back-to-top"></a>
         <!-- footer begin -->

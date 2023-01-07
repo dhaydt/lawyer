@@ -31,6 +31,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('about_us', [HomeController::class, 'about_us'])->name('about_us');
 Route::get('organization', [HomeController::class, 'organization'])->name('organization');
 Route::get('posting', [HomeController::class, 'posting'])->name('posting');
+Route::get('services', [HomeController::class, 'services'])->name('services');
+Route::get('consultation', [HomeController::class, 'consultation'])->name('consultation');
+Route::get('contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
+Route::get('information', [HomeController::class, 'information'])->name('information');
+Route::get('carrier', [HomeController::class, 'carrier'])->name('carrier');
 
 if (file_exists(app_path('Http/Controllers/LocalizationController.php'))) {
     Route::get('lang/{locale}', [LocalizationController::class, 'lang']);

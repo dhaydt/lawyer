@@ -50,7 +50,7 @@
             $(".owl-carousel").owlCarousel({
                 center: true,
                 items:1,
-                autoplay: true,
+                autoplay: false,
                 loop:true,
                 dots: true,
                 margin:10,

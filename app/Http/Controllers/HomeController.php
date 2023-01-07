@@ -34,4 +34,39 @@ class HomeController extends Controller
 
         return view('Home.content.index', $data);
     }
+
+    public function services()
+    {
+        $data['title'] = 'Our Legal Services';
+
+        return view('Home.services.index', $data);
+    }
+
+    public function consultation()
+    {
+        $data['title'] = 'Consultation';
+
+        return view('Home.consultation.index', $data);
+    }
+
+    public function contact_us()
+    {
+        $data['title'] = 'Contact Us';
+
+        return view('Home.contact_us.index', $data);
+    }
+
+    public function information()
+    {
+        $data['title'] = 'Other Information';
+
+        return view('Home.information.index', $data);
+    }
+
+    public function carrier()
+    {
+        $data['title'] = 'Carrier';
+
+        return view('Home.carrier.index', $data);
+    }
 }

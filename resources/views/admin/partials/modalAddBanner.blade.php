@@ -23,7 +23,7 @@
                         data-kt-scroll-dependencies="#kt_modal_add_customer_header"
                         data-kt-scroll-wrappers="#kt_modal_add_customer_scroll" data-kt-scroll-offset="300px">
                         <div class="row mb-6">
-                            <label class="col-lg-4 col-form-label fw-semibold fs-6">Banner Image</label>
+                            <label class="col-lg-4 col-form-label fw-semibold fs-6">Banner Image <br><span class="text-danger">(Ratio: 16:9)</span></label>
                             <div class="col-lg-8 pt-4">
                                 <div class="image-input image-input-outline" data-kt-image-input="true">
                                     <div class="image-input-wrapper w-300px h-150px"

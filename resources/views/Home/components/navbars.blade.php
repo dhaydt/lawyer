@@ -20,7 +20,7 @@
 
 </style>
 <header class="transparent scroll-light">
-    <div class="dropdown position-absolute lang-dropdown">
+    <div class="dropdown position-absolute lang-dropdown d-none">
         <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"
             data-bs-toggle="dropdown" aria-expanded="false">
             Lang
@@ -56,21 +56,25 @@
                             <li><a href="{{ route('posting') }}">Posts & Journals</a>
                             <li><a href="javascript:">Services</a>
                                 <ul>
-                                    <li><a href="javascript:">Our legal services</a></li>
-                                    <li><a href="javascript:">Direct Consultation</a></li>
+                                    <li><a href="{{ route('services') }}">Our legal services</a></li>
+                                    <li><a href="{{ route('consultation') }}">Direct Consultation</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Carrier</a>
+                            <li><a href="{{ route('carrier') }}">Carrier</a>
                             <li><a href="#">Other</a>
                                 <ul>
-                                    <li><a href="#">Other Infromation</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{ route('information') }}">Other Infromation</a></li>
+                                    <li><a href="{{ route('contact_us') }}">Contact Us</a></li>
                                 </ul>
                             </li>
 
                             </li>
                         </ul>
                         <!-- mainmenu close -->
+                    </div>
+                    <div class="de-flex-col">
+                        {{-- <div class="h-phone md-hide"><span>Need&nbsp;Help?</span><i class="fa fa-phone"></i> 1 200 300 9000</div> --}}
+                        <span id="menu-btn"></span>
                     </div>
                 </div>
             </div>

@@ -79,7 +79,9 @@ class ServicesController extends Controller
         }
         $service->title = $request->title;
         $service->description = $request->description;
-        $service->logo = ImageManager::update('services/', $service['logo'], 'png', $request->file('img'));
+        if ($request->has($request->file('img'))) {
+            $service->logo = ImageManager::update('services/', $service['logo'], 'png', $request->file('img'));
+        }
 
         $service->save();
 

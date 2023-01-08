@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="menu-item pt-5">
-                    <div class="menu-content">
+                    <div class="menu-content main-content">
                         <span class="menu-heading fw-bold text-uppercase fs-7">Services</span>
                     </div>
                 </div>

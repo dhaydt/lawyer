@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\UserController;
@@ -15,6 +17,16 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     Route::post('add_admin', [UserController::class, 'add_admin'])->name('post-admin');
     Route::post('update_admin', [UserController::class, 'update_admin'])->name('update-admin');
     Route::get('delete-admin/{id}', [UserController::class, 'delete_admin'])->name('delete-admin');
+
+    // Category ROUTE
+    Route::group(['prefix' => 'category', 'as' => 'category.'], function () {
+        Route::get('/', [CategoryController::class, 'index'])->name('list');
+    });
+
+    // Content ROUTE
+    Route::group(['prefix' => 'content', 'as' => 'content.'], function () {
+        Route::get('/', [ContentController::class, 'index'])->name('list');
+    });
 
     // BANNER ROUTE
     Route::group(['prefix' => 'banner', 'as' => 'banner.'], function () {

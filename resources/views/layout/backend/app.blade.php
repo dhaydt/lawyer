@@ -6,6 +6,7 @@
 
 <head>
     @include('layout.backend.partials.head')
+    @livewireStyles
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -4377,6 +4378,8 @@
     </div>
     <!--begin::Javascript-->
     @include('layout.backend.partials.foot')
+    @yield('script')
+    @livewireScripts
     @stack('script')
 </body>
 <!--end::Body-->

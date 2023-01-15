@@ -39,6 +39,7 @@ return array(
     'App\\Models\\Category' => $baseDir . '/app/Models/Category.php',
     'App\\Models\\Client' => $baseDir . '/app/Models/Client.php',
     'App\\Models\\Content' => $baseDir . '/app/Models/Content.php',
+    'App\\Models\\Hashtag' => $baseDir . '/app/Models/Hashtag.php',
     'App\\Models\\LoginLogs' => $baseDir . '/app/Models/LoginLogs.php',
     'App\\Models\\Role' => $baseDir . '/app/Models/Role.php',
     'App\\Models\\Services' => $baseDir . '/app/Models/Services.php',

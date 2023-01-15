@@ -7,17 +7,17 @@
 <!--end::Global Javascript Bundle-->
 <!--begin::Vendors Javascript(used by this page)-->
 <script src="{{ asset('assets_metronic/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/index.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/xy.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/percent.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/radar.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/themes/Animated.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/map.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/geodata/worldLow.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/geodata/continentsLow.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/geodata/usaLow.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js') }}"></script>
-<script src="{{ asset('cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js') }}"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('assets_metronic/plugins/custom/datatables/datatables.bundle.js') }}"></script>
 <!--end::Vendors Javascript-->
@@ -35,5 +35,8 @@
 <script src="{{ asset('assets_metronic/js/custom/utilities/modals/create-project/main.js') }}"></script>
 <script src="{{ asset('assets_metronic/js/custom/utilities/modals/users-search.js') }}"></script>
 <script src="{{ asset('assets_metronic/js/custom.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
 
 

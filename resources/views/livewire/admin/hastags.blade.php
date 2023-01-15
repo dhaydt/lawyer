@@ -10,7 +10,7 @@
                                 <a href="../../index.html" class="text-gray-600 text-hover-primary">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item text-gray-600">Content</li>
-                            <li class="breadcrumb-item text-gray-500">Category</li>
+                            <li class="breadcrumb-item text-gray-500">Hashtag</li>
                         </ul>
                     </div>
                 </div>
@@ -24,11 +24,11 @@
                                     <input type="text" class="form-control" placeholder="Search..." wire:model="search">
                                 </div>
                                 <div class="card-toolbar w-50 justify-content-end">
-                                <button type="button" wire:click.prevent="$emit('onClickAdd')"
-                                    class="btn btn-primary btn-hover-rotate-end" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Add category">
-                                    <i class="fas fa-plus-square mr-2"></i> Category
-                                </button>
+                                    <button type="button" wire:click.prevent="$emit('onClickAdd')"
+                                        class="btn btn-primary btn-hover-rotate-end" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="Add hashtag">
+                                        <i class="fas fa-plus-square mr-2"></i> Hashtag
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -37,53 +37,58 @@
                             <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
                                 <thead>
                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                                        <th class="min-w-125px">No.</th>
                                         <th class="min-w-125px">Name</th>
-                                        <th class="min-w-125px">Type</th>
                                         <th class="text-end min-w-70px">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody class="fw-semibold text-gray-600">
-                                    @if (count($category) > 0)
-                                    @foreach ($category as $u)
-                                        <tr>
-                                            <td class="text-capitalize">
-                                                {{ $u->name }}
-                                            </td>
-                                            <td class="text-capitalize">
-                                                {{ $u->type }}
-                                            </td>
-                                            <td class="text-end">
-                                                <div class="btn-group btn-group-sm" role="group">
-                                                    <button type="button" wire:click.prevent="$emit('onClickUpdateCategory', {{ $u }})"
-                                                        class="btn btn-sm bg-success text-white btn-hover-rotate-start"
-                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="Edit {{ $u->name}}"><i
-                                                            class="fas fa-edit text-light"></i></button>
-                                                    <button type="button" wire:click.prevent="$emit('onClickDelete', `{{ $u->id }}`)"
-                                                        class="btn btn-sm bg-danger btn-hover-rotate-end" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" title="Delete {{ $u->name}}"><i
-                                                            class="fas fa-trash text-light"></i></button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        @endforeach
+                                    @if (count($hashtag) > 0)
+                                    @foreach ($hashtag as $i=>$u)
+                                    <tr>
+                                        <td class="text-capitalize">
+                                            {{ $i + 1 }}
+                                        </td>
+                                        <td class="text-capitalize">
+                                            {{ $u->name }}
+                                        </td>
+                                        <td class="text-end">
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <button type="button"
+                                                    wire:click.prevent="$emit('onClickUpdateHashtag', {{ $u }})"
+                                                    class="btn btn-sm bg-success text-white btn-hover-rotate-start"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Edit {{ $u->name}}"><i
+                                                        class="fas fa-edit text-light"></i></button>
+                                                <button type="button"
+                                                    wire:click.prevent="$emit('onClickDelete', `{{ $u->id }}`)"
+                                                    class="btn btn-sm bg-danger btn-hover-rotate-end"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Delete {{ $u->name}}"><i
+                                                        class="fas fa-trash text-light"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    @endforeach
                                     @else
-                                        <tr class="text-center">
-                                            <td colspan="3">
-                                                <img src="{{ asset('assets_metronic/image/nodata.png') }}" class="h-200px"
-                                                    alt="">
-                                            </td>
-                                        </tr>
+                                    <tr class="text-center">
+                                        <td colspan="3">
+                                            <img src="{{ asset('assets_metronic/image/nodata.png') }}" class="h-200px"
+                                                alt="">
+                                        </td>
+                                    </tr>
                                     @endif
                                 </tbody>
                             </table>
                         </div>
                         <div class="row px-9 pt-3 pb-5">
-                            <div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                            <div
+                                class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
                                 @include('livewire.helper.total-show')
                             </div>
-                            <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                                {{ $category->links() }}
+                            <div
+                                class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                                {{ $hashtag->links() }}
                             </div>
                         </div>
                     </div>
@@ -93,7 +98,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Add Category</h5>
+                                    <h5 class="modal-title">Add Hashtag</h5>
 
                                     <!--begin::Close-->
                                     <div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
@@ -111,30 +116,19 @@
                                             'Menyimpan data ...'])
                                         </div>
                                         <div class="mb-10">
-                                            <label for="exampleFormControlInput1" class="required form-label">Name</label>
+                                            <label for="exampleFormControlInput1"
+                                                class="required form-label">Name</label>
                                             <input type="text" class="form-control form-control-solid" wire:model="name"
-                                                placeholder="Category name" />
+                                                placeholder="Hashtag name" />
                                             @error('name')
-                                            <small class="text-danger">{{ $message }}</small>
-                                            @enderror
-                                        </div>
-                                        <div class="mb-10">
-                                            <label for="exampleFormControlInput1" class="required form-label">Type</label>
-                                            <select class="form-select form-select-solid"
-                                                wire:model="type">
-                                                <option value="">-- Select Categories Type --</option>
-                                                @foreach ($type_list as $tl)
-                                                    <option value="{{ $tl }}" class="text-capitalize">{{ $tl }}</option>
-                                                @endforeach
-                                            </select>
-                                            @error('type')
                                             <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                     </div>
 
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-light"
+                                            data-bs-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Save</button>
                                     </div>
                                 </form>
@@ -148,7 +142,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Edit Category</h5>
+                                    <h5 class="modal-title text-capitalize">Edit hashtag</h5>
 
                                     <!--begin::Close-->
                                     <div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
@@ -159,32 +153,25 @@
                                 </div>
 
                                 <form wire:submit.prevent="update" id="form_update">
-                                    <input type="hidden" wire:mode="cabang_id">
+                                    <input type="hidden" wire:mode="hashtag_id">
                                     <div class="modal-body">
                                         <div class="text-center">
                                             @include('helper.simple-loading', ['target' => 'update', 'message' =>
                                             'Menyimpan data ...'])
                                         </div>
                                         <div class="mb-10">
-                                            <label for="exampleFormControlInput1" class="required form-label">Name</label>
-                                            <input type="text" class="form-control form-control-solid" wire:model="name"
-                                                placeholder="Masukan nama outlet" />
+                                            <label for="exampleFormControlInput1"
+                                                class="required form-label">Name</label>
+                                            <input type="text" class="form-control form-control-solid" wire:model="name" />
                                             @error('name')
-                                            <small class="text-danger">{{ $message }}</small>
-                                            @enderror
-                                        </div>
-                                        <div class="mb-10">
-                                            <label for="exampleFormControlInput1" class="required form-label">Type</label>
-                                            <input type="text" class="form-control form-control-solid"
-                                                wire:model="type" />
-                                            @error('type')
                                             <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                     </div>
 
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-light"
+                                            data-bs-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Update</button>
                                     </div>
                                 </form>
@@ -216,24 +203,24 @@
             $('#modal_add').modal('hide')
         })
 
-        Livewire.on("finishCategory", (status, message) => {
+        Livewire.on("finishHashtag", (status, message) => {
             alertMessage(status, message)
         })
 
         Livewire.on('onClickRefresh', (id) => {
-            Livewire.emit('refreshCategory')
+            Livewire.emit('refreshHashtag')
             alertMessage(1, 'Data refreshed successfully!')
         })
 
-        Livewire.on('onClickUpdateCategory', (item) => {
-            Livewire.emit('setCategory', item);
+        Livewire.on('onClickUpdateHashtag', (item) => {
+            Livewire.emit('setHashtag', item);
             $('#modal_update').modal('show')
         })
 
         Livewire.on('onClickDelete', async (id) => {
             const response = await alertHapus('Warning !!!', 'Are you sure to delete this data?')
             if(response.isConfirmed == true){
-                @this.set('category_id', id)
+                @this.set('hashtag_id', id)
                 Livewire.emit('delete')
             }
         })

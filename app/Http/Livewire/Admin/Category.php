@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\CPU\Helpers;
 use App\Models\Category as ModelsCategory;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -16,11 +17,12 @@ class Category extends Component
     protected $category;
 
     public $search;
-    public $total_show = 1;
+    public $total_show = 10;
 
     public $name;
     public $category_id;
     public $type;
+    public $type_list;
 
     protected $rulesUpdate = [
         'name' => 'required',
@@ -47,6 +49,7 @@ class Category extends Component
     public function mount($title)
     {
         $this->title = $title;
+        $this->type_list = Helpers::getTypeContent();
     }
 
     public function setCategory($item)

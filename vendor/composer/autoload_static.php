@@ -577,6 +577,7 @@ class ComposerStaticInit656a5d5e16912f29905722bd16d1729c
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Client' => __DIR__ . '/../..' . '/app/Models/Client.php',
         'App\\Models\\Content' => __DIR__ . '/../..' . '/app/Models/Content.php',
+        'App\\Models\\Hashtag' => __DIR__ . '/../..' . '/app/Models/Hashtag.php',
         'App\\Models\\LoginLogs' => __DIR__ . '/../..' . '/app/Models/LoginLogs.php',
         'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
         'App\\Models\\Services' => __DIR__ . '/../..' . '/app/Models/Services.php',

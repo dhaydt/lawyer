@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\HashtagController;
 use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\WebConfigController;
@@ -21,6 +22,9 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     // Category ROUTE
     Route::group(['prefix' => 'category', 'as' => 'category.'], function () {
         Route::get('/', [CategoryController::class, 'index'])->name('list');
+    });
+    Route::group(['prefix' => 'hashtag', 'as' => 'hashtag.'], function () {
+        Route::get('/', [HashtagController::class, 'index'])->name('list');
     });
 
     // Content ROUTE

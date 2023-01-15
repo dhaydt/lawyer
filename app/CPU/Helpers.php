@@ -4,9 +4,50 @@ namespace App\CPU;
 
 use App\Models\Banner;
 use App\Models\WebConfig;
+use DateTime;
 
 class Helpers
 {
+    public function getDate($date)
+    {
+        $dt = new DateTime($date);
+
+        $date = $dt->format('d');
+
+        return $date;
+    }
+
+    public static function monthChange($date)
+    {
+        $dt = new DateTime($date);
+
+        $month_num = $dt->format('d');
+
+        $month_name = date('F', mktime(0, 0, 0, $month_num, 10));
+
+        return strtoupper(substr($month_name, 0, 3));
+    }
+
+    public static function limitText($text)
+    {
+        $filter = strip_tags($text);
+        $limit = $filter;
+        if (strlen($filter) > 160) {
+            $limit = substr($filter, 0, 157).'...';
+        }
+
+        return $limit;
+    }
+
+    public function getTypeContent()
+    {
+        $type = [
+            'post', 'journals', 'clinic',
+        ];
+
+        return $type;
+    }
+
     public static function get_settings($object, $type)
     {
         $config = null;

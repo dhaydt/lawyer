@@ -1153,7 +1153,7 @@
                                                             <td>
                                                                 <div class="symbol symbol-45px me-2">
                                                                     <span class="symbol-label">
-                                                                        <img src="assets/media/svg/brand-logos/telegram.svg"
+                                                                        <img src="{{ asset('assets_metronic/media/svg/brand-logos/telegram.svg') }}"
                                                                             class="h-50 align-self-center" alt="" />
                                                                     </span>
                                                                 </div>
@@ -1196,7 +1196,7 @@
                                                             <td>
                                                                 <div class="symbol symbol-45px me-2">
                                                                     <span class="symbol-label">
-                                                                        <img src="assets/media/svg/brand-logos/bebo.svg"
+                                                                        <img src="{{ asset('assets_metronic/media/svg/brand-logos/bebo.svg') }}"
                                                                             class="h-50 align-self-center" alt="" />
                                                                     </span>
                                                                 </div>
@@ -1265,7 +1265,7 @@
                                                             <td>
                                                                 <div class="symbol symbol-45px me-2">
                                                                     <span class="symbol-label">
-                                                                        <img src="assets/media/svg/brand-logos/kickstarter.svg"
+                                                                        <img src="{{ asset('assets_metronic/media/svg/brand-logos/kickstarter.svg') }}"
                                                                             class="h-50 align-self-center" alt="" />
                                                                     </span>
                                                                 </div>
@@ -1308,7 +1308,7 @@
                                                             <td>
                                                                 <div class="symbol symbol-45px me-2">
                                                                     <span class="symbol-label">
-                                                                        <img src="assets/media/svg/brand-logos/bebo.svg"
+                                                                        <img src="{{ asset('assets_metronic/media/svg/brand-logos/bebo.svg') }}"
                                                                             class="h-50 align-self-center" alt="" />
                                                                     </span>
                                                                 </div>
@@ -1350,7 +1350,7 @@
                                                             <td>
                                                                 <div class="symbol symbol-45px me-2">
                                                                     <span class="symbol-label">
-                                                                        <img src="assets/media/svg/brand-logos/vimeo.svg"
+                                                                        <img src="{{ asset('assets_metronic/media/svg/brand-logos/vimeo.svg') }}"
                                                                             class="h-50 align-self-center" alt="" />
                                                                     </span>
                                                                 </div>
@@ -1392,7 +1392,7 @@
                                                             <td>
                                                                 <div class="symbol symbol-45px me-2">
                                                                     <span class="symbol-label">
-                                                                        <img src="assets/media/svg/brand-logos/telegram.svg"
+                                                                        <img src="{{ asset('assets_metronic/media/svg/brand-logos/telegram.svg') }}"
                                                                             class="h-50 align-self-center" alt="" />
                                                                     </span>
                                                                 </div>
@@ -1496,7 +1496,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/avatars/300-14.jpg" alt="" />
+                                                                    <img src="{{ asset('assets_metronic/media/avatars/300-14.jpg') }}" alt="" />
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -1541,7 +1541,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/avatars/300-5.jpg" alt="" />
+                                                                    <img src="{{ asset('assets_metronic/media/avatars/300-5.jpg') }}" alt="" />
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -1586,7 +1586,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/avatars/300-20.jpg" alt="" />
+                                                                    <img src="{{ asset('assets_metronic/media/avatars/300-20.jpg') }}" alt="" />
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -1632,7 +1632,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/avatars/300-23.jpg" alt="" />
+                                                                    <img src="{{ asset('assets_metronic/media/avatars/300-23.jpg') }}" alt="" />
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -1677,7 +1677,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/avatars/300-10.jpg" alt="" />
+                                                                    <img src="{{ asset('assets_metronic/media/avatars/300-10.jpg') }}" alt="" />
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -1747,7 +1747,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/svg/avatars/043-boy-18.svg"
+                                                                    <img src="{{ asset('assets_metronic/media/svg/avatars/043-boy-18.svg') }}"
                                                                         alt="" />
                                                                 </div>
                                                             </td>
@@ -1793,7 +1793,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/svg/avatars/014-girl-7.svg"
+                                                                    <img src="{{ asset('assets_metronic/media/svg/avatars/014-girl-7.svg') }}"
                                                                         alt="" />
                                                                 </div>
                                                             </td>
@@ -1839,7 +1839,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/svg/avatars/018-girl-9.svg"
+                                                                    <img src="{{ asset('assets_metronic/media/svg/avatars/018-girl-9.svg') }}"
                                                                         alt="" />
                                                                 </div>
                                                             </td>
@@ -1885,7 +1885,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/svg/avatars/001-boy.svg"
+                                                                    <img src="{{ asset('assets_metronic/media/svg/avatars/001-boy.svg') }}"
                                                                         alt="" />
                                                                 </div>
                                                             </td>
@@ -1956,7 +1956,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/svg/avatars/018-girl-9.svg"
+                                                                    <img src="{{ asset('assets_metronic/media/svg/avatars/018-girl-9.svg') }}"
                                                                         alt="" />
                                                                 </div>
                                                             </td>
@@ -2002,7 +2002,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/svg/avatars/047-girl-25.svg"
+                                                                    <img src="{{ asset('assets_metronic/media/svg/avatars/047-girl-25.svg') }}"
                                                                         alt="" />
                                                                 </div>
                                                             </td>
@@ -2049,7 +2049,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="symbol symbol-50px">
-                                                                    <img src="assets/media/svg/avatars/014-girl-7.svg"
+                                                                    <img src="{{ asset('assets_metronic/media/svg/avatars/014-girl-7.svg') }}"
                                                                         alt="" />
                                                                 </div>
                                                             </td>
@@ -2253,7 +2253,7 @@
                                                     <th>
                                                         <div class="symbol symbol-50px me-2">
                                                             <span class="symbol-label">
-                                                                <img src="assets/media/svg/brand-logos/plurk.svg"
+                                                                <img src="{{ asset('assets_metronic/media/svg/brand-logos/plurk.svg') }}"
                                                                     class="h-50 align-self-center" alt="" />
                                                             </span>
                                                         </div>
@@ -2300,7 +2300,7 @@
                                                     <th>
                                                         <div class="symbol symbol-50px me-2">
                                                             <span class="symbol-label">
-                                                                <img src="assets/media/svg/brand-logos/telegram.svg"
+                                                                <img src="{{ asset('assets_metronic/media/svg/brand-logos/telegram.svg') }}"
                                                                     class="h-50 align-self-center" alt="" />
                                                             </span>
                                                         </div>
@@ -2347,7 +2347,7 @@
                                                     <th>
                                                         <div class="symbol symbol-50px me-2">
                                                             <span class="symbol-label">
-                                                                <img src="assets/media/svg/brand-logos/vimeo.svg"
+                                                                <img src="{{ asset('assets_metronic/media/svg/brand-logos/vimeo.svg') }}"
                                                                     class="h-50 align-self-center" alt="" />
                                                             </span>
                                                         </div>
@@ -2394,7 +2394,7 @@
                                                     <th>
                                                         <div class="symbol symbol-50px me-2">
                                                             <span class="symbol-label">
-                                                                <img src="assets/media/svg/brand-logos/bebo.svg"
+                                                                <img src="{{ asset('assets_metronic/media/svg/brand-logos/bebo.svg') }}"
                                                                     class="h-50 align-self-center" alt="" />
                                                             </span>
                                                         </div>
@@ -2441,7 +2441,7 @@
                                                     <th>
                                                         <div class="symbol symbol-50px me-2">
                                                             <span class="symbol-label">
-                                                                <img src="assets/media/svg/brand-logos/kickstarter.svg"
+                                                                <img src="{{ asset('assets_metronic/media/svg/brand-logos/kickstarter.svg') }}"
                                                                     class="h-50 align-self-center" alt="" />
                                                             </span>
                                                         </div>
@@ -2580,7 +2580,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/001-boy.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/001-boy.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -2622,7 +2622,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/018-girl-9.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/018-girl-9.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -2664,7 +2664,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/047-girl-25.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/047-girl-25.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -2706,7 +2706,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/014-girl-7.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/014-girl-7.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -2748,7 +2748,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/043-boy-18.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/043-boy-18.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -2815,7 +2815,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/018-girl-9.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/018-girl-9.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -2857,7 +2857,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/014-girl-7.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/014-girl-7.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -2899,7 +2899,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/001-boy.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/001-boy.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -2966,7 +2966,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/047-girl-25.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/047-girl-25.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -3008,7 +3008,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/014-girl-7.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/014-girl-7.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -3050,7 +3050,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/043-boy-18.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/043-boy-18.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -3092,7 +3092,7 @@
                                                 <td>
                                                     <div class="symbol symbol-50px me-2">
                                                         <span class="symbol-label">
-                                                            <img src="assets/media/svg/avatars/001-boy.svg"
+                                                            <img src="{{ asset('assets_metronic/media/svg/avatars/001-boy.svg') }}"
                                                                 class="h-75 align-self-end" alt="" />
                                                         </span>
                                                     </div>
@@ -3427,7 +3427,7 @@
                             <!--begin::Symbol-->
                             <div class="symbol symbol-50px me-5">
                                 <span class="symbol-label">
-                                    <img src="assets/media/svg/brand-logos/plurk.svg" class="h-50 align-self-center"
+                                    <img src="{{ asset('assets_metronic/media/svg/brand-logos/plurk.svg') }}" class="h-50 align-self-center"
                                         alt="" />
                                 </span>
                             </div>
@@ -3450,7 +3450,7 @@
                             <!--begin::Symbol-->
                             <div class="symbol symbol-50px me-5">
                                 <span class="symbol-label">
-                                    <img src="assets/media/svg/brand-logos/telegram.svg" class="h-50 align-self-center"
+                                    <img src="{{ asset('assets_metronic/media/svg/brand-logos/telegram.svg') }}" class="h-50 align-self-center"
                                         alt="" />
                                 </span>
                             </div>
@@ -3473,7 +3473,7 @@
                             <!--begin::Symbol-->
                             <div class="symbol symbol-50px me-5">
                                 <span class="symbol-label">
-                                    <img src="assets/media/svg/brand-logos/vimeo.svg" class="h-50 align-self-center"
+                                    <img src="{{ asset('assets_metronic/media/svg/brand-logos/vimeo.svg') }}" class="h-50 align-self-center"
                                         alt="" />
                                 </span>
                             </div>
@@ -3496,7 +3496,7 @@
                             <!--begin::Symbol-->
                             <div class="symbol symbol-50px me-5">
                                 <span class="symbol-label">
-                                    <img src="assets/media/svg/brand-logos/bebo.svg" class="h-50 align-self-center"
+                                    <img src="{{ asset('assets_metronic/media/svg/brand-logos/bebo.svg') }}" class="h-50 align-self-center"
                                         alt="" />
                                 </span>
                             </div>
@@ -3519,7 +3519,7 @@
                             <!--begin::Symbol-->
                             <div class="symbol symbol-50px me-5">
                                 <span class="symbol-label">
-                                    <img src="assets/media/svg/brand-logos/kickstarter.svg"
+                                    <img src="{{ asset('assets_metronic/media/svg/brand-logos/kickstarter.svg') }}"
                                         class="h-50 align-self-center" alt="" />
                                 </span>
                             </div>
@@ -3542,7 +3542,7 @@
                             <!--begin::Symbol-->
                             <div class="symbol symbol-50px me-5">
                                 <span class="symbol-label">
-                                    <img src="assets/media/svg/brand-logos/fox-hub.svg" class="h-50 align-self-center"
+                                    <img src="{{ asset('assets_metronic/media/svg/brand-logos/fox-hub.svg') }}" class="h-50 align-self-center"
                                         alt="" />
                                 </span>
                             </div>

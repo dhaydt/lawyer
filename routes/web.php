@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\AutentikasiController;
+use App\Http\Controllers\ContentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Artisan;
@@ -36,6 +37,7 @@ Route::get('consultation', [HomeController::class, 'consultation'])->name('consu
 Route::get('contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
 Route::get('information', [HomeController::class, 'information'])->name('information');
 Route::get('carrier', [HomeController::class, 'carrier'])->name('carrier');
+Route::get('post&journals/{id}', [ContentController::class, 'index'])->name('single-content');
 
 if (file_exists(app_path('Http/Controllers/LocalizationController.php'))) {
     Route::get('lang/{locale}', [LocalizationController::class, 'lang']);

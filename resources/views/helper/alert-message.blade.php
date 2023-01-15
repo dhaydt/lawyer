@@ -9,7 +9,7 @@
         </span>
 
         <div class="d-flex flex-column">
-            <h4 class="mb-1 text-dark">Pemberitahuan</h4>
+            <h4 class="mb-1 text-dark">Notice</h4>
             <span>{{ session('success') }}</span>
         </div>
         <button type="button" class="position-absolute position-sm-relative m-2 m-sm-0 top-0 end-0 btn btn-icon ms-sm-auto" data-bs-dismiss="alert">

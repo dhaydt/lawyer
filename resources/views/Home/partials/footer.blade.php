@@ -19,3 +19,4 @@
 <script src="{{ asset('assets/js/jarallax.js') }}"></script>
 <script src="{{ asset('assets/js/designesia.js') }}"></script>
 @stack('script')
+@livewireScripts

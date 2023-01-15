@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ env('APP_NAME', 'AMAR Lawyer') }}</title>
     @include('Home.partials.head')
-    @livewireStyles
 </head>
 
 <body>
@@ -27,7 +26,6 @@
         </div>
     </div>
     @include('Home.partials.footer')
-    @livewireScripts
 </body>
 
 </html>

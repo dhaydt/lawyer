@@ -108,7 +108,7 @@ class Content extends Component
         $save = ModelsContent::updateOrCreate([
             'title' => $this->title_content,
             'category' => $this->category,
-            'hashtag' => $this->hashtag,
+            'hashtag' => json_encode($this->hashtag),
             'image' => 'storage/content/'.$imgName,
             'content' => $this->isi_content,
             'is_active' => 1,

@@ -55,38 +55,58 @@
             <div class="content flex-row-fluid" id="kt_content">
                 <div class="card">
                     <form action="{{ route('admin.webconfig.update') }}" method="POST" enctype="multipart/form-data">
-                    <div class="card-body pt-0">
+                        <div class="card-body pt-0">
                             @csrf
-                            <div class="mb-10">
-                                <label for="exampleFormControlInput1" class="required form-label">Web Name</label>
-                                <input type="text" name="web_name" class="form-control form-control-solid" value="{{ $web_name }}"/>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-10">
+                                        <label for="exampleFormControlInput1" class="required form-label">Web
+                                            Name</label>
+                                        <input type="text" name="web_name" class="form-control form-control-solid"
+                                            value="{{ $web_name }}" />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-10">
+                                        <label for="exampleFormControlInput1" class="required form-label">Email</label>
+                                        <input type="email" name="email" class="form-control form-control-solid"
+                                            value="{{ $email }}" />
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-10">
-                                        <label for="exampleFormControlInput1" class="required form-label">Company Phone</label>
-                                        <input type="text" name="phone" class="form-control form-control-solid" value="{{ $phone }}"/>
+                                        <label for="exampleFormControlInput1" class="required form-label">Company
+                                            Phone</label>
+                                        <input type="text" name="phone" class="form-control form-control-solid"
+                                            value="{{ $phone }}" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-10">
-                                        <label for="exampleFormControlInput1" class="required form-label">Company Fax</label>
-                                        <input type="text" name="fax" class="form-control form-control-solid" value="{{ $fax }}"/>
+                                        <label for="exampleFormControlInput1" class="required form-label">Company
+                                            Fax</label>
+                                        <input type="text" name="fax" class="form-control form-control-solid"
+                                            value="{{ $fax }}" />
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-10">
-                                <label for="exampleFormControlInput1" class="required form-label">Company Address</label>
-                                <textarea name="address" class="form-control form-control-solid">{{ $address }}</textarea>
+                                <label for="exampleFormControlInput1" class="required form-label">Company
+                                    Address</label>
+                                <textarea name="address"
+                                    class="form-control form-control-solid">{{ $address }}</textarea>
                             </div>
-                            <div class="row">
+                            <div class="row mb-10">
                                 <div class="col-md-4">
                                     <div class="">
                                         <label for="bg_color" class="required form-label">Web Logo</label>
                                         <div class="pt-4">
                                             <div class="image-input image-input-outline" data-kt-image-input="true">
                                                 <div class="image-input-wrapper w-350px h-150px"
-                                                    style="background-image: url({{ asset('storage/company'.'/'.$logo) }}); background-size: 350px 150px; background-repeat: no-repeat;"></div>
+                                                    style="background-image: url({{ asset('storage/company'.'/'.$logo) }}); background-size: 350px 150px; background-repeat: no-repeat;">
+                                                </div>
                                                 <label
                                                     class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
                                                     data-kt-image-input-action="change" data-bs-toggle="tooltip"
@@ -118,7 +138,8 @@
                                         <div class="pt-4">
                                             <div class="image-input image-input-outline" data-kt-image-input="true">
                                                 <div class="image-input-wrapper w-150px h-150px"
-                                                    style="background-image: url({{ asset('storage/company'.'/'.$icon) }}); background-size: 150px 150px; background-repeat: no-repeat;"></div>
+                                                    style="background-image: url({{ asset('storage/company'.'/'.$icon) }}); background-size: 150px 150px; background-repeat: no-repeat;">
+                                                </div>
                                                 <label
                                                     class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
                                                     data-kt-image-input-action="change" data-bs-toggle="tooltip"
@@ -147,14 +168,65 @@
                                 <div class="col-md-4">
                                     <div class="">
                                         <label for="bg_color" class="required form-label">Background Color</label>
-                                        <input type="color" name="bg_color" class="form-control form-control-solid" value="{{ $bg_color }}"/>
+                                        <input type="color" name="bg_color" class="form-control form-control-solid"
+                                            value="{{ $bg_color }}" />
                                     </div>
                                 </div>
+                            </div>
+                            <div class="mb-10">
+                                <div class="form" method="post">
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-form-label text-lg-right">Company Profile:</label>
+                                        <div class="col-lg-10">
+                                            @if ($company_profile != null)
+                                            <label for="" class="form-label">
+                                                <a href="{{ asset('storage/company_profile'.'/'.$company_profile) }}" target="_blank" rel="noopener noreferrer">Download company profile</a>
+                                            </label>
+                                            @endif
+                                            <div class="dropzone dropzone-queue mb-2" id="kt_dropzonejs_example_3">
+                                                <div class="dropzone-panel mb-lg-0 mb-2">
+                                                    <a class="dropzone-select btn btn-sm btn-primary me-2">Change Company profile</a>
+                                                    <a class="dropzone-remove-all btn btn-sm btn-light-primary">Remove
+                                                        All</a>
+                                                </div>
 
+                                                <div class="dropzone-items wm-200px">
+                                                    <div class="dropzone-item" style="display:none">
+                                                        <div class="dropzone-file">
+                                                            <div class="dropzone-filename"
+                                                                title="some_image_file_name.jpg">
+                                                                <span data-dz-name>some_image_file_name.jpg</span>
+                                                                <strong>(<span data-dz-size>340kb</span>)</strong>
+                                                            </div>
+
+                                                            <div class="dropzone-error" data-dz-errormessage></div>
+                                                        </div>
+
+                                                        <div class="dropzone-progress">
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                                    aria-valuemin="0" aria-valuemax="100"
+                                                                    aria-valuenow="0" data-dz-uploadprogress>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dropzone-toolbar">
+                                                            <span class="dropzone-delete" data-dz-remove><i
+                                                                    class="bi bi-x fs-1"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="form-text text-muted">Max file size is 5MB and max number of
+                                                files is 1.</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary hover-scale" data-bs-toggle="tooltip" title="Save Config">Update Configuration</button>
+                            <button type="submit" class="btn btn-primary hover-scale" data-bs-toggle="tooltip"
+                                title="Save Config">Update Configuration</button>
                         </div>
                     </form>
                 </div>
@@ -165,6 +237,62 @@
 @endsection
 @push('script')
 <script>
+    // set the dropzone container id
+        const id = "#kt_dropzonejs_example_3";
+        const dropzone = document.querySelector(id);
+
+        // set the preview element template
+        var previewNode = dropzone.querySelector(".dropzone-item");
+        previewNode.id = "";
+        var previewTemplate = previewNode.parentNode.innerHTML;
+        previewNode.parentNode.removeChild(previewNode);
+
+        var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
+            url: "{{ route('admin.webconfig.upload_company') }}", // Set the url for your upload script location
+            parallelUploads: 1,
+            acceptedFiles: ".pdf",
+            maxFilesize: 5, // Max filesize in MB
+            previewTemplate: previewTemplate,
+            previewsContainer: id + " .dropzone-items", // Define the container to display the previews
+            clickable: id + " .dropzone-select",
+            headers: { 'X-CSRF-TOKEN': $('meta[name="token"]').attr('content') }
+        });
+
+        myDropzone.on("addedfile", function (file) {
+            // Hookup the start button
+            const dropzoneItems = dropzone.querySelectorAll('.dropzone-item');
+            dropzoneItems.forEach(dropzoneItem => {
+                dropzoneItem.style.display = '';
+            });
+        });
+
+        // Update the total progress bar
+        myDropzone.on("totaluploadprogress", function (progress) {
+            const progressBars = dropzone.querySelectorAll('.progress-bar');
+            progressBars.forEach(progressBar => {
+                progressBar.style.width = progress + "%";
+            });
+        });
+
+        myDropzone.on("sending", function (file) {
+            // Show the total progress bar when upload starts
+            const progressBars = dropzone.querySelectorAll('.progress-bar');
+            progressBars.forEach(progressBar => {
+                progressBar.style.opacity = "1";
+            });
+        });
+
+        // Hide the total progress bar when nothing"s uploading anymore
+        myDropzone.on("complete", function (progress) {
+            const progressBars = dropzone.querySelectorAll('.dz-complete');
+
+            setTimeout(function () {
+                progressBars.forEach(progressBar => {
+                    progressBar.querySelector('.progress-bar').style.opacity = "0";
+                    progressBar.querySelector('.progress').style.opacity = "0";
+                });
+            }, 300);
+        });
     function hapus(id){
             var ids = id
             Swal.fire({

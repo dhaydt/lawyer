@@ -3,11 +3,19 @@
 namespace App\CPU;
 
 use App\Models\Banner;
+use App\Models\Content;
 use App\Models\WebConfig;
 use DateTime;
 
 class Helpers
 {
+    public static function getContent()
+    {
+        $content = Content::where('is_active', 1)->orderBy('updated_at', 'desc')->limit(6)->get();
+
+        return $content;
+    }
+
     public function getDate($date)
     {
         $dt = new DateTime($date);

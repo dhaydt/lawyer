@@ -9,69 +9,35 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="bloglist item">
+            @php($content = App\CPU\Helpers::getContent())
+            @foreach ($content as $c)
+            <div class="col-lg-4 col-md-6 mb30">
+                <div class="bloglist item shadow-sm">
                     <div class="post-content">
                         <div class="date-box">
-                            <div class="m">10</div>
-                            <div class="d">NOV</div>
+                            <div class="m">{{ App\CPU\Helpers::getDate($c->created_at) }}</div>
+                            <div class="d text-capitalize">{{ App\CPU\Helpers::monthChange($c->created_at) }}</div>
                         </div>
                         <div class="post-image">
-                            <img alt="" src="{{ asset('assets/images/news/1.jpg') }}">
+                            <img alt="" src="{{ asset($c->image) }}">
                         </div>
                         <div class="post-text">
-                            <span class="p-tagline">Law Firm</span>
-                            <h4><a href="news-single.html">The Lawyer European Awards shortlist<span></span></a>
+                            <span class="p-tagline text-capitalize">{{ $c->category }}</span>
+                            <h4><a href="{{ route('single-content', $c->id) }}" class="text-capitalize">{{ $c->title
+                                    }}<span></span></a>
                             </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="p-author">Fynley Wilkinson</span>
+                            <p>
+                                {{ App\CPU\Helpers::limitText($c->content) }}
+                            </p>
+                            @php($tag = json_decode($c->hashtag))
+                            @foreach ($tag as $t)
+                            <span class="p-author text-lowercase">#{{ $t }}</span>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="bloglist item">
-                    <div class="post-content">
-                        <div class="date-box">
-                            <div class="m">15</div>
-                            <div class="d">NOV</div>
-                        </div>
-                        <div class="post-image">
-                            <img alt="" src="{{ asset('assets/images/news/2.jpg') }}">
-                        </div>
-                        <div class="post-text">
-                            <span class="p-tagline">Law Firm</span>
-                            <h4><a href="news-single.html">Six firms that are setting the trend<span></span></a>
-                            </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="p-author">Fynley Wilkinson</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="bloglist item">
-                    <div class="post-content">
-                        <div class="date-box">
-                            <div class="m">20</div>
-                            <div class="d">NOV</div>
-                        </div>
-                        <div class="post-image">
-                            <img alt="" src="{{ asset('assets/images/news/3.jpg') }}">
-                        </div>
-                        <div class="post-text">
-                            <span class="p-tagline">Law Firm</span>
-                            <h4><a href="news-single.html">When it comes to law firm mergers<span></span></a>
-                            </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="p-author">Fynley Wilkinson</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

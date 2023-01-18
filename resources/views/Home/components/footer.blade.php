@@ -1,16 +1,16 @@
 <footer class="footer_page">
+
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
                 <div class="widget">
                     <a href="index.html"><img alt="" class="img-fluid mb20" src="images/logo-light.png"></a>
                     <address class="s1">
-                        <span><i class="id-color fa fa-map-marker fa-lg"></i>08 W 36th St, New York, NY 10001</span>
-                        <span><i class="id-color fa fa-phone fa-lg"></i>+1 333 9296</span>
-                        <span><i class="id-color fa fa-envelope-o fa-lg"></i><a
-                                href="mailto:contact@example.com">contact@example.com</a></span>
-                        <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">Download
-                                Brochure</a></span>
+                        <span><i class="id-color fa fa-map-marker fa-lg"></i>{{ $web_config['address'] }}</span>
+                        <span><i class="id-color fa fa-phone fa-lg"></i>+62{{ (int)$web_config['phone'] }}</span>
+                        <span><i class="id-color fa fa-fax fa-lg"></i>{{ $web_config['fax'] }}</span>
+                        <span><i class="id-color fa fa-envelope-o fa-lg"></i><ahref="mailto:contact@example.com">{{ $web_config['email'] }}</ahref=></span>
+                        <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="{{ asset('storage/company_profile'.'/'.$web_config['company_profile']) }}">Download Company Profile</a></span>
                     </address>
                 </div>
             </div>

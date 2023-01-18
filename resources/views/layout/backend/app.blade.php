@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Mirrored from preview.keenthemes.com/metronic8/demo14/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Dec 2022 13:52:33 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
+    <meta name="token" content="{{csrf_token()}}">
     @include('layout.backend.partials.head')
     @stack('style')
     @livewireStyles

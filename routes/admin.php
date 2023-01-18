@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HashtagController;
@@ -18,6 +19,9 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     Route::post('add_admin', [UserController::class, 'add_admin'])->name('post-admin');
     Route::post('update_admin', [UserController::class, 'update_admin'])->name('update-admin');
     Route::get('delete-admin/{id}', [UserController::class, 'delete_admin'])->name('delete-admin');
+
+    // CLIENT
+    Route::get('client', [ClientController::class, 'index'])->name('client');
 
     // Category ROUTE
     Route::group(['prefix' => 'category', 'as' => 'category.'], function () {
@@ -51,5 +55,6 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     Route::group(['prefix' => 'webconfig', 'as' => 'webconfig.'], function () {
         Route::get('/', [WebConfigController::class, 'index'])->name('index');
         Route::post('update', [WebConfigController::class, 'update_config'])->name('update');
+        Route::post('upload_company', [WebConfigController::class, 'upload_company'])->name('upload_company');
     });
 });

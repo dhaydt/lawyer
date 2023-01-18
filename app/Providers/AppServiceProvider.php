@@ -36,6 +36,8 @@ class AppServiceProvider extends ServiceProvider
                 'web_icon' => Helpers::get_settings($web, 'web_icon')['value'],
                 'address' => Helpers::get_settings($web, 'address')['value'],
                 'fax' => Helpers::get_settings($web, 'fax')['value'],
+                'email' => Helpers::get_settings($web, 'email')['value'],
+                'company_profile' => Helpers::get_settings($web, 'company_profile')['value'],
             ];
 
             View::share(['web_config' => $web_config]);

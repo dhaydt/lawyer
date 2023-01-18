@@ -38,7 +38,36 @@
     .f-box.f-icon-left img {
         margin-right: 30px;
     }
-
+    .post-image{
+            width: 100%;
+            height: 247px;
+            display: flex;
+            justify-content: center;
+        }
+        .post-image img{
+            height: 100%;
+            width: auto;
+            max-height: 247px;
+        }
+        ul.pagination li span, ul.pagination li button{
+            font-size: 12px;
+            color: rgb(105, 105, 105);
+            border: solid 1px #eee;
+            /* border-right: none; */
+            background: none;
+            padding: 15px 20px 15px 20px;
+            border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+        }
+        .pagination .page-item.active span{
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .pagination .page-item.disabled span{
+            color: rgb(180, 180, 180);
+            pointer-events: none;
+        }
 </style>
 @stack('css')
 @livewireStyles

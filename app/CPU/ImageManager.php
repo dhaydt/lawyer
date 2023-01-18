@@ -52,4 +52,17 @@ class ImageManager
             Storage::disk('public')->delete($dir.$old_image);
         }
     }
+
+    public static function deleteImg($full_path)
+    {
+        $dir = str_replace('storage/', '', $full_path);
+        if (Storage::disk('public')->exists($dir)) {
+            Storage::disk('public')->delete($dir);
+        }
+
+        return [
+            'success' => 1,
+            'message' => 'Removed successfully !',
+        ];
+    }
 }

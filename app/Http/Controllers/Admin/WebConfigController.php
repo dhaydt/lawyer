@@ -75,9 +75,38 @@ class WebConfigController extends Controller
         }
         $data['icon'] = $icon->value;
 
+        $email = WebConfig::where('type', 'email')->first();
+        if (!$email) {
+            $email = new WebConfig();
+            $email->type = 'email';
+            $email->value = 'admin@admin';
+            $email->save();
+        }
+        $data['email'] = $email->value;
+
+        $cp = WebConfig::where('type', 'company_profile')->first();
+        if (!$cp) {
+            $cp = new WebConfig();
+            $cp->type = 'company_profile';
+            $cp->value = null;
+            $cp->save();
+        }
+
+        $data['company_profile'] = $cp->value;
+
         $data['title'] = 'Web Configuration';
 
         return view('admin.web_config.index', $data);
+    }
+
+    public function upload_company(Request $request)
+    {
+        $company = WebConfig::where('type', 'company_profile')->first();
+        if ($request->has('file')) {
+            $company->value = ImageManager::update('company_profile/', $company->value, 'pdf', $request->file('file'));
+
+            $company->save();
+        }
     }
 
     public function update_config(Request $request)

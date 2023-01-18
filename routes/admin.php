@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HashtagController;
 use App\Http\Controllers\Admin\ServicesController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\WebConfigController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,7 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
 
     // CLIENT
     Route::get('client', [ClientController::class, 'index'])->name('client');
+    Route::get('team', [TeamController::class, 'index'])->name('team');
 
     // Category ROUTE
     Route::group(['prefix' => 'category', 'as' => 'category.'], function () {

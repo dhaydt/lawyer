@@ -23,7 +23,7 @@
                                 <a href="{{ route('admin.dashboard') }}" class="text-gray-600 text-hover-primary">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item text-gray-600">Internal</li>
-                            <li class="breadcrumb-item text-gray-500">List Client Company</li>
+                            <li class="breadcrumb-item text-gray-500">Team</li>
                         </ul>
                     </div>
                 </div>
@@ -39,8 +39,8 @@
                                 <div class="card-toolbar w-50 justify-content-end">
                                     <button type="button" wire:click.prevent="$emit('onClickAdd')"
                                         class="btn btn-primary btn-hover-rotate-end" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" title="Add Client">
-                                        <i class="fas fa-plus-square mr-2"></i> Client
+                                        data-bs-placement="top" title="Add Team">
+                                        <i class="fas fa-plus-square mr-2"></i> team
                                     </button>
                                 </div>
                             </div>
@@ -52,14 +52,15 @@
                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                                         <th class="min-w-125px">No.</th>
                                         <th class="min-w-125px">Name</th>
-                                        <th class="min-w-125px">Logo</th>
+                                        <th class="min-w-125px">Photos</th>
+                                        <th class="min-w-125px">Position</th>
                                         <th class="min-w-125px">Description</th>
                                         <th class="text-end min-w-70px">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody class="fw-semibold text-gray-600">
-                                    @if (count($client) > 0)
-                                    @foreach ($client as $i => $u)
+                                    @if (count($team) > 0)
+                                    @foreach ($team as $i => $u)
                                     <tr>
                                         <td class="text-capitalize">
                                             {{ $i+1 }}
@@ -68,11 +69,14 @@
                                             {{ $u->name }}
                                         </td>
                                         <td class="text-capitalize">
-                                            @if ($u->img != null)
-                                            <img height="100px" src="{{ asset($u->img) }}" alt="">
+                                            @if ($u->image != null)
+                                            <img height="100px" src="{{ asset($u->image) }}" alt="">
                                             @else
-                                            <span class="badge badge-danger">No Logo</span>
+                                            <span class="badge badge-danger">No Photos</span>
                                             @endif
+                                        </td>
+                                        <td class="text-capitalize">
+                                            {{ $u->position }}
                                         </td>
                                         <td class="text-capitalize">
                                             {{ $u->description }}
@@ -80,7 +84,7 @@
                                         <td class="text-end">
                                             <div class="btn-group btn-group-sm" role="group">
                                                 <button type="button"
-                                                    wire:click.prevent="$emit('onClickUpdateClient', {{ $u }})"
+                                                    wire:click.prevent="$emit('onClickUpdateTeam', {{ $u }})"
                                                     class="btn btn-sm bg-success text-white btn-hover-rotate-start"
                                                     data-bs-toggle="tooltip" data-bs-placement="top"
                                                     title="Edit {{ $u->name}}"><i
@@ -113,7 +117,7 @@
                             </div>
                             <div
                                 class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                                {{ $client->links() }}
+                                {{ $team->links() }}
                             </div>
                         </div>
                     </div>
@@ -125,7 +129,7 @@
                                 <div class="modal-header">
                                     <h5 class="modal-title">
                                         @if ($type == 'save')
-                                        Add Client
+                                        Add team
                                         @else
                                         Edit {{ $name }}
                                         @endif
@@ -148,20 +152,20 @@
                                         </div>
                                         <div class="mb-10">
                                             <label for="exampleFormControlInput1"
-                                                class="required form-label">Company name</label>
+                                                class="required form-label">Name</label>
                                             <input type="text" class="form-control form-control-solid"
-                                                wire:model="name" placeholder="company name" />
+                                                wire:model="name" placeholder="name" />
                                             @error('name')
                                             <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <div class="mb-10">
-                                            <label class="col-lg-4 col-form-label fw-semibold fs-6">Logo</label>
+                                            <label class="col-lg-4 col-form-label fw-semibold fs-6">Photos</label>
                                             <div class="col-lg-12 pt-4">
                                                 <div class="image-input image-input-outline" data-kt-image-input="true">
                                                     @if ($type == 'save')
                                                     <img class="image-input image-input-outline img-profile"
-                                                        src="{{ $image ? $image->temporaryUrl() : asset('assets_metronic/image/logo-placeholder.png') }}"></img>
+                                                        src="{{ $image ? $image->temporaryUrl() : asset('assets_metronic/image/user.png') }}"></img>
                                                     @else
                                                     @if ($image)
                                                     <img class="image-input image-input-outline img-profile"
@@ -169,13 +173,13 @@
                                                     @else
                                                     <img id="placeholder" src="{{ asset($photo) }}"
                                                         class="img-profile preview-img"
-                                                        onerror="this.src='{{ asset('assets_metronic/image/placeholder.jpg') }}'">
+                                                        onerror="this.src='{{ asset('assets_metronic/image/user.jpg') }}'">
                                                     @endif
                                                     @endif
                                                     <label id="label-img"
                                                         class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
                                                         data-kt-image-input-action="change" data-bs-toggle="tooltip"
-                                                        title="Change client company logo">
+                                                        title="Change team company logo">
                                                         <i class="bi bi-pencil-fill fs-7"></i>
                                                         <input type="file" id="image" name="image"
                                                             accept=".png, .jpg, .jpeg" wire:model="image" />
@@ -188,15 +192,19 @@
                                             @enderror
                                         </div>
                                         <div class="mb-10">
-                                            <label for="" class="required form-label">Description service</label>
+                                            <label for="" class="required form-label">Position</label>
+                                            <input type="text" name="position" class="form-control form-control-solid"
+                                                wire:model="position" />
+                                            <div class="form-text">Team position in company.</div>
+                                            @error('position')
+                                            <small class="text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                        <div class="mb-10">
+                                            <label for="" class="required form-label">Description</label>
                                             <textarea name="description" class="form-control form-control-solid" cols="30" rows="3"
                                                 wire:model="description"></textarea>
-                                            <div class="form-text">Description of the problem faced by the client.</div>
-                                            {{--
-                                            <x-forms.trix wire:model.lazy="isi_client" id="client"
-                                                :initial-value="$client->client"
-                                                @trix-attachment-add="console.log($event.attachment)" /> --}}
-                                            @error('isi_client')
+                                            @error('description')
                                             <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -222,62 +230,17 @@
 @push('script')
 <script>
     $(document).ready(function() {
-        $('#hastag-dropdown').select2({
-            placeholder: "-- Select Hashtag --"
-        });
 
-        $('#hastag-dropdowns').select2({
-        });
-
-        $('#hastag-dropdown').on('change', function (e) {
-            let data = $(this).val();
-            @this.set('hashtag', data);
-        });
-
-        $('#hastag-dropdowns').on('change', function (e) {
-            let data = $(this).val();
-            @this.set('hashtag', data);
-        });
-
-        ClassicEditor
-        .create(document.querySelector('#editor'))
-        .then(editor => {
-            editor.model.document.on('change:data', () => {
-                @this.set('isi_content', editor.getData());
-            })
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-        ClassicEditor
-            .create(document.querySelector('#editors'))
-            .then(editor => {
-                editor.model.document.on('change:data', () => {
-                    @this.set('isi_content', editor.getData());
-                })
-            })
-            .catch(error => {
-                console.error(error);
-            });
         });
 
         window.addEventListener('contentChange', function(){
-            $('#hastag-dropdowns').select2();
         })
 
         Livewire.on('onClickAdd', () => {
             @this.set('type', 'save')
-            @this.set('client_id', null)
+            @this.set('team_id', null)
             Livewire.emit('resetInput');
             $('#modal_add').modal('show');
-            const domEditableElement = document.querySelector( '#add_content .ck-editor__editable' );
-
-            // Get the editor instance from the editable element.
-            const editorInstance = domEditableElement.ckeditorInstance;
-
-            // Use the editor instance API.
-            editorInstance.setData('');
         })
 
         Livewire.on('refresh', () => {
@@ -285,48 +248,26 @@
             $('#modal_add').modal('hide')
         })
 
-        Livewire.on("finishClient", (status, message) => {
+        Livewire.on("finishTeam", (status, message) => {
             alertMessage(status, message)
         })
 
         Livewire.on('onClickRefresh', (id) => {
-            Livewire.emit('refreshClient')
+            Livewire.emit('refreshteam')
             alertMessage(1, 'Data refreshed successfully!')
         })
 
-        Livewire.on('onClickUpdateClient', (item) => {
+        Livewire.on('onClickUpdateTeam', (item) => {
             @this.set('type', 'update');
-            Livewire.emit('setClient', item);
+            Livewire.emit('setTeam', item);
             $('#modal_add').modal('show');
-
-            // $('#hastag-dropdowns').select2({
-            //     value: item.hashtag
-            // })
-
-            // $('#hastag-dropdowns').select2({
-            //     placeholder: JSON.parse(item.hashtag)
-            // })
-
-
-
-            // A reference to the editor editable element in the DOM.
-            const domEditableElement = document.querySelector( '#contents .ck-editor__editable' );
-
-            // Get the editor instance from the editable element.
-            const editorInstance = domEditableElement.ckeditorInstance;
-
-            // Use the editor instance API.
-            editorInstance.setData('');
-            editorInstance.setData( item.content);
-            $('#hastag-dropdowns').val(item.hashtag).trigger('change');
-
 
         })
 
         Livewire.on('onClickDelete', async (id) => {
             const response = await alertHapus('Warning !!!', 'Are you sure to delete this data?')
             if(response.isConfirmed == true){
-                @this.set('client_id', id)
+                @this.set('team_id', id)
                 Livewire.emit('delete')
             }
         })

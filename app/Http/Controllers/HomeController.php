@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Services;
+use App\Models\Team;
 
 class HomeController extends Controller
 {
     public function index()
     {
         $data['title'] = 'AMAR Lawyer';
+        $data['active'] = 'home';
         $data['services'] = Services::where('status', 1)->get();
 
         return view('Home.index', $data);
@@ -17,6 +19,20 @@ class HomeController extends Controller
     public function about_us()
     {
         $data['title'] = 'About Us';
+        $data['active'] = 'about_us';
+        $team = Team::get();
+        $com = [];
+        $i = 0;
+        for ($y = 0; $y < count($team); ++$y) {
+            if (!isset($com[$i])) {
+                array_push($com, []);
+            }
+            array_push($com[$i], $team[$y]);
+            if (count($com[$i]) > 1) {
+                $i = $i + 1;
+            }
+        }
+        $data['team'] = $com;
 
         return view('Home.about.index', $data);
     }
@@ -24,6 +40,7 @@ class HomeController extends Controller
     public function organization()
     {
         $data['title'] = 'Company & Organization';
+        $data['active'] = 'organization';
 
         return view('Home.organization.index', $data);
     }
@@ -31,6 +48,7 @@ class HomeController extends Controller
     public function posting()
     {
         $data['title'] = 'Posts & Journals';
+        $data['active'] = 'content';
 
         return view('Home.content.index', $data);
     }
@@ -38,6 +56,7 @@ class HomeController extends Controller
     public function services()
     {
         $data['title'] = 'Our Legal Services';
+        $data['active'] = 'services';
 
         return view('Home.services.index', $data);
     }
@@ -45,6 +64,7 @@ class HomeController extends Controller
     public function consultation()
     {
         $data['title'] = 'Consultation';
+        $data['active'] = 'consultation';
 
         return view('Home.consultation.index', $data);
     }
@@ -52,6 +72,7 @@ class HomeController extends Controller
     public function contact_us()
     {
         $data['title'] = 'Contact Us';
+        $data['active'] = 'contact_us';
 
         return view('Home.contact_us.index', $data);
     }
@@ -59,6 +80,7 @@ class HomeController extends Controller
     public function information()
     {
         $data['title'] = 'Other Information';
+        $data['active'] = 'information';
 
         return view('Home.information.index', $data);
     }
@@ -66,6 +88,7 @@ class HomeController extends Controller
     public function carrier()
     {
         $data['title'] = 'Carrier';
+        $data['active'] = 'carrier';
 
         return view('Home.carrier.index', $data);
     }

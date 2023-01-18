@@ -50,18 +50,18 @@
                     <div class="de-flex-col header-col-mid">
                         <!-- mainmenu begin -->
                         <ul id="mainmenu">
-                            <li><a href="{{ route('home') }}" class="active">Home</a></li>
-                            <li><a href="{{ route('about_us') }}" class="">About Us</a></li>
-                            <li><a href="{{ route('organization') }}" class="">Company & Organization</a></li>
-                            <li><a href="{{ route('posting') }}">Posts & Journals</a>
-                            <li><a href="javascript:">Services</a>
+                            <li><a href="{{ route('home') }}" class="{{ $active == 'home' ? 'active' : '' }}">Home</a></li>
+                            <li><a href="{{ route('about_us') }}" class="{{ $active == 'about_us' ? 'active' : '' }}">About Us</a></li>
+                            <li><a href="{{ route('organization') }}" class="{{ $active == 'organization' ? 'active' : '' }}">Company & Organization</a></li>
+                            <li><a href="{{ route('posting') }}" class="{{ $active == 'content' ? 'active' : '' }}">Posts & Journals</a>
+                            <li><a href="javascript:" class="{{ $active == 'services' || $active == 'consultation' ? 'active' : '' }}">Services</a>
                                 <ul>
                                     <li><a href="{{ route('services') }}">Our legal services</a></li>
                                     <li><a href="{{ route('consultation') }}">Direct Consultation</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ route('carrier') }}">Carrier</a>
-                            <li><a href="#">Other</a>
+                            <li><a href="{{ route('carrier') }}" class="{{ $active == 'carrier' ? 'active' : '' }}">Carrier</a>
+                            <li><a href="#" class="{{ $active == 'information' || $active == 'contact_us' ? 'active' : '' }}">Other</a>
                                 <ul>
                                     <li><a href="{{ route('information') }}">Other Infromation</a></li>
                                     <li><a href="{{ route('contact_us') }}">Contact Us</a></li>

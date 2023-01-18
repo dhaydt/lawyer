@@ -27,6 +27,10 @@
         --primary-color: {{ $web_config['bg_color'] }};
     }
 
+    #mainmenu a.active{
+        color: var(--primary-color);
+    }
+
     .f-box.f-icon-rounded img {
         display: block;
         text-align: center;

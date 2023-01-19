@@ -53,7 +53,7 @@
                                         <th class="min-w-125px">No.</th>
                                         <th class="min-w-125px">Name</th>
                                         <th class="min-w-125px">Logo</th>
-                                        <th class="min-w-125px">Description</th>
+                                        {{-- <th class="min-w-125px">Description</th> --}}
                                         <th class="text-end min-w-70px">Actions</th>
                                     </tr>
                                 </thead>
@@ -74,9 +74,9 @@
                                             <span class="badge badge-danger">No Logo</span>
                                             @endif
                                         </td>
-                                        <td class="text-capitalize">
+                                        {{-- <td class="text-capitalize">
                                             {{ $u->description }}
-                                        </td>
+                                        </td> --}}
                                         <td class="text-end">
                                             <div class="btn-group btn-group-sm" role="group">
                                                 <button type="button"
@@ -187,19 +187,15 @@
                                             <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
-                                        <div class="mb-10">
+                                        {{-- <div class="mb-10">
                                             <label for="" class="required form-label">Description service</label>
                                             <textarea name="description" class="form-control form-control-solid" cols="30" rows="3"
                                                 wire:model="description"></textarea>
                                             <div class="form-text">Description of the problem faced by the client.</div>
-                                            {{--
-                                            <x-forms.trix wire:model.lazy="isi_client" id="client"
-                                                :initial-value="$client->client"
-                                                @trix-attachment-add="console.log($event.attachment)" /> --}}
                                             @error('isi_client')
                                             <small class="text-danger">{{ $message }}</small>
                                             @enderror
-                                        </div>
+                                        </div> --}}
                                     </div>
 
                                     <div class="modal-footer">

@@ -41,6 +41,12 @@ class AppServiceProvider extends ServiceProvider
                 'about_image' => Helpers::get_settings($web, 'about_image')['value'],
                 'expertise' => Helpers::get_settings($web, 'expertise')['value'],
                 'about_us' => Helpers::get_settings($web, 'about_us')['value'],
+                'we_are' => Helpers::get_settings($web, 'who_we_are')['value'],
+                'case_count' => Helpers::get_settings($web, 'case_count')['value'],
+                'exp_count' => Helpers::get_settings($web, 'exp_count')['value'],
+                'primary_image' => Helpers::get_settings($web, 'organization_primary_image')['value'],
+                'secondary_image' => Helpers::get_settings($web, 'organization_secondary_image')['value'],
+                'exp_content' => Helpers::get_settings($web, 'exp_content')['value'],
             ];
 
             View::share(['web_config' => $web_config]);

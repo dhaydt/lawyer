@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Models\Services;
 use App\Models\Team;
 
@@ -41,6 +42,7 @@ class HomeController extends Controller
     {
         $data['title'] = 'Company & Organization';
         $data['active'] = 'organization';
+        $data['client'] = Client::get();
 
         return view('Home.organization.index', $data);
     }

@@ -1,5 +1,16 @@
 
 @extends('layout.frontend.app')
+@push('css')
+    <style>
+        .img-frame{
+            height: 370px;
+        }
+        .img-frame img{
+            height: 228px;
+            width: 228px;
+        }
+    </style>
+@endpush
 @section('content')
 <div class="no-bottom no-top" id="content">
     <div id="top"></div>
@@ -26,17 +37,12 @@
                 <div class="col-md-5">
                     <span class="p-title">Who We Are</span><br>
                     <h2>Your partner for legal</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-                        et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-                        officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                    <p>{{ $web_config['we_are'] }}</p>
                 </div>
                 <div class="col-md-6 offset-md-1">
                     <div class="de-images">
                         <div class="di-text text-white bg-color">
-                            <h1>2500</h1><span>Solved Cases</span>
+                            <h1>{{ $web_config['case_count'] }}</h1><span>Solved Cases</span>
                         </div>
                         <img class="di-small-2" src="{{ asset('assets/images/misc/d2.jpg') }}" alt="" />
                         <img class="di-big img-fluid" src="{{ asset('assets/images/misc/d1.jpg') }}" alt="" />
@@ -45,7 +51,7 @@
             </div>
         </div>
     </section>
-    <section data-bgcolor="#111111" class="text-light">
+    {{-- <section data-bgcolor="#111111" class="text-light">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 offset-lg-7">
@@ -100,83 +106,13 @@
         <div class="jarallax image-container col-md-6 pull-right">
             <img src="{{ asset('assets/images/background/9.jpg') }}" class="jarallax-img" alt="">
         </div>
-    </section>
-    <section aria-label="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>Our Lawyer Team</h2>
-                    <div class="small-border"></div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb30 wow fadeInRight" data-wow-delay=".2s">
-                    <div class="f-profile text-center">
-                        <div class="fp-wrap f-invert">
-                            <div class="fpw-overlay">
-                                <div class="fpwo-wrap">
-                                    <div class="fpwow-icons">
-                                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="fpw-overlay-btm"></div>
-                            <img src="{{ asset('assets/images/team/1.jpg') }}" class="fp-image img-fluid" alt="">
-                        </div>
-                        <h4>Fynley Wilkinson</h4>
-                        Managing Partner
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb30 wow fadeInRight" data-wow-delay=".4s">
-                    <div class="f-profile text-center">
-                        <div class="fp-wrap f-invert">
-                            <div class="fpw-overlay">
-                                <div class="fpwo-wrap">
-                                    <div class="fpwow-icons">
-                                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="fpw-overlay-btm"></div>
-                            <img src="{{ asset('assets/images/team/2.jpg') }}" class="fp-image img-fluid" alt="">
-                        </div>
-                        <h4>Sasha Welsh</h4>
-                        Senior Partner
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb30 wow fadeInRight" data-wow-delay=".6s">
-                    <div class="f-profile text-center">
-                        <div class="fp-wrap f-invert">
-                            <div class="fpw-overlay">
-                                <div class="fpwo-wrap">
-                                    <div class="fpwow-icons">
-                                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                        <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="fpw-overlay-btm"></div>
-                            <img src="{{ asset('assets/images/team/3.jpg') }}" class="fp-image img-fluid" alt="">
-                        </div>
-                        <h4>John Shepard</h4>
-                        Associate
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </section> --}}
     <section id="section-text" data-bgcolor="#111111" class="text-light">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-12 wow fadeInRight" data-wow-delay=".2s">
                     <div class="de_count ultra-big s2 text-center">
-                        <h3 class="timer" data-to="20" data-speed="1000">20</h3>
+                        <h3 class="timer" data-to="20" data-speed="1000">{{ $web_config['exp_count'] }}</h3>
                         <span class="id-color">Years of Experience</span>
                     </div>
                 </div>
@@ -186,16 +122,47 @@
                 </div>
                 <div class="col-lg-4 wow fadeInRight" data-wow-delay=".6s">
                     <p>
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
-                        provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
-                        dolorum fuga.
+                        {{ $web_config['exp_content'] }}
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section aria-label="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Our Client</h2>
+                    <div class="small-border"></div>
+                </div>
+                @foreach ($client as $c)
+                <div class="col-lg-4 col-md-6 col-sm-6 mb30 wow fadeInRight" data-wow-delay=".2s">
+                    <div class="f-profile text-center">
+                        <div class="fp-wrap f-invert">
+                            <div class="fpw-overlay">
+                                <div class="fpwo-wrap">
+                                    <div class="fpwow-icons">
+                                        <a href="javascript:"><i class="fa fa-facebook fa-lg"></i></a>
+                                        <a href="javascript:"><i class="fa fa-twitter fa-lg"></i></a>
+                                        <a href="javascript:"><i class="fa fa-linkedin fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fpw-overlay-btm"></div>
+                            <div class="img-frame">
+                                <img src="{{ asset('/' . $c['img']) }}" class="fp-image img-fluid" alt="">
+                            </div>
+                        </div>
+                        <h4>{{ $c['name'] }}</h4>
+                        {{-- Managing Partner --}}
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- <section>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
@@ -233,7 +200,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 </div>
 <!-- content close -->
 @endsection

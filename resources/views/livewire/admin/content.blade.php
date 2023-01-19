@@ -418,6 +418,14 @@
             });
         });
 
+        $('input[name="imgSecond"]').change(function(){
+            $('#placeholder2').addClass('d-none');
+        });
+
+        $('input[name="img"]').change(function(){
+            $('#placeholder').addClass('d-none');
+        });
+
         window.addEventListener('contentChange', function(){
             $('#hastag-dropdowns').select2();
         })

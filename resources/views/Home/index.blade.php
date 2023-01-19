@@ -6,9 +6,9 @@
         @include('Home.components.banner')
         @include('Home.components.jarralax')
         @include('Home.components.services')
+        @include('Home.components.experience')
         @include('Home.components.counter')
-        @include('Home.components.testimoni')
-        @include('Home.components.latest')
+        {{-- @include('Home.components.testimoni') --}}
         <section class="pt40 pb40 bg-color text-light">
             <div class="container">
                 <div class="row align-items-center">
@@ -21,6 +21,7 @@
                 </div>
             </div>
         </section>
+        @include('Home.components.latest')
     </div>
     <!-- content close -->
 {{-- @include('Home.components.floating') --}}

@@ -15,6 +15,7 @@ class ContentController extends Controller
             $data['title'] = 'Post & Journals';
             $data['judul'] = $content->title;
             $data['content'] = $content;
+            $data['active'] = 'content';
 
             return view('Home.content.single', $data);
         }

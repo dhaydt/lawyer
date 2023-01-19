@@ -50,11 +50,11 @@
             $(".owl-carousel").owlCarousel({
                 center: true,
                 items:1,
-                autoplay: false,
+                autoplay: true,
                 loop:true,
                 dots: true,
                 margin:10,
-                autoplayHoverPause: true
+                autoplayHoverPause: false
             });
         });
 </script>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ClientController;
@@ -24,6 +25,7 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     // CLIENT
     Route::get('client', [ClientController::class, 'index'])->name('client');
     Route::get('team', [TeamController::class, 'index'])->name('team');
+    Route::get('about_us', [AboutUsController::class, 'index'])->name('about_us');
 
     // Category ROUTE
     Route::group(['prefix' => 'category', 'as' => 'category.'], function () {

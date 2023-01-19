@@ -16,7 +16,7 @@ class Helpers
         return $content;
     }
 
-    public function getDate($date)
+    public static function getDate($date)
     {
         $dt = new DateTime($date);
 

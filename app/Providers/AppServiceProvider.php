@@ -38,6 +38,9 @@ class AppServiceProvider extends ServiceProvider
                 'fax' => Helpers::get_settings($web, 'fax')['value'],
                 'email' => Helpers::get_settings($web, 'email')['value'],
                 'company_profile' => Helpers::get_settings($web, 'company_profile')['value'],
+                'about_image' => Helpers::get_settings($web, 'about_image')['value'],
+                'expertise' => Helpers::get_settings($web, 'expertise')['value'],
+                'about_us' => Helpers::get_settings($web, 'about_us')['value'],
             ];
 
             View::share(['web_config' => $web_config]);

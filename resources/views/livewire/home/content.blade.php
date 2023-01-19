@@ -1,3 +1,10 @@
+@push('css')
+    <style>
+        .post-text{
+            height: 300px;
+        }
+    </style>
+@endpush
 <div>
     <section aria-label="section">
         <div class="container">

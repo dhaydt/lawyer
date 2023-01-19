@@ -25,7 +25,7 @@ data-kt-sticky-animation="false" data-kt-sticky-offset="{default: '200px', lg: '
             </button>
             <!--end::Aside toggle-->
             <!--begin::Header Logo-->
-            <a href="{{ route('home') }}">
+            <a href="{{ route('home') }}" target="_blank">
             @if (isset($web_config))
             <img alt="Logo" src="{{ $web_config ? asset('storage/company'.'/'.$web_config['web_icon']) : '' }}" onerror="this.src='{{ asset('assets_metronic/media/logos/default-small.svg') }}'"
                 class="h-30px h-lg-35px" />

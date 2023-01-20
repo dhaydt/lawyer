@@ -94,17 +94,17 @@ class Pengumuman extends Component
                 return session()->flash('fail', 'Announcement is not found');
             }
 
-            // if ($this->image != null) {
-            //     $imgName = Carbon::now()->toDateString() . '-' . uniqid() . '.' . 'png';
-            //     ImageManager::deleteImg($save->image);
-            //     $this->image->storeAs('public/' . $dir, $imgName);
-            // }
+            if ($this->image != null) {
+                $imgName = Carbon::now()->toDateString() . '-' . uniqid() . '.' . 'png';
+                ImageManager::deleteImg($save->image);
+                $this->image->storeAs('public/' . $dir, $imgName);
+            }
         } else {
-            // $save = new ModelsPengumuman();
-            // if ($this->image != null) {
-            //     $this->image->storeAs('public/' . $dir, $imgName);
-            //     $save->image = 'storage/notif/' . $imgName;
-            // }
+            $save = new ModelsPengumuman();
+            if ($this->image != null) {
+                $this->image->storeAs('public/' . $dir, $imgName);
+                $save->image = 'storage/notif/' . $imgName;
+            }
         }
 
         $save->title = $this->title_notif;

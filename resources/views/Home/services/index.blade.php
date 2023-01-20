@@ -22,19 +22,21 @@
     <section>
         <div class="container">
             <div class="row">
+                @foreach ($services as $s)
                 <div class="col-lg-4 col-md-6 mb30">
                     <div class="feature-box f-boxed style-3 text-center">
-                        <i class="id-color icofont-worker"></i>
-                        <div class="text">
-                            <h4>Labor</h4>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
+                        <img src="{{ asset('storage/services'.'/'.$s->logo) }}" alt="" class="icofont-group bg-color text-light">
+                        <div class="text mt-4">
+                            <h4>{{ $s->title }}</h4>
+                            {{ $s->description }}
                         </div>
                         <i class="wm icofont-worker"></i>
                         <div class="spacer-single"></div>
-                        <a href="#" class="btn-custom btn-black">Read More</a>
+                        <a href="#" class="btn-custom btn-black d-none">Read More</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb30">
+                @endforeach
+                {{-- <div class="col-lg-4 col-md-6 mb30">
                     <div class="feature-box f-boxed style-3 text-center">
                         <i class="id-color icofont-medical-sign-alt"></i>
                         <div class="text">
@@ -129,7 +131,7 @@
                         <div class="spacer-single"></div>
                         <a href="#" class="btn-custom btn-black">Read More</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

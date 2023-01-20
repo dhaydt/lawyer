@@ -118,7 +118,7 @@
                 </div>
                 <div class="col-lg-4 p-lg-5  mb-sm-30 wow fadeInRight" data-wow-delay=".4s">
                     <span class="p-title">Welcome</span><br>
-                    <h2>Justica is Your Best Partner for Legal Solutions</h2>
+                    <h2>{{ $web_config['name'] }} is Your Best Partner for Legal Solutions</h2>
                 </div>
                 <div class="col-lg-4 wow fadeInRight" data-wow-delay=".6s">
                     <p>

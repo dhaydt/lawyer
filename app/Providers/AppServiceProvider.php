@@ -47,6 +47,7 @@ class AppServiceProvider extends ServiceProvider
                 'primary_image' => Helpers::get_settings($web, 'organization_primary_image')['value'],
                 'secondary_image' => Helpers::get_settings($web, 'organization_secondary_image')['value'],
                 'exp_content' => Helpers::get_settings($web, 'exp_content')['value'],
+                'wa' => Helpers::get_settings($web, 'wa')['value'],
             ];
 
             View::share(['web_config' => $web_config]);

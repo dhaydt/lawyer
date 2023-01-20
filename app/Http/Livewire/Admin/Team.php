@@ -122,6 +122,7 @@ class Team extends Component
             return session()->flash('fail', 'team not found!');
         }
         $name = $cabang->title;
+        ImageManager::deleteImg($cabang->image);
 
         $cabang->delete();
         $this->emit('finishTeam', 1, 'team Company deleted successfully!');

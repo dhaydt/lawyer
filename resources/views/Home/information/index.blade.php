@@ -14,142 +14,30 @@
         </div>
     </div>
 </section>
-<!-- section close -->
-<!-- section begin -->
-<section aria-label="section">
-    <div class="container d-none">
+<section aria-label="section" class="jarallax text-light">
+    <img src="{{ asset('assets/images/background/bgNotif.jpg') }}" class="jarallax-img" alt="">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="bloglist item">
-                    <div class="post-content">
-                        <div class="date-box">
-                            <div class="m">10</div>
-                            <div class="d">NOV</div>
-                        </div>
-                        <div class="post-image">
-                            <img alt="" src="{{ asset('assets/images/news/1.jpg') }}">
-                        </div>
-                        <div class="post-text">
-                            <span class="p-tagline">Law Firm</span>
-                            <h4><a href="news-single.html">The Lawyer European Awards shortlist<span></span></a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="p-author">Fynley Wilkinson</span>
+            <div class="col-lg-12">
+                <div class="text-center text-light">
+                    <h2>Announcement</h2>
+                    <div class="small-border"></div>
+                </div>
+                <div class="owl-carousel owl-theme" id="testimonial-carousel">
+                    @foreach ($notif as $n)
+                    <div class="item">
+                        <div class="de_testi opt-2 review">
+                            <blockquote>
+                                <i class="fa fa-quote-left id-color"></i>
+                                <h3>{{ $n->title }}</h3>
+                                <p>{{ $n->description }}</p>
+                                {{-- <div class="de_testi_by"><span>John, Pixar Studio</span></div> --}}
+                            </blockquote>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="bloglist item">
-                    <div class="post-content">
-                        <div class="date-box">
-                            <div class="m">15</div>
-                            <div class="d">NOV</div>
-                        </div>
-                        <div class="post-image">
-                            <img alt="" src="{{ asset('assets/images/news/2.jpg') }}">
-                        </div>
-                        <div class="post-text">
-                            <span class="p-tagline">Law Firm</span>
-                            <h4><a href="news-single.html">Six firms that are setting the trend<span></span></a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="p-author">Fynley Wilkinson</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="bloglist item">
-                    <div class="post-content">
-                        <div class="date-box">
-                            <div class="m">20</div>
-                            <div class="d">NOV</div>
-                        </div>
-                        <div class="post-image">
-                            <img alt="" src="{{ asset('assets/images/news/3.jpg') }}">
-                        </div>
-                        <div class="post-text">
-                            <span class="p-tagline">Law Firm</span>
-                            <h4><a href="news-single.html">When it comes to law firm mergers<span></span></a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="p-author">Fynley Wilkinson</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="bloglist item">
-                    <div class="post-content">
-                        <div class="date-box">
-                            <div class="m">25</div>
-                            <div class="d">NOV</div>
-                        </div>
-                        <div class="post-image">
-                            <img alt="" src="{{ asset('assets/images/news/4.jpg') }}">
-                        </div>
-                        <div class="post-text">
-                            <span class="p-tagline">Law Firm</span>
-                            <h4><a href="news-single.html">How to Make the Most of Your CLE<span></span></a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="p-author">Fynley Wilkinson</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="bloglist item">
-                    <div class="post-content">
-                        <div class="date-box">
-                            <div class="m">28</div>
-                            <div class="d">NOV</div>
-                        </div>
-                        <div class="post-image">
-                            <img alt="" src="{{ asset('assets/images/news/5.jpg') }}">
-                        </div>
-                        <div class="post-text">
-                            <span class="p-tagline">Law Firm</span>
-                            <h4><a href="news-single.html">The Ultimate Guide to Writing like a Lawyer<span></span></a>
-                            </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="p-author">Fynley Wilkinson</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb30">
-                <div class="bloglist item">
-                    <div class="post-content">
-                        <div class="date-box">
-                            <div class="m">30</div>
-                            <div class="d">NOV</div>
-                        </div>
-                        <div class="post-image">
-                            <img alt="" src="{{ asset('assets/images/news/6.jpg') }}">
-                        </div>
-                        <div class="post-text">
-                            <span class="p-tagline">Law Firm</span>
-                            <h4><a href="news-single.html">Should you Just Phone Your Opponent?<span></span></a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="p-author">Fynley Wilkinson</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="spacer-single"></div>
-            <ul class="pagination">
-                <li><a href="#">Prev</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">Next</a></li>
-            </ul>
         </div>
     </div>
 </section>

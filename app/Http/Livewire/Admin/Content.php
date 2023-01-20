@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\CPU\ImageManager;
 use App\Models\Category;
 use App\Models\Content as ModelsContent;
 use App\Models\Hashtag;
@@ -131,6 +132,7 @@ class Content extends Component
 
         if ($this->image != null) {
             $imgName = Carbon::now()->toDateString().'-'.uniqid().'.'.'png';
+            ImageManager::deleteImg($cabang->image);
             $this->image->storeAs('public/'.$dir, $imgName);
             $cabang->image = 'storage/content/'.$imgName;
         }
@@ -157,7 +159,7 @@ class Content extends Component
             return session()->flash('fail', 'Post/Journals not found!');
         }
         $name = $cabang->title;
-
+        ImageManager::deleteImg($cabang->image);
         $cabang->delete();
         $this->emit('finishContent', 1, 'Post/Journals deleted successfully!');
         $this->emit('refresh');

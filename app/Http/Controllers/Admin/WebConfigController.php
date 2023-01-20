@@ -21,6 +21,15 @@ class WebConfigController extends Controller
         }
         $data['web_name'] = $web_name->value;
 
+        $wa = WebConfig::where('type', 'wa')->first();
+        if (!$wa) {
+            $wa = new WebConfig();
+            $wa->type = 'wa';
+            $wa->value = '';
+            $wa->save();
+        }
+        $data['wa'] = $wa->value;
+
         $phone = WebConfig::where('type', 'phone')->first();
         if (!$phone) {
             $phone = new WebConfig();
@@ -137,6 +146,14 @@ class WebConfigController extends Controller
             Toastr::success('Web Name Changed Successfully!');
         }
         $data['web_name'] = $web_name->value;
+
+        $wa= WebConfig::where('type', 'wa')->first();
+        if ($wa->value !== $request->wa) {
+            $wa->value = $request->wa;
+            $wa->save();
+            Toastr::success('WhatsApp Consultation number Changed Successfully!');
+        }
+        $data['wa'] = $wa->value;
 
         $phone = WebConfig::where('type', 'phone')->first();
         if ($phone->value !== $request->phone) {

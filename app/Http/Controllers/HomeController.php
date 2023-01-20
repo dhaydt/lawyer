@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\Pengumuman;
 use App\Models\Services;
 use App\Models\Team;
 
@@ -59,6 +60,7 @@ class HomeController extends Controller
     {
         $data['title'] = 'Our Legal Services';
         $data['active'] = 'services';
+        $data['services'] = Services::where('status', 1)->orderBy('created_at', 'desc')->get();
 
         return view('Home.services.index', $data);
     }
@@ -83,6 +85,7 @@ class HomeController extends Controller
     {
         $data['title'] = 'Other Information';
         $data['active'] = 'information';
+        $data['notif'] = Pengumuman::where('status', 1)->orderBy('created_at', 'desc')->get();
 
         return view('Home.information.index', $data);
     }

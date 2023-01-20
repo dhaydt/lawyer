@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HashtagController;
 use App\Http\Controllers\Admin\OrganizationController;
+use App\Http\Controllers\Admin\PengumumanController;
 use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\UserController;
@@ -28,6 +29,7 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     Route::get('team', [TeamController::class, 'index'])->name('team');
     Route::get('about_us', [AboutUsController::class, 'index'])->name('about_us');
     Route::get('organization', [OrganizationController::class, 'index'])->name('organization');
+    Route::get('pengumuman', [PengumumanController::class, 'index'])->name('pengumuman');
 
     // Category ROUTE
     Route::group(['prefix' => 'category', 'as' => 'category.'], function () {

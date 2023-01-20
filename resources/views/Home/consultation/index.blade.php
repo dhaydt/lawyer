@@ -54,7 +54,19 @@
             </div>
         </div>
     </section>
-    <section aria-label="section" class="text-light" data-bgcolor="#111111">
+    <section class="pt40 pb40 bg-color text-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 mb-sm-30 text-lg-left text-sm-center">
+                    <h3 class="no-bottom">Now! Get a Free Consultation for Your Case.</h3>
+                </div>
+                <div class="col-md-4 text-lg-right rtl-lg-left text-sm-center">
+                    <a href="https://wa.me/+62{{ (int)$web_config['wa'] }}?text=saya%20ingin%20konsultasi%20tentang%20" target="_blank" class="btn-custom btn-black light">Consultation via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- <section aria-label="section" class="text-light" data-bgcolor="#111111">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 mb-sm-30 text-center">
@@ -84,24 +96,24 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section class="jarallax text-light">
         <img src="{{ asset('assets/images/background/2.jpg') }}" class="jarallax-img" alt="">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-12 wow fadeInRight" data-wow-delay=".2s">
                     <div class="de_count ultra-big s2 border-light text-center">
-                        <h3 class="timer" data-to="20" data-speed="1000">20</h3>
+                        <h3 class="timer" data-to="20" data-speed="1000">{{ $web_config['exp_count'] }}</h3>
                         <span class="id-color">Years of Experience</span>
                     </div>
                 </div>
                 <div class="col-lg-4 p-lg-5  mb-sm-30 wow fadeInRight" data-wow-delay=".4s">
                     <span class="p-title">About Us</span><br>
-                    <h2>Justica is Your Best Partner for Legal Solutions</h2>
+                    <h2>{{ $web_config['name'] }}  is Your Best Partner for Legal Solutions</h2>
                 </div>
                 <div class="col-lg-4 wow fadeInRight" data-wow-delay=".6s">
                     <p>
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                        {{ $web_config['exp_content'] }}
                     </p>
                 </div>
             </div>

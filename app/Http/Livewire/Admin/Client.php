@@ -159,6 +159,7 @@ class Client extends Component
             return session()->flash('fail', 'Client Company not found!');
         }
         $name = $cabang->title;
+        ImageManager::deleteImg($cabang->image);
 
         $cabang->delete();
         $this->emit('finishClient', 1, 'Client Company deleted successfully!');

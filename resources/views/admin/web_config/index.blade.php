@@ -92,11 +92,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mb-10">
-                                <label for="exampleFormControlInput1" class="required form-label">Company
-                                    Address</label>
-                                <textarea name="address"
-                                    class="form-control form-control-solid">{{ $address }}</textarea>
+                            <div class="mb-10 row">
+                                <div class="col-6">
+                                        <label for="exampleFormControlInput1" class="required form-label">WhatsApp Consultation</label>
+                                        <input type="text" name="wa" class="form-control form-control-solid"
+                                            value="{{ $wa }}" />
+                                </div>
+                                <div class="col-6">
+                                    <label for="exampleFormControlInput1" class="required form-label">Company
+                                        Address</label>
+                                    <textarea name="address"
+                                        class="form-control form-control-solid">{{ $address }}</textarea>
+                                </div>
                             </div>
                             <div class="row mb-10">
                                 <div class="col-md-4">

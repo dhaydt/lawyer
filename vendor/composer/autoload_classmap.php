@@ -54,6 +54,7 @@ return array(
     'App\\Models\\Client' => $baseDir . '/app/Models/Client.php',
     'App\\Models\\Content' => $baseDir . '/app/Models/Content.php',
     'App\\Models\\Hashtag' => $baseDir . '/app/Models/Hashtag.php',
+    'App\\Models\\Jobs' => $baseDir . '/app/Models/Jobs.php',
     'App\\Models\\LoginLogs' => $baseDir . '/app/Models/LoginLogs.php',
     'App\\Models\\Pengumuman' => $baseDir . '/app/Models/Pengumuman.php',
     'App\\Models\\Role' => $baseDir . '/app/Models/Role.php',

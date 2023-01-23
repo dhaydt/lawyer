@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\HashtagController;
 use App\Http\Controllers\Admin\OrganizationController;
 use App\Http\Controllers\Admin\PengumumanController;
@@ -32,6 +33,7 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     Route::get('organization', [OrganizationController::class, 'index'])->name('organization');
     Route::get('pengumuman', [PengumumanController::class, 'index'])->name('pengumuman');
     Route::get('recruitment', [RecruitmentController::class, 'index'])->name('recruitment');
+    Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 
     // Category ROUTE
     Route::group(['prefix' => 'category', 'as' => 'category.'], function () {

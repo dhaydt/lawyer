@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '2fdc45a3a0e504c481b36a26dabb934076a88434',
+        'reference' => '111ca3804ba3793042c05ec5f453002f755832ee',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -27,6 +27,15 @@
             'install_path' => __DIR__ . '/../barryvdh/laravel-debugbar',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'bensampo/laravel-embed' => array(
+            'pretty_version' => 'v1.4.0',
+            'version' => '1.4.0.0',
+            'reference' => 'd94dfe948f9edfc0a541067712918630a607a438',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../bensampo/laravel-embed',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'brick/math' => array(
             'pretty_version' => '0.9.3',
@@ -406,7 +415,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '2fdc45a3a0e504c481b36a26dabb934076a88434',
+            'reference' => '111ca3804ba3793042c05ec5f453002f755832ee',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

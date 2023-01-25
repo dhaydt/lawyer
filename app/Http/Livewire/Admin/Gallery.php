@@ -120,6 +120,9 @@ class Gallery extends Component
                 $this->image->storeAs('public/' . $dir, $imgName);
                 $save->image = 'storage/gallery/' . $imgName;
             }
+            if($this->content_type == 'youtube'){
+                $save->youtube = $this->youtube;
+            }
         }
 
         $save->title = $this->title_gallery;

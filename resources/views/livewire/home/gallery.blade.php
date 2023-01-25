@@ -46,28 +46,32 @@
                     <div class="small-border" style="background-size: cover;"></div>
                 </div>
             </div>
-        </div>
-        @if (count($video) == 0)
-        <div class="row justify-content-center">
-            <div class="col-6 text-center">
-                <img height="170px" src="{{ asset('assets/images/coming_soon.png') }}" alt="">
+            @if (count($video) == 0)
+            <div class="row justify-content-center">
+                <div class="col-6 text-center">
+                    <img height="170px" src="{{ asset('assets/images/coming_soon.png') }}" alt="">
+                </div>
             </div>
-        </div>
-        @else
-        @foreach ($video as $v)
-        <div class="col-md-4 mb30">
-            <div class="de-image-hover">
-                <a href="{{ $v->youtube }}" class="image-popup">
-                    {{-- <span class="dih-title-wrap">
-                        <span class="dih-title">{{ $v->title }}</span>
-                    </span>
-                    <span class="dih-overlay"></span> --}}
-                    {{-- <img src="{{ $i->image }}" class="img-fluid" alt=""> --}}
-                    <x-embed url="{{ $v->youtube }}" aspect-ratio="16:9"/>
-                </a>
+            @else
+            @foreach ($video as $v)
+            <div class="col-md-4 mb30">
+                <div class="de-image-hover">
+                    @if ($v->youtube == null)
+                        <span class="badge badge-danger">Youtube url is empty</span>
+                    @else
+                    <a href="{{ $v->youtube }}" class="image-popup">
+                        {{-- <span class="dih-title-wrap">
+                            <span class="dih-title">{{ $v->title }}</span>
+                        </span>
+                        <span class="dih-overlay"></span> --}}
+                        {{-- <img src="{{ $i->image }}" class="img-fluid" alt=""> --}}
+                        <x-embed url="{{ $v->youtube }}" aspect-ratio="16:9"/>
+                    </a>
+                    @endif
+                </div>
             </div>
+            @endforeach
+            @endif
         </div>
-        @endforeach
-        @endif
     </div>
 </section>

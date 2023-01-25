@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\ApplyController;
 use App\Http\Controllers\Auth\AutentikasiController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\GalleryController;
@@ -40,6 +41,7 @@ Route::get('information', [HomeController::class, 'information'])->name('informa
 Route::get('carrier', [HomeController::class, 'carrier'])->name('carrier');
 Route::get('post&journals/{id}', [ContentController::class, 'index'])->name('single-content');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
+Route::get('apply/{id}', [ApplyController::class, 'index'])->name('apply');
 
 if (file_exists(app_path('Http/Controllers/LocalizationController.php'))) {
     Route::get('lang/{locale}', [LocalizationController::class, 'lang']);

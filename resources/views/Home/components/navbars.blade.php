@@ -61,9 +61,10 @@
                                 </ul>
                             </li>
                             <li><a href="{{ route('carrier') }}" class="{{ $active == 'carrier' ? 'active' : '' }}">Carrier</a>
-                            <li><a href="#" class="{{ $active == 'information' || $active == 'contact_us' ? 'active' : '' }}">Other</a>
+                            <li><a href="#" class="{{ $active == 'information' || $active == 'contact_us' ? 'active' : ($active == 'gallery' ? 'active' : '') }}">Other</a>
                                 <ul>
                                     <li><a href="{{ route('information') }}">Other Infromation</a></li>
+                                    <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                     <li><a href="{{ route('contact_us') }}">Contact Us</a></li>
                                 </ul>
                             </li>

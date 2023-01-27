@@ -14,7 +14,7 @@
 
     header #logo .logo,
     header #logo .logo-2 {
-        max-height: 65px;
+        max-height: 60px;
         width: auto;
     }
 

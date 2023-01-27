@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <h2 class="text-capitalize">scope of legal services</h2>
+                    <h2 class="text-capitalize"><a href="{{ route('services') }}">scope of legal services</a></h2>
                     <div class="small-border"></div>
                 </div>
             </div>

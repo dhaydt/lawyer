@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\CPU\Helpers;
+use App\Models\Services;
 use App\Models\WebConfig;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
@@ -48,6 +49,7 @@ class AppServiceProvider extends ServiceProvider
                 'secondary_image' => Helpers::get_settings($web, 'organization_secondary_image')['value'],
                 'exp_content' => Helpers::get_settings($web, 'exp_content')['value'],
                 'wa' => Helpers::get_settings($web, 'wa')['value'],
+                'services' => Services::orderBy('created_at', 'desc')->get()
             ];
 
             View::share(['web_config' => $web_config]);

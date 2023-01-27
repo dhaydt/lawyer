@@ -90,7 +90,7 @@
             </div>
         </div>
     </div>
-    <div class="image-container col-md-6 pos-right" data-bgimage="url({{ asset('/'.$c[0]['image']) }}) center"></div>
+    <div class="image-container col-md-6 pos-right" data-bgimage="url({{ asset('/'.$c[0]['image']) }}) top"></div>
 </section>
 @if (isset($c[1]))
 <section data-bgcolor="#111111" class="text-light">

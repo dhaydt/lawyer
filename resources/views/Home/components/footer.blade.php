@@ -6,7 +6,7 @@
                 <div class="widget">
                     <a href="index.html"><img alt="" class="img-fluid mb20" src="images/logo-light.png"></a>
                     <address class="s1">
-                        <span><i class="id-color fa fa-map-marker fa-lg"></i>{{ $web_config['address'] }}</span>
+                        <span><i class="id-color fa fa-map-marker fa-lg text-capitalize"></i>{{ $web_config['address'] }}</span>
                         <span><i class="id-color fa fa-phone fa-lg"></i>+62{{ (int)$web_config['phone'] }}</span>
                         <span><i class="id-color fa fa-fax fa-lg"></i>{{ $web_config['fax'] }}</span>
                         <span><i class="id-color fa fa-envelope-o fa-lg"></i><ahref="mailto:contact@example.com">{{ $web_config['email'] }}</ahref=></span>
@@ -15,13 +15,15 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <h5 class="id-color mb20">Practice Areas</h5>
+                <h5 class="id-color mb20">Legal Services</h5>
                 <ul class="ul-style-2">
-                    <li>Corporate and M&A</li>
-                    <li>Construction and Real Estate</li>
+                    @foreach ($web_config['services']->take(10) as $item)
+                        <li>{{ $item['title'] }}</li>
+                    @endforeach
+                    {{-- <li>Construction and Real Estate</li>
                     <li>Commercial Duspute Resolution</li>
                     <li>Employment</li>
-                    <li>Banking and Finance</li>
+                    <li>Banking and Finance</li> --}}
                 </ul>
             </div>
             <div class="col-lg-4">

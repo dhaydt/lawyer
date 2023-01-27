@@ -73,9 +73,9 @@
                                     <select name="marital" class="form-select form-select-solid" wire:model="marital">
                                         <option value=""> -- Select Marital Status -- </option>
                                         <option value="single">Single</option>
-                                        <option value="menikah">Marry</option>
-                                        <option value="cerai">Divorced</option>
-                                        <option value="duda/janda">Widower</option>
+                                        <option value="marry">Marry</option>
+                                        <option value="divorced">Divorced</option>
+                                        <option value="widower">Widower</option>
                                     </select>
                                     @error('marital')
                                     <small class="text-danger">{{ $message }}</small>

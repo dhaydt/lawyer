@@ -34,6 +34,7 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     Route::get('pengumuman', [PengumumanController::class, 'index'])->name('pengumuman');
     Route::get('recruitment', [RecruitmentController::class, 'index'])->name('recruitment');
     Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
+    Route::get('applied', [RecruitmentController::class, 'applied'])->name('applied');
 
     // Category ROUTE
     Route::group(['prefix' => 'category', 'as' => 'category.'], function () {

@@ -14,4 +14,12 @@ class RecruitmentController extends Controller
 
         return view('admin.recruitment.recruitment', $data);
     }
+
+    public function applied()
+    {
+        $data['title'] = 'Applied Job';
+        $data['active'] = 'applied';
+
+        return view('admin.applied.applied', $data);
+    }
 }

@@ -112,7 +112,7 @@
             </div>
         </div>
     </div>
-    <div class="image-container col-md-6" data-bgimage="url({{ asset('/'.$c[1]['image']) }}) center"></div>
+    <div class="image-container col-md-6" data-bgimage="url({{ asset('/'.$c[1]['image']) }}) top"></div>
 </section>
 @endif
 @endforeach

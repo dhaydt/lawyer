@@ -9,12 +9,12 @@
                 </span>
             </div>
         </div>
-        <div class="col-7  d-flex align-items-center">
+        {{-- <div class="col-7  d-flex align-items-center">
             <marquee direction="left" class="w-100 text-light" height="25" style="background: #111">Pemerintah Tetapkan
                 Ketentuan Terbaru Mengenai Pembebasan dan Tidak Dipungutnya PPN dan/atau PPnBM terhadap Barang dan/atau
                 Jasa Kena Pajak Tertentu dari Luar Daerah Pabean</marquee>
-        </div>
-        <div class="col-3">
+        </div> --}}
+        <div class="col-10">
             <div class="topbar-right">
                 <div class="topbar-right">
                     <span class="topbar-widget"><a href="#">{{ __('general.privacy_policy') }}</a></span>

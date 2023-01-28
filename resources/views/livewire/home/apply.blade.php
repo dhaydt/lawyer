@@ -147,6 +147,9 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="text-center">
+                            @include('helper.simple-loading', ['target' => 'save', 'message' => 'Saving data...'])
+                        </div>
                         <div class="card-footer d-flex justify-content-end mt-4">
                             <button type="submit" class="btn btn-success">Apply Jobs</button>
                         </div>

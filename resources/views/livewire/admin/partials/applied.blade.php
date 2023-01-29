@@ -5,8 +5,7 @@
         <div class="card-header border-0 pt-5">
             <h3 class="card-title align-items-start flex-column">
                 <span class="card-label fw-bold fs-3 mb-1 text-capitalize">Latest Applied Job</span>
-                {{-- <span class="text-muted mt-1 fw-semibold fs-7">More than 400 new
-                    members</span> --}}
+                <span class="text-muted mt-1 fw-semibold fs-7">Applied Jobs</span>
             </h3>
             <div class="card-toolbar">
                 <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bold px-4 me-1"
@@ -35,211 +34,27 @@
                             <!--end::Table head-->
                             <!--begin::Table body-->
                             <tbody>
+                                @foreach ($applied as $s)
                                 <tr>
                                     <td>
                                         <div class="symbol symbol-50px">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-14.jpg') }}" alt="" />
+                                            <span class="symbol-label">
+                                                <img src="{{ asset('/'.$s->ktp) }}" class="h-100 align-self-center" alt="" />
+                                            </span>
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">Brad
-                                            Simmons</a>
-                                        <span class="text-muted fw-semibold d-block fs-7">Movie
-                                            Creator</span>
+                                        <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $s->name }}</a>
+                                        <span class="text-muted fw-semibold d-block fs-7">{{ $s->job->position }}</span>
                                     </td>
                                     <td>
-                                        <span class="text-muted fw-semibold d-block fs-7">Rating</span>
-                                        <div class="rating">
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                        </div>
+                                        <i class="fa-solid fa-phone mr-3"></i> {{ $s->phone }}
                                     </td>
                                     <td class="text-end">
-                                        <a href="#" class="btn btn-icon btn-light-twitter btn-sm me-3">
-                                            <i class="bi bi-twitter fs-4"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-icon btn-light-facebook btn-sm">
-                                            <i class="bi bi-facebook fs-4"></i>
-                                        </a>
+                                        {{ $s->gender }}
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <div class="symbol symbol-50px">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-5.jpg') }}" alt="" />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">Jessie
-                                            Clarcson</a>
-                                        <span class="text-muted fw-semibold d-block fs-7">HTML,
-                                            CSS Coding</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted fw-semibold d-block fs-7">Rating</span>
-                                        <div class="rating">
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-icon btn-light-twitter btn-sm me-3">
-                                            <i class="bi bi-twitter fs-4"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-icon btn-light-facebook btn-sm">
-                                            <i class="bi bi-facebook fs-4"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="symbol symbol-50px">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-20.jpg') }}" alt="" />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">Lebron
-                                            Wayde</a>
-                                        <span class="text-muted fw-semibold d-block fs-7">ReactJS
-                                            Developer</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted fw-semibold d-block fs-7">Rating</span>
-                                        <div class="rating">
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-icon btn-light-twitter btn-sm me-3">
-                                            <i class="bi bi-twitter fs-4"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-icon btn-light-facebook btn-sm">
-                                            <i class="bi bi-facebook fs-4"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="symbol symbol-50px">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-23.jpg') }}" alt="" />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">Natali
-                                            Trump</a>
-                                        <span class="text-muted fw-semibold d-block fs-7">UI/UX
-                                            Designer</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted fw-semibold d-block fs-7">Rating</span>
-                                        <div class="rating">
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-icon btn-light-twitter btn-sm me-3">
-                                            <i class="bi bi-twitter fs-4"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-icon btn-light-facebook btn-sm">
-                                            <i class="bi bi-facebook fs-4"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="symbol symbol-50px">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-10.jpg') }}" alt="" />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">Kevin
-                                            Leonard</a>
-                                        <span class="text-muted fw-semibold d-block fs-7">Art
-                                            Director</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted fw-semibold d-block fs-7">Rating</span>
-                                        <div class="rating">
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2 checked">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                            <div class="rating-label me-2">
-                                                <i class="bi bi-star-fill fs-5"></i>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-icon btn-light-twitter btn-sm me-3">
-                                            <i class="bi bi-twitter fs-4"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-icon btn-light-facebook btn-sm">
-                                            <i class="bi bi-facebook fs-4"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
                             <!--end::Table body-->
                         </table>

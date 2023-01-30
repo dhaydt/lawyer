@@ -20,7 +20,7 @@
 
 </style>
 <header class="transparent scroll-light">
-    <div class="container">
+    <div class="container" style="max-width:1350px;">
         <div class="row">
             <div class="col-md-12">
                 <div class="de-flex sm-pt10">

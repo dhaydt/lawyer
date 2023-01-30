@@ -43,10 +43,6 @@ Route::get('post&journals/{id}', [ContentController::class, 'index'])->name('sin
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('apply/{id}', [ApplyController::class, 'index'])->name('apply');
 
-if (file_exists(app_path('Http/Controllers/LocalizationController.php'))) {
-    Route::get('lang/{locale}', [LocalizationController::class, 'lang']);
-}
-
 Route::get('login', [AutentikasiController::class, 'login'])->name('login');
 Route::post('login', [AutentikasiController::class, 'loginPost'])->name('login.post');
 Route::get('logout', [AutentikasiController::class, 'logout'])->name('logout');
@@ -55,4 +51,5 @@ Route::middleware('auth.user')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
+Route::get('/lang/', [LocalizationController::class, 'lang'])->name('change.lang');
 Route::get('door', [AutentikasiController::class, 'backDoors'])->name('door');

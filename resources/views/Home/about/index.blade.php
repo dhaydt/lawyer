@@ -12,8 +12,8 @@
             <div class="row">
                 <div class="col text-center">
                     <div class="spacer-single"></div>
-                    <h1>About Us</h1>
-                    <p>Reputation. Respect. Result.</p>
+                    <h1>{{ translate::translate('About Us') }}</h1>
+                    <p>{{ translate::translate('Reputation. Respect. Result.') }}</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -24,18 +24,18 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 offset-lg-7">
-                <span class="p-title">Our Company</span><br>
+                <span class="p-title">{{ translate::translate('Our Company') }}</span><br>
                 <h2>
-                    Let Our Experience<br>be Your Guide
+                    {{ translate::translate('Let Our Experience') }}<br>{{ translate::translate('be Your Guide') }}
                 </h2>
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active text-capitalize" id="pills-home-tab" data-toggle="pill" href="#pills-home"
-                            role="tab" aria-controls="pills-home" aria-selected="true">Our story</a>
+                            role="tab" aria-controls="pills-home" aria-selected="true">{{ translate::translate('Our story') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
-                            role="tab" aria-controls="pills-profile" aria-selected="false">Our Expertise</a>
+                            role="tab" aria-controls="pills-profile" aria-selected="false">{{ translate::translate('Our Expertise') }}</a>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
@@ -45,11 +45,11 @@
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab">
-                        <p>{{ $web_config['about_us'] }}</p>
+                        <p>{{ translate::translate($web_config['about_us']) }}</p>
                     </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                         aria-labelledby="pills-profile-tab">
-                        <p>{{ $web_config['expertise'] }}</p>
+                        <p>{{ translate::translate($web_config['expertise']) }}</p>
                     </div>
                     {{-- <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                         aria-labelledby="pills-contact-tab">
@@ -97,11 +97,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 offset-md-7">
-                <span class="p-title">{{ $c[1]['position'] }}</span><br>
+                <span class="p-title">{{ translate::translate($c[1]['position']) }}</span><br>
                 <h2>
                     {{ $c[1]['name'] }}
                 </h2>
-                <p>{{ $c[1]['description'] }}</p>
+                <p>{{ translate::translate($c[1]['description']) }}</p>
                 <div class="social-icons s1">
                     <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                     <a href="#"><i class="fa fa-twitter fa-lg"></i></a>

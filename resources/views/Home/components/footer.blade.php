@@ -10,15 +10,15 @@
                         <span><i class="id-color fa fa-phone fa-lg"></i>+62{{ (int)$web_config['phone'] }}</span>
                         <span><i class="id-color fa fa-fax fa-lg"></i>{{ $web_config['fax'] }}</span>
                         <span><i class="id-color fa fa-envelope-o fa-lg"></i><ahref="mailto:contact@example.com">{{ $web_config['email'] }}</ahref=></span>
-                        <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="{{ asset('storage/company_profile'.'/'.$web_config['company_profile']) }}">Download Company Profile</a></span>
+                        <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="{{ asset('storage/company_profile'.'/'.$web_config['company_profile']) }}">{{ translate::translate('Download Company Profile') }}</a></span>
                     </address>
                 </div>
             </div>
             <div class="col-md-4">
-                <h5 class="id-color mb20">Legal Services</h5>
+                <h5 class="id-color mb20">{{ translate::translate('Legal Services') }}</h5>
                 <ul class="ul-style-2">
                     @foreach ($web_config['services']->take(10) as $item)
-                        <li>{{ $item['title'] }}</li>
+                        <li>{{ translate::translate($item['title']) }}</li>
                     @endforeach
                     {{-- <li>Construction and Real Estate</li>
                     <li>Commercial Duspute Resolution</li>
@@ -28,8 +28,8 @@
             </div>
             <div class="col-lg-4">
                 <div class="widget">
-                    <h5 class="id-color">Newsletter</h5>
-                    <p>Signup for our newsletter to get the latest news, updates and special offers in your inbox.
+                    <h5 class="id-color">{{ translate::translate('Newsletter') }}</h5>
+                    <p>{{ translate::translate('Signup for our newsletter to get the latest news, updates and special offers in your inbox.') }}
                     </p>
                     <form action="https://www.designesia.com/themes/justica/blank.php" class="row"
                         id="form_subscribe" method="post" name="form_subscribe">
@@ -41,7 +41,7 @@
                         </div>
                     </form>
                     <div class="spacer-10"></div>
-                    <small>Your email is safe with us. We don't spam.</small>
+                    <small>{{ translate::translate('Your email is safe with us. We don\'t spam.') }}</small>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                 <div class="col-md-12">
                     <div class="de-flex">
                         <div class="de-flex-col">
-                            &copy; Copyright 2022 - Justica by Designesia
+                            &copy; Copyright 2022
                         </div>
                         <div class="de-flex-col">
                             <div class="social-icons">

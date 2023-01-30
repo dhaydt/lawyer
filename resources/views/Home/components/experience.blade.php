@@ -2,18 +2,18 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 offset-lg-7">
-                <span class="p-title">Experiences</span><br>
+                <span class="p-title">{{ translate::translate('Experiences') }}</span><br>
                 <h2>
-                    Why Choose Us?
+                    {{ translate::translate('Why Choose Us?') }}
                 </h2>
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
-                            role="tab" aria-controls="pills-home" aria-selected="true">Our Story</a>
+                            role="tab" aria-controls="pills-home" aria-selected="true">{{ translate::translate('Our Story') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
-                            role="tab" aria-controls="pills-profile" aria-selected="false">Our Expertise</a>
+                            role="tab" aria-controls="pills-profile" aria-selected="false">{{ translate::translate('Our Expertise') }}</a>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
@@ -23,11 +23,11 @@
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab">
-                        <p>{{ $web_config['about_us'] }}</p>
+                        <p>{{ translate::translate($web_config['about_us']) }}</p>
                     </div>
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                         aria-labelledby="pills-profile-tab">
-                        <p>{{ $web_config['expertise'] }}</p>
+                        <p>{{ translate::translate($web_config['expertise']) }}</p>
                     </div>
                     {{-- <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                         aria-labelledby="pills-contact-tab">

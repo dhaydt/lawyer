@@ -20,17 +20,6 @@
 
 </style>
 <header class="transparent scroll-light">
-    <div class="dropdown position-absolute lang-dropdown d-none">
-        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Lang
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="lang/id">ID</a></li>
-            <li><a class="dropdown-item" href="lang/en">ENG</a></li>
-        </ul>
-    </div>
-
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -50,22 +39,22 @@
                     <div class="de-flex-col header-col-mid">
                         <!-- mainmenu begin -->
                         <ul id="mainmenu">
-                            <li><a href="{{ route('home') }}" class="{{ $active == 'home' ? 'active' : '' }}">Home</a></li>
-                            <li><a href="{{ route('about_us') }}" class="{{ $active == 'about_us' ? 'active' : '' }}">About Us</a></li>
-                            <li><a href="{{ route('organization') }}" class="{{ $active == 'organization' ? 'active' : '' }}">Company & Organization</a></li>
-                            <li><a href="{{ route('posting') }}" class="{{ $active == 'content' ? 'active' : '' }}">Posts & Journals</a>
-                            <li><a href="javascript:" class="{{ $active == 'services' || $active == 'consultation' ? 'active' : '' }}">Services</a>
+                            <li><a href="{{ route('home') }}" class="text-capitalize {{ $active == 'home' ? 'active' : '' }}">{{ translate::translate('Home') }}</a></li>
+                            <li><a href="{{ route('about_us') }}" class="{{ $active == 'about_us' ? 'active' : '' }}">{{ translate::translate('About Us') }}</a></li>
+                            <li><a href="{{ route('organization') }}" class="text-capitalize {{ $active == 'organization' ? 'active' : '' }}">{{ translate::translate('Company & Organization') }}</a></li>
+                            <li><a href="{{ route('posting') }}" class="text-capitalize {{ $active == 'content' ? 'active' : '' }}">{{ translate::translate('Posts & Journals') }}</a>
+                            <li><a href="javascript:" class="text-capitalize {{ $active == 'services' || $active == 'consultation' ? 'active' : '' }}">{{ translate::translate('Services') }}</a>
                                 <ul>
-                                    <li><a href="{{ route('services') }}">Our legal services</a></li>
-                                    <li><a href="{{ route('consultation') }}">Direct Consultation</a></li>
+                                    <li><a href="text-capitalize {{ route('services') }}">{{ translate::translate('Our legal services') }}</a></li>
+                                    <li><a href="text-capitalize {{ route('consultation') }}">{{ translate::translate('Direct Consultation') }}</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ route('carrier') }}" class="{{ $active == 'carrier' ? 'active' : '' }}">Carrier</a>
-                            <li><a href="#" class="{{ $active == 'information' || $active == 'contact_us' ? 'active' : ($active == 'gallery' ? 'active' : '') }}">Other</a>
+                            <li><a href="{{ route('carrier') }}" class="text-capitalize {{ $active == 'carrier' ? 'active' : '' }}">{{ translate::translate('career') }}</a>
+                            <li><a href="#" class="text-capitalize {{ $active == 'information' || $active == 'contact_us' ? 'active' : ($active == 'gallery' ? 'active' : '') }}">{{ translate::translate('Other') }}</a>
                                 <ul>
-                                    <li><a href="{{ route('information') }}">Other Infromation</a></li>
-                                    <li><a href="{{ route('gallery') }}">Gallery</a></li>
-                                    <li><a href="{{ route('contact_us') }}">Contact Us</a></li>
+                                    <li><a href="{{ route('information') }}" class="text-capitalize">{{ translate::translate('Other Infromation') }}</a></li>
+                                    <li><a href="{{ route('gallery') }}" class="text-capitalize">{{ translate::translate('Gallery') }}</a></li>
+                                    <li><a href="{{ route('contact_us') }}" class="text-capitalize">{{ translate::translate('Contact Us') }}</a></li>
                                 </ul>
                             </li>
 

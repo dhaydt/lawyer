@@ -11,6 +11,10 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $lang = session()->get('locale');
+        if(!$lang){
+            session()->put('locale', 'en');
+        }
         $data['title'] = 'AMAR Lawyer';
         $data['active'] = 'home';
         $data['services'] = Services::where('status', 1)->get();

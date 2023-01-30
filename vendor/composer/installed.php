@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '349edcbdf6d9cf52b9a867d216152b01ab45f6ff',
+        'reference' => '1f504ab44a18dc591ba4904b7e9cb56749185241',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -415,7 +415,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '349edcbdf6d9cf52b9a867d216152b01ab45f6ff',
+            'reference' => '1f504ab44a18dc591ba4904b7e9cb56749185241',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -997,6 +997,15 @@
             'install_path' => __DIR__ . '/../sebastian/version',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'stichoza/google-translate-php' => array(
+            'pretty_version' => 'v5.1.1',
+            'version' => '5.1.1.0',
+            'reference' => '7f528ab7e8dad78d0cfa261e4a4cac1b187f63df',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../stichoza/google-translate-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'sven/artisan-view' => array(
             'pretty_version' => 'v3.5.0',

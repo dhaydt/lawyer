@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h2>Latest News</h2>
+                    <h2>{{ translate::translate('Latest News') }}</h2>
                     <div class="small-border"></div>
                 </div>
             </div>
@@ -29,12 +29,13 @@
                             <img alt="" src="{{ asset($c->image) }}">
                         </div>
                         <div class="post-text">
-                            <span class="p-tagline text-capitalize">{{ $c->category }}</span>
-                            <h4><a href="{{ route('single-content', $c->id) }}" class="text-capitalize">{{ $c->title
+                            <span class="p-tagline text-capitalize">{{ translate::translate($c->category) }}</span>
+                            <h4><a href="{{ route('single-content', $c->id) }}" class="text-capitalize">{{ translate::translate($c->title)
                                     }}<span></span></a>
                             </h4>
                             <p>
-                                {{ App\CPU\Helpers::limitText($c->content) }}
+                                @php($news= App\CPU\Helpers::limitText($c->content))
+                                {{ translate::translate($news) }}
                             </p>
                             @php($tag = json_decode($c->hashtag))
                             @foreach ($tag as $t)

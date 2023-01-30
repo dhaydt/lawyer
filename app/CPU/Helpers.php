@@ -5,10 +5,16 @@ namespace App\CPU;
 use App\Models\Banner;
 use App\Models\Content;
 use App\Models\WebConfig;
+use Stichoza\GoogleTranslate\GoogleTranslate;
 use DateTime;
 
 class Helpers
 {
+    public static function translate($word){
+        $lang = session()->get('locale');
+        $trans = GoogleTranslate::trans($word, $lang);
+        return $trans;
+    }
     public static function getContent()
     {
         $content = Content::where('is_active', 1)->orderBy('updated_at', 'desc')->limit(6)->get();

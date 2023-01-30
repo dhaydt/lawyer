@@ -34,8 +34,9 @@
                     <form action="https://www.designesia.com/themes/justica/blank.php" class="row"
                         id="form_subscribe" method="post" name="form_subscribe">
                         <div class="col text-center">
-                            <input class="form-control" id="name_1" name="name_1" placeholder="enter your email"
-                                type="text" /> <a href="#" id="btn-submit"><i
+                            {{-- <input class="form-control" id="name_1" name="name_1" placeholder="enter your email"
+                                type="text" />  --}}
+                                <a href="#" id="btn-submit"><i
                                     class="fa fa-long-arrow-right"></i></a>
                             <div class="clearfix"></div>
                         </div>
@@ -55,13 +56,13 @@
                             &copy; Copyright 2022
                         </div>
                         <div class="de-flex-col">
-                            <div class="social-icons">
+                            {{-- <div class="social-icons">
                                 <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                                 <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
                                 <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
                                 <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
                                 <a href="#"><i class="fa fa-rss fa-lg"></i></a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

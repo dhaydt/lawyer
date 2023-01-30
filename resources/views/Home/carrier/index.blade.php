@@ -10,8 +10,8 @@
                 <div class="row">
                     <div class="col text-center">
                         <div class="spacer-single"></div>
-                        <h1>Carrier</h1>
-                        <p>Reputation. Respect. Result.</p>
+                        <h1>{{ translate::translate('Carrier') }}</h1>
+                        <p>{{ translate::translate('Reputation. Respect. Result.') }}</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>

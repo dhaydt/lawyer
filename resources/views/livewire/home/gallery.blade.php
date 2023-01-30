@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12" style="background-size: cover;">
                 <div class="text-center" style="background-size: cover;">
-                    <h2>Photos Documentation</h2>
+                    <h2>{{ translate::translate('Photos Documentation') }}</h2>
                     <div class="small-border" style="background-size: cover;"></div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                 <div class="de-image-hover">
                     <a href="{{ $i->image }}" class="image-popup">
                         <span class="dih-title-wrap">
-                            <span class="dih-title">{{ $i->title }}</span>
+                            <span class="dih-title">{{ translate::translate($i->title) }}</span>
                         </span>
                         <span class="dih-overlay"></span>
                         <img src="{{ $i->image }}" class="img-fluid" alt="">
@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-lg-12" style="background-size: cover;">
                 <div class="text-center" style="background-size: cover;">
-                    <h2>Video Documentation</h2>
+                    <h2>{{ translate::translate('Video Documentation') }}</h2>
                     <div class="small-border" style="background-size: cover;"></div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
             <div class="col-md-4 mb30">
                 <div class="de-image-hover">
                     @if ($v->youtube == null)
-                        <span class="badge badge-danger">Youtube url is empty</span>
+                        <span class="badge badge-danger">{{ translate::translate('Youtube url is empty') }}</span>
                     @else
                     <a href="{{ $v->youtube }}" class="image-popup">
                         {{-- <span class="dih-title-wrap">

@@ -10,8 +10,8 @@
                 <div class="row">
                     <div class="col text-center">
                         <div class="spacer-single"></div>
-                        <h1>Our Legal Services</h1>
-                        <p>Reputation. Respect. Result.</p>
+                        <h1>{{ translate::translate('Our Legal Services') }}</h1>
+                        <p>{{ translate::translate('Reputation. Respect. Result.') }}</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -27,12 +27,12 @@
                     <div class="feature-box f-boxed style-3 text-center">
                         <img src="{{ asset('storage/services'.'/'.$s->logo) }}" alt="" class="icofont-group bg-color text-light">
                         <div class="text mt-4">
-                            <h4>{{ $s->title }}</h4>
-                            {{ $s->description }}
+                            <h4>{{ translate::translate($s->title) }}</h4>
+                            {{ translate::translate($s->description) }}
                         </div>
                         <i class="wm icofont-worker"></i>
                         <div class="spacer-single"></div>
-                        <a href="#" class="btn-custom btn-black d-none">Read More</a>
+                        {{-- <a href="#" class="btn-custom btn-black d-none">Read More</a> --}}
                     </div>
                 </div>
                 @endforeach

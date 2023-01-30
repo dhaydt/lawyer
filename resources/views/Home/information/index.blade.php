@@ -6,8 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1>Other Informations</h1>
-                    <p>Reputation. Respect. Result.</p>
+                    <h1>{{ translate::translate('Other Informations') }}</h1>
+                    <p>{{ translate::translate('Reputation. Respect. Result.') }}</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center text-light">
-                    <h2>Announcement</h2>
+                    <h2>{{ translate::translate('Announcement') }}</h2>
                     <div class="small-border"></div>
                 </div>
                 <div class="owl-carousel owl-theme" id="testimonial-carousel">
@@ -29,8 +29,8 @@
                         <div class="de_testi opt-2 review">
                             <blockquote>
                                 <i class="fa fa-quote-left id-color"></i>
-                                <h3>{{ $n->title }}</h3>
-                                <p>{{ $n->description }}</p>
+                                <h3>{{ translate::translate($n->title) }}</h3>
+                                <p>{{ translate::translate($n->description) }}</p>
                                 {{-- <div class="de_testi_by"><span>John, Pixar Studio</span></div> --}}
                             </blockquote>
                         </div>

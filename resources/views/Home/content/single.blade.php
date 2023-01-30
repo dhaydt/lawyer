@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="text-capitalize">{{ $judul }}</h1>
+                    <h1 class="text-capitalize">{{ translate::translate($judul) }}</h1>
                 </div>
 
                 <div class="clearfix"></div>
@@ -16,7 +16,7 @@
 </section>
 <section aria-label="section">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="blog-read">
                     @if ($content->image != null)
@@ -28,7 +28,7 @@
                 </div>
                 <div class="spacer-single"></div>
             </div>
-            <div id="sidebar" class="col-md-4">
+            {{-- <div id="sidebar" class="col-md-4">
                 <div class="widget widget-post">
                     <h4>Recent Posts</h4>
                     <div class="small-border"></div>
@@ -63,7 +63,7 @@
                         <li><a href="#link">Website</a></li>
                     </ul>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>

@@ -22,8 +22,8 @@
                 <div class="row">
                     <div class="col text-center">
                         <div class="spacer-single"></div>
-                        <h1>Company & Organization</h1>
-                        <p>Reputation. Respect. Result.</p>
+                        <h1>{{ translate::translate('Company & Organization') }}</h1>
+                        <p>{{ translate::translate('Reputation. Respect. Result.') }}</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -35,14 +35,14 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-5">
-                    <span class="p-title">Who We Are</span><br>
-                    <h2>Your partner for legal</h2>
-                    <p>{{ $web_config['we_are'] }}</p>
+                    <span class="p-title">{{ translate::translate('Who We Are') }}</span><br>
+                    <h2>{{ translate::translate('Your partner for legal') }}</h2>
+                    <p>{{ translate::translate($web_config['we_are']) }}</p>
                 </div>
                 <div class="col-md-6 offset-md-1">
                     <div class="de-images">
                         <div class="di-text text-white bg-color">
-                            <h1>{{ $web_config['case_count'] }}</h1><span>Solved Cases</span>
+                            <h1>{{ $web_config['case_count'] }}</h1><span>{{ translate::translate("Solved Cases") }}</span>
                         </div>
                         <img class="di-small-2" src="{{ asset('assets/images/misc/d2.jpg') }}" alt="" />
                         <img class="di-big img-fluid" src="{{ asset('assets/images/misc/d1.jpg') }}" alt="" />
@@ -113,16 +113,16 @@
                 <div class="col-lg-4 col-md-12 wow fadeInRight" data-wow-delay=".2s">
                     <div class="de_count ultra-big s2 text-center">
                         <h3 class="timer" data-to="{{ $web_config['exp_count'] }}" data-speed="1000">{{ $web_config['exp_count'] }}</h3>
-                        <span class="id-color">Years of Experience</span>
+                        <span class="id-color">{{ translate::translate('Years of Experience') }}</span>
                     </div>
                 </div>
                 <div class="col-lg-4 p-lg-5  mb-sm-30 wow fadeInRight" data-wow-delay=".4s">
-                    <span class="p-title">Welcome</span><br>
-                    <h2>{{ $web_config['name'] }} is Your Best Partner for Legal Solutions</h2>
+                    <span class="p-title">{{ translate::translate('Welcome') }}</span><br>
+                    <h2>{{ $web_config['name'] }} {{ translate::translate('is Your Best Partner for Legal Solutions') }}</h2>
                 </div>
                 <div class="col-lg-4 wow fadeInRight" data-wow-delay=".6s">
                     <p>
-                        {{ $web_config['exp_content'] }}
+                        {{ translate::translate($web_config['exp_content']) }}
                     </p>
                 </div>
             </div>
@@ -132,7 +132,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2>Our Client</h2>
+                    <h2>{{ translate::translate('Our Client') }}</h2>
                     <div class="small-border"></div>
                 </div>
                 @foreach ($client as $c)

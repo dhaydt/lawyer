@@ -8,27 +8,27 @@
             <div class="col-md-6 mb30" style="background-size: cover;">
                 <div class="box-highlight s2" style="background-size: cover;">
                     <div class="heading text-center text-light" style="background-size: cover;">
-                        <h3>{{ $c->position }}</h3>
+                        <h3>{{ translate::translate($c->position) }}</h3>
                     </div>
                     <div class="content" style="background-size: cover;">
                         <div class="accordion" style="background-size: cover;">
                             <div class="accordion-section" style="background-size: cover;">
                                 <div class="accordion-section-title active" data-tab="#accordion-b-1" style="background-size: cover;">
-                                    Job Description
+                                    {{ translate::translate('Job Description') }}
                                 </div>
                                 <div class="accordion-section-content" id="accordion-b-1" style="background-size: cover; display: block;">
-                                    {!! $c->description !!}
+                                    {!! translate::translate($c->description) !!}
                                 </div>
                                 <div class="accordion-section-title" data-tab="#accordion-b-2" style="background-size: cover;">
-                                    Qualification
+                                    {{ translate::translate('Qualification') }}
                                 </div>
                                 <div class="accordion-section-content" id="accordion-b-2" style="background-size: cover; display: none;">
-                                    {!! $c->qualification !!}
+                                    {!! translate::translate($c->qualification) !!}
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <a href="{{ route('apply', ['id' => $c->id]) }}" class="btn-custom btn-black">Apply Now</a>
+                            <a href="{{ route('apply', ['id' => $c->id]) }}" class="btn-custom btn-black">{{ translate::translate('Apply Now') }}</a>
                         </div>
                     </div>
                 </div>

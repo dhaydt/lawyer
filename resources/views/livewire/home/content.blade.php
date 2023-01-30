@@ -21,8 +21,8 @@
                                 <img alt="" src="{{ asset($c->image) }}">
                             </div>
                             <div class="post-text">
-                                <span class="p-tagline text-capitalize">{{ $c->category }}</span>
-                                <h4><a href="{{ route('single-content', $c->id) }}" class="text-capitalize">{{ $c->title }}<span></span></a>
+                                <span class="p-tagline text-capitalize">{{ translate::translate($c->category) }}</span>
+                                <h4><a href="{{ route('single-content', $c->id) }}" class="text-capitalize">{{ translate::translate($c->title) }}<span></span></a>
                                 </h4>
                                 <p>
                                     {{ App\CPU\Helpers::limitText($c->content) }}

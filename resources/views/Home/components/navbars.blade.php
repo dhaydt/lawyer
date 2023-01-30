@@ -45,8 +45,8 @@
                             <li><a href="{{ route('posting') }}" class="text-capitalize {{ $active == 'content' ? 'active' : '' }}">{{ translate::translate('Posts & Journals') }}</a>
                             <li><a href="javascript:" class="text-capitalize {{ $active == 'services' || $active == 'consultation' ? 'active' : '' }}">{{ translate::translate('Services') }}</a>
                                 <ul>
-                                    <li><a href="text-capitalize {{ route('services') }}">{{ translate::translate('Our legal services') }}</a></li>
-                                    <li><a href="text-capitalize {{ route('consultation') }}">{{ translate::translate('Direct Consultation') }}</a></li>
+                                    <li><a class="text-capitalize " href="{{ route('services') }}">{{ translate::translate('Our legal services') }}</a></li>
+                                    <li><a class="text-capitalize " href="{{ route('consultation') }}">{{ translate::translate('Direct Consultation') }}</a></li>
                                 </ul>
                             </li>
                             <li><a href="{{ route('carrier') }}" class="text-capitalize {{ $active == 'carrier' ? 'active' : '' }}">{{ translate::translate('career') }}</a>
@@ -54,7 +54,7 @@
                                 <ul>
                                     <li><a href="{{ route('information') }}" class="text-capitalize">{{ translate::translate('Other Infromation') }}</a></li>
                                     <li><a href="{{ route('gallery') }}" class="text-capitalize">{{ translate::translate('Gallery') }}</a></li>
-                                    <li><a href="{{ route('contact_us') }}" class="text-capitalize">{{ translate::translate('Contact Us') }}</a></li>
+                                    {{-- <li><a href="{{ route('contact_us') }}" class="text-capitalize">{{ translate::translate('Contact Us') }}</a></li> --}}
                                 </ul>
                             </li>
 

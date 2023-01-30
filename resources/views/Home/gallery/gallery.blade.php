@@ -6,8 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1>Gallery Documentation</h1>
-                    <p>Reputation. Respect. Result.</p>
+                    <h1>{{ translate::translate('Gallery Documentation') }}</h1>
+                    <p>{{ translate::translate('Reputation. Respect. Result.') }}</p>
                 </div>
                 <div class="clearfix"></div>
             </div>

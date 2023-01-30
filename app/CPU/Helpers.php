@@ -12,8 +12,12 @@ class Helpers
 {
     public static function translate($word){
         $lang = session()->get('locale');
-        $trans = GoogleTranslate::trans($word, $lang);
-        return $trans;
+        if($lang == 'en'){
+            return $word;
+        }else{
+            $trans = GoogleTranslate::trans($word, $lang);
+            return $trans;
+        }
     }
     public static function getContent()
     {

@@ -25,7 +25,7 @@
                 @foreach ($services as $s)
                 <div class="col-lg-4 col-md-6 mb30">
                     <div class="feature-box f-boxed style-3 text-center">
-                        <img src="{{ asset('storage/services'.'/'.$s->logo) }}" alt="" class="icofont-group bg-color text-light">
+                        <img src="{{ asset('storage/services'.'/'.$s->logo) }}" alt="" class="icofont-group bg-color text-light" style="height: 100px;">
                         <div class="text mt-4">
                             <h4>{{ translate::translate($s->title) }}</h4>
                             {{ translate::translate($s->description) }}

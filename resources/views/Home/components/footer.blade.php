@@ -31,16 +31,16 @@
                     <h5 class="id-color">{{ translate::translate('Newsletter') }}</h5>
                     <p>{{ translate::translate('Signup for our newsletter to get the latest news, updates and special offers in your inbox.') }}
                     </p>
-                    <form action="https://www.designesia.com/themes/justica/blank.php" class="row"
+                    {{-- <form action="https://www.designesia.com/themes/justica/blank.php" class="row"
                         id="form_subscribe" method="post" name="form_subscribe">
                         <div class="col text-center">
-                            {{-- <input class="form-control" id="name_1" name="name_1" placeholder="enter your email"
-                                type="text" />  --}}
+                            <input class="form-control" id="name_1" name="name_1" placeholder="enter your email"
+                                type="text" /> 
                                 <a href="#" id="btn-submit"><i
                                     class="fa fa-long-arrow-right"></i></a>
                             <div class="clearfix"></div>
                         </div>
-                    </form>
+                    </form> --}}
                     <div class="spacer-10"></div>
                     <small>{{ translate::translate('Your email is safe with us. We don\'t spam.') }}</small>
                 </div>

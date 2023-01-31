@@ -53,7 +53,7 @@
         </div>
         <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
             <div class="content flex-row-fluid" id="kt_content">
-                <div class="card">
+                <div class="card pt-4">
                     <form action="{{ route('admin.webconfig.update') }}" method="POST" enctype="multipart/form-data">
                         <div class="card-body pt-0">
                             @csrf
@@ -226,6 +226,163 @@
                                             </div>
                                             <span class="form-text text-muted">Max file size is 5MB and max number of
                                                 files is 1.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <span>Slider Bottom Content</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">Content 1 Title</label>
+                                            <input type="text" name="c1_title" class="form-control form-control-solid"
+                                                value="{{ $c1_title }}" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">Content 1 Description</label>
+                                            <textarea name="c1_content" class="form-control form-control-solid">{{ $c1_content }}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="d-flex flex-column text-center">
+                                            <label for="bg_color" class="required form-label">Content 1 Icon</label>
+                                            <div class="pt-4">
+                                                <div class="image-input image-input-outline" data-kt-image-input="true">
+                                                    <div class="image-input-wrapper w-150px h-150px"
+                                                        style="background-image: url({{ asset('storage/company'.'/'.$c1_icon) }}); background-size: 150px 150px; background-repeat: no-repeat;">
+                                                    </div>
+                                                    <label
+                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                        data-kt-image-input-action="change" data-bs-toggle="tooltip"
+                                                        title="Change web logo" data-kt-initialized="1">
+                                                        <i class="bi bi-pencil-fill fs-7"></i>
+                                                        <input type="file" name="c1_icon" accept=".png, .jpg, .jpeg">
+                                                        <input type="hidden" name="avatar_remove">
+                                                    </label>
+                                                    <span
+                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                        data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
+                                                        aria-label="Cancel avatar" data-kt-initialized="1">
+                                                        <i class="bi bi-x fs-2"></i>
+                                                    </span>
+                                                    <span
+                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                        data-kt-image-input-action="remove" data-bs-toggle="tooltip"
+                                                        aria-label="Remove avatar" data-kt-initialized="1">
+                                                        <i class="bi bi-x fs-2"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">Content 2 Title</label>
+                                            <input type="text" name="c2_title" class="form-control form-control-solid"
+                                                value="{{ $c2_title }}" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">Content 2 Description</label>
+                                            <textarea name="c2_content" class="form-control form-control-solid">{{ $c2_content }}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="d-flex flex-column text-center">
+                                            <label for="bg_color" class="required form-label">Content 2 Icon</label>
+                                            <div class="pt-4">
+                                                <div class="image-input image-input-outline" data-kt-image-input="true">
+                                                    <div class="image-input-wrapper w-150px h-150px"
+                                                        style="background-image: url({{ asset('storage/company'.'/'.$c2_icon) }}); background-size: 150px 150px; background-repeat: no-repeat;">
+                                                    </div>
+                                                    <label
+                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                        data-kt-image-input-action="change" data-bs-toggle="tooltip"
+                                                        title="Change web logo" data-kt-initialized="1">
+                                                        <i class="bi bi-pencil-fill fs-7"></i>
+                                                        <input type="file" name="c2_icon" accept=".png, .jpg, .jpeg">
+                                                        <input type="hidden" name="avatar_remove">
+                                                    </label>
+                                                    <span
+                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                        data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
+                                                        aria-label="Cancel avatar" data-kt-initialized="1">
+                                                        <i class="bi bi-x fs-2"></i>
+                                                    </span>
+                                                    <span
+                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                        data-kt-image-input-action="remove" data-bs-toggle="tooltip"
+                                                        aria-label="Remove avatar" data-kt-initialized="1">
+                                                        <i class="bi bi-x fs-2"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">Content 3 Title</label>
+                                            <input type="text" name="c3_title" class="form-control form-control-solid"
+                                                value="{{ $c3_title }}" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">Content 3 Description</label>
+                                            <textarea name="c3_content" class="form-control form-control-solid">{{ $c3_content }}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="d-flex flex-column text-center">
+                                            <label for="bg_color" class="required form-label">Content 3 Icon</label>
+                                            <div class="pt-4">
+                                                <div class="image-input image-input-outline" data-kt-image-input="true">
+                                                    <div class="image-input-wrapper w-150px h-150px"
+                                                        style="background-image: url({{ asset('storage/company'.'/'.$c3_icon) }}); background-size: 150px 150px; background-repeat: no-repeat;">
+                                                    </div>
+                                                    <label
+                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                        data-kt-image-input-action="change" data-bs-toggle="tooltip"
+                                                        title="Change web logo" data-kt-initialized="1">
+                                                        <i class="bi bi-pencil-fill fs-7"></i>
+                                                        <input type="file" name="c3_icon" accept=".png, .jpg, .jpeg">
+                                                        <input type="hidden" name="avatar_remove">
+                                                    </label>
+                                                    <span
+                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                        data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
+                                                        aria-label="Cancel avatar" data-kt-initialized="1">
+                                                        <i class="bi bi-x fs-2"></i>
+                                                    </span>
+                                                    <span
+                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                        data-kt-image-input-action="remove" data-bs-toggle="tooltip"
+                                                        aria-label="Remove avatar" data-kt-initialized="1">
+                                                        <i class="bi bi-x fs-2"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

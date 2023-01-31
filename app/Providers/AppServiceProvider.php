@@ -27,6 +27,40 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $check_banner = WebConfig::where('type', 'slider_content_1')->first();
+        $check_banner2 = WebConfig::where('type', 'slider_content_2')->first();
+        $check_banner3 = WebConfig::where('type', 'slider_content_3')->first();
+
+        if(!$check_banner){
+            $new = new WebConfig();
+            $new->type = 'slider_content_1';
+            $new->value = json_encode([
+                'icon' => null,
+                'title' => 'Request Quote',
+                'content' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.'
+            ]);
+            $new->save();
+        }
+        if(!$check_banner2){
+            $new2 = new WebConfig();
+            $new2->type = 'slider_content_2';
+            $new2->value = json_encode([
+                'icon' => null,
+                'title' => 'Investigation',
+                'content' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.'
+            ]);
+            $new2->save();
+        }
+        if(!$check_banner3){
+            $new3 = new WebConfig();
+            $new3->type = 'slider_content_3';
+            $new3->value = json_encode([
+                'icon' => null,
+                'title' => 'Case Fight',
+                'content' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.'
+            ]);
+            $new3->save();
+        }
         try {
             $web = WebConfig::all();
             $web_config = [
@@ -49,7 +83,10 @@ class AppServiceProvider extends ServiceProvider
                 'secondary_image' => Helpers::get_settings($web, 'organization_secondary_image')['value'],
                 'exp_content' => Helpers::get_settings($web, 'exp_content')['value'],
                 'wa' => Helpers::get_settings($web, 'wa')['value'],
-                'services' => Services::orderBy('created_at', 'desc')->get()
+                'services' => Services::orderBy('created_at', 'desc')->get(),
+                'slider_content_1' => json_decode(Helpers::get_settings($web, 'slider_content_1')['value']),
+                'slider_content_2' => json_decode(Helpers::get_settings($web, 'slider_content_2')['value']),
+                'slider_content_3' => json_decode(Helpers::get_settings($web, 'slider_content_3')['value']),
             ];
 
             View::share(['web_config' => $web_config]);

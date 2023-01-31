@@ -2,34 +2,31 @@
     <div class="container">
         <div class="row bg-color no-gutters mt-100">
             <div class="col-lg-4 col-md-6">
-                <div class="feature-box f-boxed style-3 text-center" data-bgcolor="rgba(0,0,0,.1)">
-                    <i class="icofont-letter"></i>
+                <div class="feature-box f-boxed style-3 text-center" data-bgcolor="rgba(0,0,0,.1)" style="height: 279px;">
+                    <img class="icofont-letter mb-2" src="{{ asset('storage/company/'.$web_config['slider_content_1']->icon) }}" style="height: 50px"/>
                     <div class="text">
-                        <h4>Request Quote</h4>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem.
+                        <h4>{{$web_config['slider_content_1']->title}}</h4>
+                        {{$web_config['slider_content_1']->content}}
                     </div>
                     <i class="wm icofont-letter"></i>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="feature-box f-boxed style-3 text-center" data-bgcolor="rgba(0,0,0,.2)">
-                    <i class="icofont-investigation"></i>
+                <div class="feature-box f-boxed style-3 text-center" data-bgcolor="rgba(0,0,0,.2)" style="height: 279px;">
+                    <img class="icofont-letter mb-2" src="{{ asset('storage/company/'.$web_config['slider_content_2']->icon) }}" style="height: 50px"/>
                     <div class="text">
-                        <h4>Investigation</h4>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem.
+                        <h4>{{$web_config['slider_content_2']->title}}</h4>
+                        {{$web_config['slider_content_2']->content}}
                     </div>
                     <i class="wm icofont-investigation"></i>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="feature-box f-boxed style-3 text-center" data-bgcolor="rgba(0,0,0,.3)">
-                    <i class="icofont-hand-power"></i>
+                <div class="feature-box f-boxed style-3 text-center" data-bgcolor="rgba(0,0,0,.3)" style="height: 279px;">
+                    <img class="icofont-letter mb-2" src="{{ asset('storage/company/'.$web_config['slider_content_3']->icon) }}" style="height: 50px"/>
                     <div class="text">
-                        <h4>Case Fight</h4>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem.
+                        <h4>{{$web_config['slider_content_3']->title}}</h4>
+                        {{$web_config['slider_content_3']->content}}
                     </div>
                     <i class="wm icofont-hand-power"></i>
                 </div>

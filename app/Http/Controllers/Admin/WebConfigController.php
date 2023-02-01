@@ -214,7 +214,7 @@ class WebConfigController extends Controller
                 $c2_ic = ImageManager::update('company/', $e2_title->icon, 'png', $request->file('c2_icon'));
                 $c2_title->value = json_encode(['icon' => $c2_ic, 'title' => $request->c2_title, 'content' => $request->c2_content]);
             }else{
-                $c2_title->value = json_encode(['icon' => $e2_title, 'title' => $request->c2_title, 'content' => $request->c2_content]);
+                $c2_title->value = json_encode(['icon' => $e2_title->icon, 'title' => $request->c2_title, 'content' => $request->c2_content]);
             }
             $c2_title->save();
             Toastr::success('Content slider 2 Changed Successfully!');
@@ -229,7 +229,7 @@ class WebConfigController extends Controller
                 $c3_ic = ImageManager::update('company/', $e3_title->icon, 'png', $request->file('c3_icon'));
                 $c3_title->value = json_encode(['icon' => $c3_ic, 'title' => $request->c3_title, 'content' => $request->c3_content]);
             }else{
-                $c3_title->value = json_encode(['icon' => $e3_title, 'title' => $request->c3_title, 'content' => $request->c3_content]);
+                $c3_title->value = json_encode(['icon' => $e3_title->icon, 'title' => $request->c3_title, 'content' => $request->c3_content]);
             }
             $c3_title->save();
             Toastr::success('Content slider 3 Changed Successfully!');

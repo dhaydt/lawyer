@@ -45,7 +45,7 @@
                                     </td>
                                     <td>
                                         <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $s->name }}</a>
-                                        <span class="text-muted fw-semibold d-block fs-7">{{ $s->job->position }}</span>
+                                        <span class="text-muted fw-semibold d-block fs-7">{{ $s->job ? $s->job->position : 'Invalid job data'}}</span>
                                     </td>
                                     <td>
                                         <i class="fa-solid fa-phone mr-3"></i> {{ $s->phone }}

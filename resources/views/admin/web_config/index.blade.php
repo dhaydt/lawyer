@@ -234,6 +234,45 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-title">
+                                    Social Media Link
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">Facebook URL</label>
+                                            <input type="text" name="fb" class="form-control form-control-solid"
+                                                value="{{ $fb }}" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">Instagram URL</label>
+                                            <input type="text" name="ig" class="form-control form-control-solid"
+                                                value="{{ $ig }}" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">Twitter URL</label>
+                                            <input type="text" name="twitter" class="form-control form-control-solid"
+                                                value="{{ $twitter }}" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">LinkedIn URL</label>
+                                            <input type="text" name="linkedin" class="form-control form-control-solid"
+                                                value="{{ $linkedin }}" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
                                     <span>Slider Bottom Content</span>
                                 </div>
                             </div>

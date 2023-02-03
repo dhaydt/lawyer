@@ -30,7 +30,38 @@ class AppServiceProvider extends ServiceProvider
         $check_banner = WebConfig::where('type', 'slider_content_1')->first();
         $check_banner2 = WebConfig::where('type', 'slider_content_2')->first();
         $check_banner3 = WebConfig::where('type', 'slider_content_3')->first();
+        $check_fb = WebConfig::where('type', 'fb')->first();
+        $check_twitter = WebConfig::where('type', 'twitter')->first();
+        $check_ig = WebConfig::where('type', 'ig')->first();
+        $check_linkedin = WebConfig::where('type', 'linkedin')->first();
 
+        if(!$check_fb){
+            $fb = new WebConfig();
+            $fb->type = 'fb';
+            $fb->value = '';
+            $fb->save();
+        }
+
+        if(!$check_twitter){
+            $twitter = new WebConfig();
+            $twitter->type = 'twitter';
+            $twitter->value = '';
+            $twitter->save();
+        }
+
+        if(!$check_ig){
+            $ig = new WebConfig();
+            $ig->type = 'ig';
+            $ig->value = '';
+            $ig->save();
+        }
+
+        if(!$check_linkedin){
+            $linkedin = new WebConfig();
+            $linkedin->type = 'linkedin';
+            $linkedin->value = '';
+            $linkedin->save();
+        }
         if(!$check_banner){
             $new = new WebConfig();
             $new->type = 'slider_content_1';
@@ -87,6 +118,10 @@ class AppServiceProvider extends ServiceProvider
                 'slider_content_1' => json_decode(Helpers::get_settings($web, 'slider_content_1')['value']),
                 'slider_content_2' => json_decode(Helpers::get_settings($web, 'slider_content_2')['value']),
                 'slider_content_3' => json_decode(Helpers::get_settings($web, 'slider_content_3')['value']),
+                'fb' => Helpers::get_settings($web, 'fb')['value'],
+                'ig' => Helpers::get_settings($web, 'ig')['value'],
+                'twitter' => Helpers::get_settings($web, 'twitter')['value'],
+                'linkedin' => Helpers::get_settings($web, 'linkedin')['value'],
             ];
 
             View::share(['web_config' => $web_config]);

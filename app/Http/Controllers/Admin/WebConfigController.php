@@ -104,6 +104,10 @@ class WebConfigController extends Controller
 
         $data['company_profile'] = $cp->value;
         $web = WebConfig::all();
+        $data['fb'] = Helpers::get_settings($web, 'fb')['value'];
+        $data['ig'] = Helpers::get_settings($web, 'ig')['value'];
+        $data['linkedin'] = Helpers::get_settings($web, 'linkedin')['value'];
+        $data['twitter'] = Helpers::get_settings($web, 'twitter')['value'];
         $data['c1_title'] = json_decode(Helpers::get_settings($web, 'slider_content_1')['value'])->title;
         $data['c1_content'] = json_decode(Helpers::get_settings($web, 'slider_content_1')['value'])->content;
         $data['c1_icon'] = json_decode(Helpers::get_settings($web, 'slider_content_1')['value'])->icon;
@@ -199,6 +203,38 @@ class WebConfigController extends Controller
             Toastr::success('Company Address Changed Successfully!');
         }
         $data['address'] = $address->value;
+        
+        $fb = WebConfig::where('type', 'fb')->first();
+        if ($fb->value !== $request->fb) {
+            $fb->value = $request->fb;
+            $fb->save();
+            Toastr::success('Facebook URL Changed Successfully!');
+        }
+        $data['fb'] = $fb->value;
+
+        $ig = WebConfig::where('type', 'ig')->first();
+        if ($ig->value !== $request->ig) {
+            $ig->value = $request->ig;
+            $ig->save();
+            Toastr::success('Instagram URL Changed Successfully!');
+        }
+        $data['ig'] = $ig->value;
+
+        $twitter = WebConfig::where('type', 'twitter')->first();
+        if ($twitter->value !== $request->twitter) {
+            $twitter->value = $request->twitter;
+            $twitter->save();
+            Toastr::success('Twitter URL Changed Successfully!');
+        }
+        $data['twitter'] = $twitter->value;
+
+        $linkedin = WebConfig::where('type', 'linkedin')->first();
+        if ($linkedin->value !== $request->linkedin) {
+            $linkedin->value = $request->linkedin;
+            $linkedin->save();
+            Toastr::success('LinkedIn URL Changed Successfully!');
+        }
+        $data['linkedin'] = $linkedin->value;
         
         $c1_title = WebConfig::where('type', 'slider_content_1')->first();
         $e1_title = json_decode($c1_title->value);

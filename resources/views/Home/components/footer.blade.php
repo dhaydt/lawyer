@@ -54,15 +54,23 @@
                     <div class="de-flex">
                         <div class="de-flex-col">
                             &copy; Copyright 2022
+
                         </div>
                         <div class="de-flex-col">
-                            {{-- <div class="social-icons">
-                                <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-rss fa-lg"></i></a>
-                            </div> --}}
+                            <div class="social-icons">
+                                @if ($web_config['fb'] != '')
+                                <a href="{{ $web_config['fb'] }}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                                @endif
+                                @if ($web_config['twitter'] != '')
+                                <a href="{{ $web_config['twitter'] }}" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                                @endif
+                                @if ($web_config['linkedin'] != '')
+                                <a href="{{ $web_config['linkedin'] }}" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+                                @endif
+                                @if ($web_config['ig'] != '')
+                                <a href="{{ $web_config['ig'] }}" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>

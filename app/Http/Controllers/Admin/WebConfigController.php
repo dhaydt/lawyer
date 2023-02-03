@@ -167,6 +167,14 @@ class WebConfigController extends Controller
             Toastr::success('WhatsApp Consultation number Changed Successfully!');
         }
         $data['wa'] = $wa->value;
+        
+        $email= WebConfig::where('type', 'email')->first();
+        if ($email->value !== $request->email) {
+            $email->value = $request->email;
+            $email->save();
+            Toastr::success('Email Changed Successfully!');
+        }
+        $data['wa'] = $wa->value;
 
         $phone = WebConfig::where('type', 'phone')->first();
         if ($phone->value !== $request->phone) {

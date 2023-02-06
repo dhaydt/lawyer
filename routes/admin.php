@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\HashtagController;
 use App\Http\Controllers\Admin\OrganizationController;
 use App\Http\Controllers\Admin\PengumumanController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RecruitmentController;
 use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\TeamController;
@@ -35,6 +36,7 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
     Route::get('recruitment', [RecruitmentController::class, 'index'])->name('recruitment');
     Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
     Route::get('applied', [RecruitmentController::class, 'applied'])->name('applied');
+    Route::get('profile', [ProfileController::class, 'index'])->name('profile');
 
     // Category ROUTE
     Route::group(['prefix' => 'category', 'as' => 'category.'], function () {

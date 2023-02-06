@@ -4,12 +4,17 @@ namespace App\CPU;
 
 use App\Models\Banner;
 use App\Models\Content;
+use App\Models\User;
 use App\Models\WebConfig;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 use DateTime;
 
 class Helpers
 {
+    public static function getAuth(){
+        $user= User::find(session()->get('user_id'));
+        return $user;
+    }
     public static function translate($word){
         $lang = session()->get('locale');
         if($word){

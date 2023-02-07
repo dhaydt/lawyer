@@ -13,6 +13,7 @@
     <div id="wrapper">
         @include('Home.components.navbars')
         @yield('content')
+        @include('Home.partials.floating')
         <a href="#" id="back-to-top"></a>
         <!-- footer begin -->
         @include('Home.components.footer')

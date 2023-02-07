@@ -6,7 +6,7 @@
                     <img class="icofont-letter mb-2" src="{{ asset('storage/company/'.$web_config['slider_content_1']->icon) }}" style="height: 50px"/>
                     <div class="text">
                         <h4>{{$web_config['slider_content_1']->title}}</h4>
-                        {{$web_config['slider_content_1']->content}}
+                        {{ translate::translate($web_config['slider_content_1']->content)}}
                     </div>
                     <i class="wm icofont-letter"></i>
                 </div>
@@ -16,7 +16,7 @@
                     <img class="icofont-letter mb-2" src="{{ asset('storage/company/'.$web_config['slider_content_2']->icon) }}" style="height: 50px"/>
                     <div class="text">
                         <h4>{{$web_config['slider_content_2']->title}}</h4>
-                        {{$web_config['slider_content_2']->content}}
+                        {{translate::translate($web_config['slider_content_2']->content)}}
                     </div>
                     <i class="wm icofont-investigation"></i>
                 </div>
@@ -26,7 +26,7 @@
                     <img class="icofont-letter mb-2" src="{{ asset('storage/company/'.$web_config['slider_content_3']->icon) }}" style="height: 50px"/>
                     <div class="text">
                         <h4>{{$web_config['slider_content_3']->title}}</h4>
-                        {{$web_config['slider_content_3']->content}}
+                        {{translate::translate($web_config['slider_content_3']->content)}}
                     </div>
                     <i class="wm icofont-hand-power"></i>
                 </div>

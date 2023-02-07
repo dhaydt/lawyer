@@ -26,7 +26,7 @@
 <div class="whatsapp pt40 pb40 bg-color text-light">
   <div class="whatsapp-child d-flex align-items-center h-100">
       <a href="https://wa.me/+62{{ (int)$web_config['wa'] }}?text=saya%20ingin%20konsultasi%20tentang%20"
-        class="btn-wa light px-3 d-flex justify-content-center align-items-center">
+        class="btn-wa light px-3 d-flex justify-content-center align-items-center" target="_blank">
         <img src="{{ asset('assets/images/wa.png') }}" height="35px" class="me-2" alt="">
         {{ translate::translate('Contact Us') }}</a>
   </div>

@@ -79,7 +79,7 @@
                 <h2 class="text-capitalize">
                     {{ $c[0]['name'] }}
                 </h2>
-                <p>{{ $c[0]['description'] }}</p>
+                <p>{{ translate::translate($c[0]['description']) }}</p>
                 <div class="social-icons s1">
                     <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                     <a href="#"><i class="fa fa-twitter fa-lg"></i></a>

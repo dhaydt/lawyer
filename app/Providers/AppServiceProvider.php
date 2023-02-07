@@ -34,6 +34,14 @@ class AppServiceProvider extends ServiceProvider
         $check_twitter = WebConfig::where('type', 'twitter')->first();
         $check_ig = WebConfig::where('type', 'ig')->first();
         $check_linkedin = WebConfig::where('type', 'linkedin')->first();
+        $checkBannerInformation = WebConfig::where('type', 'banner_info')->first();
+
+        if(!$checkBannerInformation){
+            $bi = new WebConfig();
+            $bi->type = 'banner_info';
+            $bi->value = '';
+            $bi->save();
+        }
 
         if(!$check_fb){
             $fb = new WebConfig();
@@ -122,6 +130,7 @@ class AppServiceProvider extends ServiceProvider
                 'ig' => Helpers::get_settings($web, 'ig')['value'],
                 'twitter' => Helpers::get_settings($web, 'twitter')['value'],
                 'linkedin' => Helpers::get_settings($web, 'linkedin')['value'],
+                'banner_info' => Helpers::get_settings($web, 'banner_info')['value'],
             ];
 
             View::share(['web_config' => $web_config]);

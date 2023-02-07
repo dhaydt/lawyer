@@ -1,13 +1,19 @@
 @push('style')
 <style>
-    .image-input-outline{
+    .image-input-outline {
         box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 10%);
     }
-    .img-profile{
+
+    .img-profile {
         border-radius: 10px;
         height: 200px;
         width: auto;
         max-width: 100%;
+    }
+    .btn-save-banner{
+        position: absolute;
+        right: -12px;
+        bottom: -4px;
     }
 </style>
 @endpush
@@ -20,7 +26,8 @@
                         <h1 class="d-flex text-dark fw-bold my-1 fs-3">{{ $title }}</h1>
                         <ul class="breadcrumb breadcrumb-dot fw-semibold text-gray-600 fs-7 my-1">
                             <li class="breadcrumb-item text-gray-600">
-                                <a href="{{ route('admin.dashboard') }}" class="text-gray-600 text-hover-primary">Dashboard</a>
+                                <a href="{{ route('admin.dashboard') }}"
+                                    class="text-gray-600 text-hover-primary">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item text-gray-600">Web Configuration</li>
                             <li class="breadcrumb-item text-gray-500">Announcement</li>
@@ -47,6 +54,50 @@
                         </div>
                         <div class="card-body pt-0">
                             @include('livewire.helper.alert-session')
+                            <div class="card-body d-flex flex-column">
+                                <label for="exampleFormControlInput1" class="required form-label">Banner Other
+                                    Information Pages</label>
+                                <div class="d-flex w-100 justify-content-center">
+                                    <div class="image-input image-input-outline" data-kt-image-input="true"
+                                        style="background-image: url('../assets/media/svg/avatars/blank.svg')">
+                                        @if ($photo)
+                                        <img class="image-input image-input-outline img-profile"
+                                            src="{{ $photo->temporaryUrl() }}"></img>
+                                        @else
+                                        <img id="placeholder" src="{{ asset('/'.$banner) }}"
+                                            class="img-profile preview-img"
+                                            onerror="this.src='{{ asset('assets/images/banner-placeholder.webp') }}'">
+                                        @endif
+                                        {{-- <div class="image-input-wrapper w-125px h-125px"
+                                            style="background-image: url(../assets/img/users.png)">
+                                        </div> --}}
+                                        <label
+                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                            data-kt-image-input-action="change" data-bs-toggle="tooltip"
+                                            title="Add image content">
+                                            <i class="bi bi-pencil-fill fs-7"></i>
+                                            <input wire:model="photo" type="file" id="profile" name="photo" accept=".png, .jpg, .jpeg"
+                                                />
+                                            {{-- <input type="hidden" name="avatar_remove" /> --}}
+                                        </label>
+                                        {{-- <span
+                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                            data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
+                                            title="Cancel avatar">
+                                            <i class="bi bi-x fs-2"></i>
+                                        </span> --}}
+                                        @if ($photo)
+                                        <span
+                                            class="btn btn-icon btn-circle btn-save-banner btn-active-color-primary w-30px h-30px bg-body shadow"
+                                            data-bs-toggle="tooltip" wire:click.prevent="$emit('changeBanner')"
+                                            title="Save banner">
+                                            <i class="bi bi-upload fs-2"></i>
+                                        </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                            </div>
                             <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
                                 <thead>
                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
@@ -139,7 +190,8 @@
                                     <!--end::Close-->
                                 </div>
 
-                                <form wire:ignore.self wire:submit.prevent="save" id="form_add" enctype="multipart/form-data">
+                                <form wire:ignore.self wire:submit.prevent="save" id="form_add"
+                                    enctype="multipart/form-data">
                                     <div class="modal-body">
                                         @include('helper.alert-message')
                                         <div class="text-center">
@@ -189,8 +241,8 @@
                                         </div> --}}
                                         <div class="mb-10">
                                             <label for="" class="required form-label">Description</label>
-                                            <textarea name="description" class="form-control form-control-solid" cols="30" rows="3"
-                                                wire:model="description"></textarea>
+                                            <textarea name="description" class="form-control form-control-solid"
+                                                cols="30" rows="3" wire:model="description"></textarea>
                                             @error('description')
                                             <small class="text-danger">{{ $message }}</small>
                                             @enderror
@@ -229,7 +281,11 @@
             Livewire.emit('resetInput');
             $('#modal_add').modal('show');
         })
-
+        
+        Livewire.on('changeBanner', () => {
+            Livewire.emit('upload')
+        })
+        
         Livewire.on('refresh', () => {
             $('#modal_update').modal('hide')
             $('#modal_add').modal('hide')

@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use App\CPU\ImageManager;
 use App\Models\Pengumuman as ModelsPengumuman;
+use App\Models\WebConfig;
 use Carbon\Carbon;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -14,7 +15,7 @@ class Pengumuman extends Component
     use WithPagination;
     use WithFileUploads;
     public $paginationTheme = 'bootstrap';
-    public $listeners = ['save', 'update', 'delete', 'resetInput', 'setNotif', 'refreshNotif' => '$refresh'];
+    public $listeners = ['save', 'update', 'delete', 'resetInput','upload', 'setNotif', 'refreshNotif' => '$refresh'];
 
     protected $notif;
 
@@ -27,6 +28,7 @@ class Pengumuman extends Component
     public $image;
     public $photo;
     public $notif_id;
+    public $banner;
     public $status = 1;
     public $type = 'save';
 
@@ -48,6 +50,7 @@ class Pengumuman extends Component
         })->paginate($this->total_show);
 
         $data['notif'] = $this->notif;
+        $this->banner = WebConfig::where('type', 'banner_info')->first()->value;
 
         return view('livewire.admin.pengumuman', $data);
     }
@@ -55,6 +58,21 @@ class Pengumuman extends Component
     public function mount($title)
     {
         $this->title = $title;
+    }
+
+    public function upload(){
+        $web = WebConfig::where('type', 'banner_info')->first();
+        if($web){
+            $imgName = Carbon::now()->toDateString() . '-' . uniqid() . '.' . 'png';
+            $dir = 'company';
+            ImageManager::deleteImg($web->value);
+            $this->photo->storeAs('public/' . $dir, $imgName);
+            $web->value= 'storage/company/' . $imgName;
+            $web->save();
+            $this->emit('finishNotif', 1, 'Other information page banner changed successfully!');
+        }else{
+            $this->emit('finishNotif', 0, 'Other information page banner not found!');
+        }
     }
 
     public function setNotif($item)

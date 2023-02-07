@@ -13,7 +13,7 @@
     transition: .3s;
     overflow: hidden;
   }
-  div:hover{
+  div.whatsapp:hover{
     background-color: #fff;
   }
   div.whatsapp .btn-wa{

@@ -97,7 +97,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 offset-md-7">
-                <span class="p-title">{{ translate::translate($c[1]['position']) }}</span><br>
+                <span class="p-title">{{ $c[1]['position'] }}</span><br>
                 <h2>
                     {{ $c[1]['name'] }}
                 </h2>

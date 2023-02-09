@@ -1,3 +1,17 @@
+<style>
+    .tiktok{
+        background: var(--primary-color);
+        padding: 5px 8px;
+        transition: .2s;
+        border-radius: 4px;
+    }
+    .tiktok img{
+        height: 16px;
+    }
+    .tiktok:hover{
+        border: 1px solid #fff;
+    }
+</style>
 <footer class="footer_page">
 
     <div class="container">
@@ -59,16 +73,19 @@
                         <div class="de-flex-col">
                             <div class="social-icons">
                                 @if ($web_config['fb'] != '')
-                                <a href="{{ $web_config['fb'] }}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                                <a href="{{ $web_config['fb'] }}" target="_blank" data-bs-toggle="tooltip" title="Facebook"><i class="fa fa-facebook fa-lg"></i></a>
                                 @endif
                                 @if ($web_config['twitter'] != '')
-                                <a href="{{ $web_config['twitter'] }}" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                                <a href="{{ $web_config['twitter'] }}" target="_blank" data-bs-toggle="tooltip" title="Youtube"><i class="fa fa-youtube fa-lg"></i></a>
                                 @endif
                                 @if ($web_config['linkedin'] != '')
-                                <a href="{{ $web_config['linkedin'] }}" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+                                <a href="{{ $web_config['linkedin'] }}" target="_blank" data-bs-toggle="tooltip" title="Linkedin"><i class="fa fa-linkedin fa-lg"></i></a>
                                 @endif
                                 @if ($web_config['ig'] != '')
-                                <a href="{{ $web_config['ig'] }}" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                                <a href="{{ $web_config['ig'] }}" target="_blank" data-bs-toggle="tooltip" title="Instagram"><i class="fa fa-instagram fa-lg"></i></a>
+                                @endif
+                                @if ($web_config['tiktok'] != '')
+                                <a href="{{ $web_config['tiktok'] }}" class="tiktok" target="_blank" data-bs-toggle="tooltip" title="Tiktok"><img src="{{ asset('assets/images/tiktok.png') }}" class="fa-tiktok fa-lg" /></a>
                                 @endif
                             </div>
                         </div>

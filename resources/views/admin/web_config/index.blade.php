@@ -255,7 +255,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-10">
-                                            <label for="exampleFormControlInput1" class="required form-label">Twitter URL</label>
+                                            <label for="exampleFormControlInput1" class="required form-label">Youtube URL</label>
                                             <input type="text" name="twitter" class="form-control form-control-solid"
                                                 value="{{ $twitter }}" />
                                         </div>
@@ -265,6 +265,13 @@
                                             <label for="exampleFormControlInput1" class="required form-label">LinkedIn URL</label>
                                             <input type="text" name="linkedin" class="form-control form-control-solid"
                                                 value="{{ $linkedin }}" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-10">
+                                            <label for="exampleFormControlInput1" class="required form-label">TikTok URL</label>
+                                            <input type="text" name="tiktok" class="form-control form-control-solid"
+                                                value="{{ $tiktok }}" />
                                         </div>
                                     </div>
                                 </div>

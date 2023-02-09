@@ -35,6 +35,7 @@ class AppServiceProvider extends ServiceProvider
         $check_twitter = WebConfig::where('type', 'twitter')->first();
         $check_ig = WebConfig::where('type', 'ig')->first();
         $check_linkedin = WebConfig::where('type', 'linkedin')->first();
+        $check_tiktok= WebConfig::where('type', 'tiktok')->first();
         $checkBannerInformation = WebConfig::where('type', 'banner_info')->first();
         $heroBanner = Banner::where('banner_type', 'hero')->first();
 
@@ -52,6 +53,12 @@ class AppServiceProvider extends ServiceProvider
             $bi->save();
         }
 
+        if(!$check_tiktok){
+            $tiktok = new WebConfig();
+            $tiktok->type = 'tiktok';
+            $tiktok->value = '';
+            $tiktok->save();
+        }
         if(!$check_fb){
             $fb = new WebConfig();
             $fb->type = 'fb';
@@ -139,6 +146,7 @@ class AppServiceProvider extends ServiceProvider
                 'ig' => Helpers::get_settings($web, 'ig')['value'],
                 'twitter' => Helpers::get_settings($web, 'twitter')['value'],
                 'linkedin' => Helpers::get_settings($web, 'linkedin')['value'],
+                'tiktok' => Helpers::get_settings($web, 'tiktok')['value'],
                 'banner_info' => Helpers::get_settings($web, 'banner_info')['value'],
                 'hero_banner' => Banner::where('banner_type', 'hero')->first()['photo'],
             ];

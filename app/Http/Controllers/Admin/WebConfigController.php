@@ -108,6 +108,7 @@ class WebConfigController extends Controller
         $data['ig'] = Helpers::get_settings($web, 'ig')['value'];
         $data['linkedin'] = Helpers::get_settings($web, 'linkedin')['value'];
         $data['twitter'] = Helpers::get_settings($web, 'twitter')['value'];
+        $data['tiktok'] = Helpers::get_settings($web, 'tiktok')['value'];
         $data['c1_title'] = json_decode(Helpers::get_settings($web, 'slider_content_1')['value'])->title;
         $data['c1_content'] = json_decode(Helpers::get_settings($web, 'slider_content_1')['value'])->content;
         $data['c1_icon'] = json_decode(Helpers::get_settings($web, 'slider_content_1')['value'])->icon;
@@ -211,6 +212,14 @@ class WebConfigController extends Controller
             Toastr::success('Facebook URL Changed Successfully!');
         }
         $data['fb'] = $fb->value;
+        
+        $tiktok = WebConfig::where('type', 'tiktok')->first();
+        if ($tiktok->value !== $request->tiktok) {
+            $tiktok->value = $request->tiktok;
+            $tiktok->save();
+            Toastr::success('Tiktok URL Changed Successfully!');
+        }
+        $data['fb'] = $fb->value;
 
         $ig = WebConfig::where('type', 'ig')->first();
         if ($ig->value !== $request->ig) {
@@ -224,7 +233,7 @@ class WebConfigController extends Controller
         if ($twitter->value !== $request->twitter) {
             $twitter->value = $request->twitter;
             $twitter->save();
-            Toastr::success('Twitter URL Changed Successfully!');
+            Toastr::success('Youtube URL Changed Successfully!');
         }
         $data['twitter'] = $twitter->value;
 

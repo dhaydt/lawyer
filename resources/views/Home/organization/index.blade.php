@@ -16,7 +16,7 @@
     <div id="top"></div>
     <!-- section begin -->
     <section id="subheader" class="jarallax text-white">
-        <img src="{{ asset('assets/images/background/subheader3.jpg') }}" class="jarallax-img" alt="">
+        <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="">
         <div class="center-y relative text-center">
             <div class="container">
                 <div class="row">
@@ -44,8 +44,9 @@
                         <div class="di-text text-white bg-color">
                             <h1>{{ $web_config['case_count'] }}</h1><span>{{ translate::translate("Solved Cases") }}</span>
                         </div>
-                        <img class="di-small-2" src="{{ asset('assets/images/misc/d2.jpg') }}" alt="" />
-                        <img class="di-big img-fluid" src="{{ asset('assets/images/misc/d1.jpg') }}" alt="" />
+                        {{-- {{ dd($web_config) }} --}}
+                        <img class="di-small-2" src="{{ asset($web_config['secondary_image']) }}" onerror="this.src='{{ asset('assets/images/misc/d2.jpg') }}'" alt="" />
+                        <img class="di-big img-fluid" src="{{ asset($web_config['primary_image']) }}" onerror="this.src='{{ asset('assets/images/misc/d1.jpg') }}'" alt="" />
                     </div>
                 </div>
             </div>

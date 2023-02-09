@@ -40,6 +40,41 @@
                             </div>
                         </div>
                     </div>
+                    <div class="card-body d-flex flex-column">
+                        <label for="exampleFormControlInput1" class="required form-label">Banner Hero Other Pages</label>
+                        <div class="d-flex w-100 justify-content-center">
+                            <div class="col-lg-8 pt-4">
+                                <div class="image-input image-input-outline" data-kt-image-input="true">
+                                    <div class="image-input-wrapper w-700px h-250px"
+                                        style="background-image: url({{ asset('storage/banner'.'/'.$hero->photo) }})"></div>
+                                    <label
+                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                        data-kt-image-input-action="change" data-bs-toggle="tooltip"
+                                        aria-label="Change avatar" data-kt-initialized="1">
+                                        <i class="bi bi-pencil-fill fs-7"></i>
+                                        <form action="{{ route('admin.banner.changeHero') }}" method="POST" id="imageUploadForm">
+                                            @csrf
+                                        <input type="file" name="hero" accept=".png, .jpg, .jpeg" onchange="changeHero(this.value)">
+                                        </form>
+                                        <input type="hidden" name="avatar_remove">
+                                    </label>
+                                    <span
+                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                        data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
+                                        aria-label="Cancel avatar" data-kt-initialized="1">
+                                        <i class="bi bi-x fs-2"></i>
+                                    </span>
+                                    {{-- <span
+                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                        data-kt-image-input-action="remove" data-bs-toggle="tooltip"
+                                        aria-label="Remove avatar" data-kt-initialized="1">
+                                        <i class="bi bi-x fs-2"></i>
+                                    </span> --}}
+                                </div>
+                                <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-body pt-0">
                         <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
                             <thead>
@@ -193,6 +228,31 @@
 @endsection
 @push('script')
 <script>
+     $('#imageUploadForm').on('submit',(function(e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+
+        $.ajax({
+            type:'POST',
+            url: $(this).attr('action'),
+            data:formData,
+            cache:false,
+            contentType: false,
+            processData: false,
+            success:function(data){
+                alert('Hero Updated successfully!')
+            },
+            error: function(data){
+                console.log("error");
+                console.log(data);
+            }
+        });
+    }));
+    function changeHero(){
+        $("#imageUploadForm").submit();
+        // console.log('changed', $('input[name="hero"]').prop('files'))
+
+    }
     function hapus(id){
             var ids = id
             Swal.fire({

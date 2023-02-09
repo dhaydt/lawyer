@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\CPU\Helpers;
+use App\Models\Banner;
 use App\Models\Services;
 use App\Models\WebConfig;
 use Illuminate\Support\Facades\Schema;
@@ -35,6 +36,14 @@ class AppServiceProvider extends ServiceProvider
         $check_ig = WebConfig::where('type', 'ig')->first();
         $check_linkedin = WebConfig::where('type', 'linkedin')->first();
         $checkBannerInformation = WebConfig::where('type', 'banner_info')->first();
+        $heroBanner = Banner::where('banner_type', 'hero')->first();
+
+        if(!$heroBanner){
+            $ban = new Banner();
+            $ban->banner_type = 'hero';
+            $ban->photo = '';
+            $ban->save();
+        }
 
         if(!$checkBannerInformation){
             $bi = new WebConfig();
@@ -131,6 +140,7 @@ class AppServiceProvider extends ServiceProvider
                 'twitter' => Helpers::get_settings($web, 'twitter')['value'],
                 'linkedin' => Helpers::get_settings($web, 'linkedin')['value'],
                 'banner_info' => Helpers::get_settings($web, 'banner_info')['value'],
+                'hero_banner' => Banner::where('banner_type', 'hero')->first()['photo'],
             ];
 
             View::share(['web_config' => $web_config]);

@@ -15,17 +15,28 @@ class BannerController extends Controller
     public function index()
     {
         $data['title'] = 'Banner Configuration';
-        $data['banner'] = Banner::get();
+        $data['banner'] = Banner::where('banner_type', 'main')->get();
+        $data['hero'] = Banner::where('banner_type', 'hero')->first();
 
         return view('admin.banner.index', $data);
+    }
+
+    public function changeHero(Request $request){
+        $banner = Banner::where('banner_type', 'hero')->first();
+        $banner->photo = ImageManager::update('banner/',$banner->photo, 'png', $request->file('hero'));
+        $banner->save();
+
+        return 'success';
     }
 
     public function post(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'img' => 'required',
+            'type' => 'required',
         ], [
             'img.required' => 'Banner image is required!',
+            'type.required' => 'Select banner type!',
         ]);
 
         if ($validator->errors()->count() > 0) {
@@ -38,7 +49,7 @@ class BannerController extends Controller
         }
 
         $banner = new Banner();
-        $banner->banner_type = 'main';
+        $banner->banner_type = $request['type'];
         $banner->url = null;
         $banner->is_active = 1;
         $banner->photo = ImageManager::upload('banner/', 'png', $request->file('img'));

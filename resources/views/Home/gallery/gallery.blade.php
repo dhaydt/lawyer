@@ -1,7 +1,7 @@
 @extends('layout.frontend.app')
 @section('content')
 <section id="subheader" class="jarallax text-white">
-    <img src="{{ asset('assets/images/background/subheader.jpg') }}" class="jarallax-img" alt="">
+    <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="">
     <div class="center-y relative text-center">
         <div class="container">
             <div class="row">

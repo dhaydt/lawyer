@@ -89,11 +89,13 @@ class Team extends Component
                 $imgName = Carbon::now()->toDateString().'-'.uniqid().'.'.'png';
                 ImageManager::deleteImg($save->image);
                 $this->image->storeAs('public/'.$dir, $imgName);
+                $save->image = 'storage/team/'.$imgName;
             }
         } else {
             $save = new ModelsTeam();
             if ($this->image != null) {
                 $this->image->storeAs('public/'.$dir, $imgName);
+                $save->image = 'storage/team/'.$imgName;
             }
         }
 
@@ -101,7 +103,6 @@ class Team extends Component
         $save->position = $this->position;
         $save->is_active = 1;
         $save->description = $this->description;
-        $save->image = 'storage/team/'.$imgName;
 
         $save->save();
 

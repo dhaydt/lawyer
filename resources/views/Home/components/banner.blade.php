@@ -1,21 +1,34 @@
 @push('css')
+<meta property="og:image" content="{{ asset('storage/company'.'/'.$web_config['web_logo']) }}" />
+<meta property="og:title" content="Amar Advokat Company Profile Firma Hukum" />
+<meta property="og:url" content="https://amaradvokat.com/">
+<meta property="og:description" content="Hukum Perusahaan - Hak Kekayaan Intelektual - Investasi - Properti - Pertambangan & Energi - Telekomunikasi - Dokumentasi Notaris - Perbankan & Keuangan - Asuransi - Ketenagakerjaan - Hukum Keluarga dan Perkawinan - Hukum Perdata & Pidana - Pengacara Retainer">
+
+<meta property="twitter:card" content="{{ asset('storage/company'.'/'.$web_config['web_logo']) }}" />
+<meta property="twitter:title" content="Amar Advokat Company Profile Firma Hukum" />
+<meta property="twitter:url" content="https://amaradvokat.com/">
+<meta property="twitter:description" content="Hukum Perusahaan - Hak Kekayaan Intelektual - Investasi - Properti - Pertambangan & Energi - Telekomunikasi - Dokumentasi Notaris - Perbankan & Keuangan - Asuransi - Ketenagakerjaan - Hukum Keluarga dan Perkawinan - Hukum Perdata & Pidana - Pengacara Retainer">
 <style>
-    .carousel-img{
+    .carousel-img {
         height: 100vh;
         object-fit: cover;
     }
-    .owl-carousel .owl-dots{
+
+    .owl-carousel .owl-dots {
         margin-top: -21vh;
         position: absolute;
         width: 100vw;
     }
-    .owl-carousel .owl-dots .owl-dot{
+
+    .owl-carousel .owl-dots .owl-dot {
         background: #a3a3a3;
         width: 30px;
     }
-    .owl-carousel .owl-dots .owl-dot.active{
+
+    .owl-carousel .owl-dots .owl-dot.active {
         background: #5c5c5c;
     }
+
 </style>
 @endpush
 <div id="top"></div>

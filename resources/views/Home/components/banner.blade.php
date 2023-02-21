@@ -1,12 +1,12 @@
 @push('css')
 <meta name="title" content="amar advokat website hukum advokat" />
-<meta name="description" content="Hukum Perusahaan - Hak Kekayaan Intelektual - Investasi - Properti - Pertambangan & Energi - Telekomunikasi - Dokumentasi Notaris - Perbankan & Keuangan - Asuransi - Ketenagakerjaan - Hukum Keluarga dan Perkawinan - Hukum Perdata & Pidana - Pengacara Retainer" />
-<meta name="keyword" content="amar-advokat,Hukum-Perusahaan,Hak-Kekayaan-Intelektual,Investasi,Properti,Pertambangan-dan-Energi,Telekomunikasi,Dokumentasi-Notaris,Perbankan-dan-Keuangan,Asuransi,Ketenagakerjaan,Hukum-Keluarga-dan-Perkawinan,Hukum-Perdata-dan-Pidana,Pengacara-Retainer" />
+<meta name="description" content="amar advokat ,Hukum Perusahaan - Hak Kekayaan Intelektual - Investasi - Properti - Pertambangan & Energi - Telekomunikasi - Dokumentasi Notaris - Perbankan & Keuangan - Asuransi - Ketenagakerjaan - Hukum Keluarga dan Perkawinan - Hukum Perdata & Pidana - Pengacara Retainer" />
+<meta name="keyword" content="amar advokat,Hukum-Perusahaan,Hak-Kekayaan-Intelektual,Investasi,Properti,Pertambangan-dan-Energi,Telekomunikasi,Dokumentasi-Notaris,Perbankan-dan-Keuangan,Asuransi,Ketenagakerjaan,Hukum-Keluarga-dan-Perkawinan,Hukum-Perdata-dan-Pidana,Pengacara-Retainer" />
 <link rel="canonical" href="{{ route('home') }}">
 <meta property="og:image" content="{{ asset('storage/company'.'/'.$web_config['web_logo']) }}" />
 <meta property="og:title" content="Amar Advokat Company Profile Firma Hukum" />
 <meta property="og:url" content="https://amaradvokat.com/">
-<meta property="og:description" content="Hukum Perusahaan - Hak Kekayaan Intelektual - Investasi - Properti - Pertambangan & Energi - Telekomunikasi - Dokumentasi Notaris - Perbankan & Keuangan - Asuransi - Ketenagakerjaan - Hukum Keluarga dan Perkawinan - Hukum Perdata & Pidana - Pengacara Retainer">
+<meta property="og:description" content="amar advokat Hukum Perusahaan - Hak Kekayaan Intelektual - Investasi - Properti - Pertambangan & Energi - Telekomunikasi - Dokumentasi Notaris - Perbankan & Keuangan - Asuransi - Ketenagakerjaan - Hukum Keluarga dan Perkawinan - Hukum Perdata & Pidana - Pengacara Retainer">
 
 <meta property="twitter:card" content="{{ asset('storage/company'.'/'.$web_config['web_logo']) }}" />
 <meta property="twitter:title" content="Amar Advokat Company Profile Firma Hukum" />

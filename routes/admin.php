@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\HashtagController;
+use App\Http\Controllers\Admin\LawsController;
 use App\Http\Controllers\Admin\OrganizationController;
 use App\Http\Controllers\Admin\PengumumanController;
 use App\Http\Controllers\Admin\ProfileController;
@@ -66,6 +67,13 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
         Route::post('post', [ServicesController::class, 'post'])->name('post');
         Route::post('update/{id}', [ServicesController::class, 'update'])->name('update');
         Route::get('delete/{id}', [ServicesController::class, 'delete'])->name('delete');
+    });
+    
+    Route::group(['prefix' => 'laws', 'as' => 'laws.'], function () {
+        Route::get('/', [LawsController::class, 'index'])->name('list');
+        Route::post('post', [LawsController::class, 'post'])->name('post');
+        Route::post('update/{id}', [LawsController::class, 'update'])->name('update');
+        Route::get('delete/{id}', [LawsController::class, 'delete'])->name('delete');
     });
 
     Route::group(['prefix' => 'webconfig', 'as' => 'webconfig.'], function () {

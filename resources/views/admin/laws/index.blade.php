@@ -10,7 +10,7 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column me-3">
                     <!--begin::Title-->
-                    <h1 class="d-flex text-dark fw-bold my-1 fs-3">Legal Services</h1>
+                    <h1 class="d-flex text-dark fw-bold my-1 fs-3">Laws</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-dot fw-semibold text-gray-600 fs-7 my-1">
@@ -20,7 +20,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-gray-600">Services</li>
+                        <li class="breadcrumb-item text-gray-600">Laws</li>
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-gray-500">List</li>
@@ -44,7 +44,7 @@
                             <!--begin::Search-->
                             <div class="d-flex align-items-center position-relative my-1">
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
-                                <h6>Services List</h6>
+                                <h6>Laws List</h6>
                                 <!--end::Svg Icon-->
 
                             </div>
@@ -55,7 +55,7 @@
                             <div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
                                 <!--begin::Add customer-->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#kt_modal_add_customer">Add Services</button>
+                                    data-bs-target="#kt_modal_add_customer">Add Law</button>
                                 <!--end::Add customer-->
                             </div>
                         </div>
@@ -69,9 +69,10 @@
                             <thead>
                                 <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                                     <th class="min-w-50px">No</th>
-                                    <th class="min-w-125px">Title</th>
-                                    <th class="min-w-125px">Description</th>
-                                    <th class="min-w-125px">Logo</th>
+                                    <th class="min-w-125px">Number</th>
+                                    <th class="min-w-125px">Year</th>
+                                    <th class="min-w-125px">About</th>
+                                    <th class="min-w-125px">Status</th>
                                     <th class="text-end min-w-125px">Actions</th>
                                 </tr>
                             </thead>
@@ -83,15 +84,18 @@
                                         {{ $key+1 }}
                                     </td>
                                     <td>
-                                        <a href="javascript:" class="text-gray-800 text-hover-primary mb-1">{{ $u->title
+                                        <a href="javascript:" class="text-gray-800 text-hover-primary mb-1">{{ $u->nomor
                                             }}</a>
                                     </td>
                                     <td>
-                                        <a href="#" class="text-gray-600 text-hover-primary mb-1">{{ $u->description
+                                        <a href="javascript:" class="text-gray-600 text-hover-primary mb-1">{{ $u->tahun
                                             }}</a>
                                     </td>
                                     <td>
-                                        <img width="100" height="100" src="{{ asset('storage/services'.'/'.$u['logo']) }}" alt="">
+                                        {{ $u->tentang }}
+                                    </td>
+                                    <td>
+                                        {{ $u->status }}
                                     </td>
                                     <td class="text-end">
                                         <button class="btn btn-sm btn-warning" data-bs-toggle="modal" title="Edit Admin"
@@ -108,13 +112,13 @@
                                         <div class="modal-dialog modal-dialog-centered mw-650px">
                                             <div class="modal-content">
                                                 <form class="form"
-                                                    action="{{ route('admin.services.update', ['id' => $u->id]) }}"
+                                                    action="{{ route('admin.laws.update', ['id' => $u->id]) }}"
                                                     id="kt_modal_add_customer_form" method="POST"
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <input type="hidden" name="id" value="{{ $u->id }}">
                                                     <div class="modal-header" id="kt_modal_add_customer_header">
-                                                        <h2 class="fw-bold">Edit Service</h2>
+                                                        <h2 class="fw-bold">Edit Laws</h2>
                                                     </div>
                                                     <div class="modal-body py-10 px-lg-17">
                                                         <div class="scroll-y me-n7 pe-7"
@@ -126,58 +130,24 @@
                                                             data-kt-scroll-offset="300px">
                                                             <div class="row mb-6">
                                                                 <label
-                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Service name</label>
-                                                                <input type="text"
+                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws number</label>
+                                                                <input type="number"
                                                                     class="form-control form-control-lg form-control-solid"
-                                                                    name="title" value="{{ $u->title }}">
+                                                                    name="number" value="{{ $u->nomor }}">
                                                             </div>
                                                             <div class="row mb-6">
                                                                 <label
-                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Service Logo</label>
-                                                                <div class="col-lg-8 pt-4">
-                                                                    <div class="image-input image-input-outline"
-                                                                        data-kt-image-input="true">
-                                                                        <div class="image-input-wrapper w-150px h-150px"
-                                                                            style="background-image: url({{ asset('storage/services/'.'/'.$u->logo) }})">
-                                                                        </div>
-                                                                        <label
-                                                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                                                            data-kt-image-input-action="change"
-                                                                            data-bs-toggle="tooltip"
-                                                                            aria-label="Change avatar"
-                                                                            data-kt-initialized="1">
-                                                                            <i class="bi bi-pencil-fill fs-7"></i>
-                                                                            <input type="file" name="img"
-                                                                                accept=".png, .jpg, .jpeg">
-                                                                            <input type="hidden" name="avatar_remove">
-                                                                        </label>
-                                                                        <span
-                                                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                                                            data-kt-image-input-action="cancel"
-                                                                            data-bs-toggle="tooltip"
-                                                                            aria-label="Cancel avatar"
-                                                                            data-kt-initialized="1">
-                                                                            <i class="bi bi-x fs-2"></i>
-                                                                        </span>
-                                                                        <span
-                                                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                                                            data-kt-image-input-action="remove"
-                                                                            data-bs-toggle="tooltip"
-                                                                            aria-label="Remove avatar"
-                                                                            data-kt-initialized="1">
-                                                                            <i class="bi bi-x fs-2"></i>
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="form-text">Allowed file types: png, jpg,
-                                                                        jpeg.</div>
-                                                                </div>
+                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws year</label>
+                                                                <input type="number"
+                                                                    class="form-control form-control-lg form-control-solid"
+                                                                    name="year" value="{{ $u->tahun }}">
                                                             </div>
                                                             <div class="row mb-6">
                                                                 <label
-                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Service Description</label>
+                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws about</label>
                                                                 <textarea
                                                                     class="form-control form-control-lg form-control-solid"
-                                                                    name="description">{{ $u->description }}</textarea>
+                                                                    name="about">{{ $u->tentang }}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -198,7 +168,7 @@
                                 @endforeach
                                 @else
                                 <tr class="text-center">
-                                    <td colspan="5">
+                                    <td colspan="6">
                                         <img src="{{ asset('assets_metronic/image/nodata.png') }}" class="h-200px"
                                             alt="">
                                     </td>
@@ -208,7 +178,7 @@
                         </table>
                     </div>
                 </div>
-                @include('admin.partials.modalAddServices')
+                @include('admin.partials.modalAddLaws')
             </div>
         </div>
     </div>
@@ -219,7 +189,7 @@
     function hapus(id){
             var ids = id
             Swal.fire({
-                text: "Are you sure you would like to delete this service?",
+                text: "Are you sure you would like to delete this law?",
                 icon: "question",
                 showCancelButton: true,
                 buttonsStyling: false,
@@ -232,7 +202,7 @@
             }).then(function (result) {
                 if (result.value) {
                     $.post({
-                    url: '/admin/services/delete/'+id,
+                    url: '/admin/laws/delete/'+id,
                     method: 'GET',
                     contentType: false,
                     processData: false,

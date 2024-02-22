@@ -8,6 +8,10 @@ class ContentController extends Controller
 {
     public function index($id)
     {
+        $locale = session()->get('locale');
+        if(!$locale){
+            session()->put('locale', 'id');
+        }
         $content = Content::find($id);
         if (!$content) {
             return redirect()->route('home');

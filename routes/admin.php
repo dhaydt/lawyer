@@ -74,6 +74,13 @@ Route::middleware('auth.user')->prefix('admin')->as('admin.')->group(function ()
         Route::post('post', [LawsController::class, 'post'])->name('post');
         Route::post('update/{id}', [LawsController::class, 'update'])->name('update');
         Route::get('delete/{id}', [LawsController::class, 'delete'])->name('delete');
+        Route::get('detail/{id}', [LawsController::class, 'details'])->name('detail');
+        
+        Route::group(['prefix' => 'details', 'as' => 'details.'], function(){
+            Route::post('post', [LawsController::class, 'details_post'])->name('post');
+            Route::post('update/{id}', [LawsController::class, 'details_update'])->name('update');
+            Route::get('delete/{id}', [LawsController::class, 'details_delete'])->name('delete');
+        });
     });
 
     Route::group(['prefix' => 'webconfig', 'as' => 'webconfig.'], function () {

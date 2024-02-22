@@ -10,7 +10,7 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column me-3">
                     <!--begin::Title-->
-                    <h1 class="d-flex text-dark fw-bold my-1 fs-3">Laws</h1>
+                    <h1 class="d-flex text-dark fw-bold my-1 fs-3">{{ $title }}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-dot fw-semibold text-gray-600 fs-7 my-1">
@@ -23,7 +23,7 @@
                         <li class="breadcrumb-item text-gray-600">Laws</li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-gray-500">List</li>
+                        <li class="breadcrumb-item text-gray-500">{{ $title }}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -44,7 +44,7 @@
                             <!--begin::Search-->
                             <div class="d-flex align-items-center position-relative my-1">
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
-                                <h6>Laws List</h6>
+                                <h6>Chapters</h6>
                                 <!--end::Svg Icon-->
 
                             </div>
@@ -55,7 +55,7 @@
                             <div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
                                 <!--begin::Add customer-->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#kt_modal_add_customer">Add Law</button>
+                                    data-bs-target="#kt_modal_add_customer">Add Chapter</button>
                                 <!--end::Add customer-->
                             </div>
                         </div>
@@ -69,43 +69,28 @@
                             <thead>
                                 <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                                     <th class="min-w-50px">No</th>
-                                    <th class="min-w-125px">Number</th>
-                                    <th class="min-w-125px">Year</th>
-                                    <th class="min-w-125px">About</th>
-                                    <th class="min-w-125px">Status</th>
+                                    <th class="min-w-125px">Chapter</th>
+                                    <th class="min-w-125px">Content of the law</th>
                                     <th class="text-end min-w-125px">Actions</th>
                                 </tr>
                             </thead>
                             <tbody class="fw-semibold text-gray-600">
-                                @if (count($services) > 0)
-                                @foreach ($services as $key => $u)
+                                @if (count($data['isi']) > 0)
+                                @foreach ($data['isi'] as $key => $u)
                                 <tr>
                                     <td>
                                         {{ $key+1 }}
                                     </td>
                                     <td>
-                                        <a href="javascript:" class="text-gray-800 text-hover-primary mb-1">{{ $u->nomor
+                                        <a href="javascript:" class="text-gray-800 text-hover-primary mb-1">{{ $u->pasal
                                             }}</a>
                                     </td>
-                                    <td>
-                                        <a href="javascript:" class="text-gray-600 text-hover-primary mb-1">{{ $u->tahun
-                                            }}</a>
-                                    </td>
-                                    <td>
-                                        {{ $u->tentang }}
-                                    </td>
-                                    <td>
-                                        {{ $u->status }}
-                                    </td>
+                                    <td>{!! $u->isi !!}</td>
                                     <td class="text-end">
                                         <button class="btn btn-sm btn-warning" data-bs-toggle="modal" title="Edit"
                                             data-bs-target="#editAdmin{{ $u->id }}">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                         </button>
-                                        <a href="{{ route('admin.laws.detail', [$u->id]) }}" class="btn btn-sm btn-primary" title="View"
-                                            data-bs-target="#editAdmin{{ $u->id }}">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </a>
                                         <button onclick="hapus({{ $u->id }})" data-bs-toggle="tooltip"
                                             title="Delete" class="btn btn-sm btn-danger">
                                             <i class="fa-solid fa-trash"></i>
@@ -116,13 +101,13 @@
                                         <div class="modal-dialog modal-dialog-centered mw-650px">
                                             <div class="modal-content">
                                                 <form class="form"
-                                                    action="{{ route('admin.laws.update', ['id' => $u->id]) }}"
+                                                    action="{{ route('admin.laws.details.update', ['id' => $u->id]) }}"
                                                     id="kt_modal_add_customer_form" method="POST"
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <input type="hidden" name="id" value="{{ $u->id }}">
                                                     <div class="modal-header" id="kt_modal_add_customer_header">
-                                                        <h2 class="fw-bold">Edit Laws</h2>
+                                                        <h2 class="fw-bold">Edit Chapter</h2>
                                                     </div>
                                                     <div class="modal-body py-10 px-lg-17">
                                                         <div class="scroll-y me-n7 pe-7"
@@ -132,26 +117,28 @@
                                                             data-kt-scroll-dependencies="#kt_modal_add_customer_header"
                                                             data-kt-scroll-wrappers="#kt_modal_add_customer_scroll"
                                                             data-kt-scroll-offset="300px">
-                                                            <div class="row mb-6">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws number</label>
-                                                                <input type="number"
-                                                                    class="form-control form-control-lg form-control-solid"
-                                                                    name="number" value="{{ $u->nomor }}">
+                                                            <div class="fv-row mb-7">
+                                                                <!--begin::Label-->
+                                                                <label class="required fs-6 fw-semibold mb-2">Chapter number</label>
+                                                                <!--end::Label-->
+                                                                <!--begin::Input-->
+                                                                <input type="number" value="{{ $u['pasal'] }}" class="form-control form-control-solid" placeholder="Number of law"
+                                                                    name="pasal"/>
+                                                                <input type="text" class="form-control form-control-solid d-none" value="{{ $u['id'] }}"
+                                                                    name="law_id"/>
+                                                                <!--end::Input-->
                                                             </div>
-                                                            <div class="row mb-6">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws year</label>
-                                                                <input type="number"
-                                                                    class="form-control form-control-lg form-control-solid"
-                                                                    name="year" value="{{ $u->tahun }}">
-                                                            </div>
-                                                            <div class="row mb-6">
-                                                                <label
-                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws about</label>
-                                                                <textarea
-                                                                    class="form-control form-control-lg form-control-solid"
-                                                                    name="about">{{ $u->tentang }}</textarea>
+                                                            <!--begin::Input group-->
+                                                            <div class="fv-row mb-7">
+                                                                <!--begin::Label-->
+                                                                <label class="fs-6 fw-semibold mb-2">
+                                                                    <span class="required">content of the law</span>
+                                                                </label>
+                                                                <!--end::Label-->
+                                                                <!--begin::Input-->
+                                                                <textarea class="form-control form-control-solid"
+                                                                    name="isi">{{ $u['isi'] }}</textarea>
+                                                                <!--end::Input-->
                                                             </div>
                                                         </div>
                                                     </div>
@@ -182,7 +169,7 @@
                         </table>
                     </div>
                 </div>
-                @include('admin.partials.modalAddLaws')
+                @include('admin.partials.modalAddPasal')
             </div>
         </div>
     </div>
@@ -193,7 +180,7 @@
     function hapus(id){
             var ids = id
             Swal.fire({
-                text: "Are you sure you would like to delete this law?",
+                text: "Are you sure you would like to delete this chapters?",
                 icon: "question",
                 showCancelButton: true,
                 buttonsStyling: false,
@@ -206,7 +193,7 @@
             }).then(function (result) {
                 if (result.value) {
                     $.post({
-                    url: '/admin/laws/delete/'+id,
+                    url: '/admin/laws/details/delete/'+id,
                     method: 'GET',
                     contentType: false,
                     processData: false,

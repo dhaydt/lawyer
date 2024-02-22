@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\CPU\Helpers;
 use App\Http\Controllers\Controller;
+use App\Models\LawIsi;
 use App\Models\LawName;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -17,6 +18,16 @@ class LawsController extends Controller
         $data['title'] = 'Laws';
 
         return view('admin.laws.index', $data);
+    }
+    
+    public function details($id)
+    {
+        $law = LawName::with('isi')->find($id);
+        $data['data'] = $law;
+        $data['title'] = 'Undang undang No. '.$law['nomor'].' tentang '.$law['tentang'].' Tahun '.$law['tahun'];
+        $data['law_id'] = $id;
+
+        return view('admin.laws.details.index', $data);
     }
 
     public function post(Request $request)
@@ -49,6 +60,37 @@ class LawsController extends Controller
         $service->save();
 
         Toastr::success('Laws added successfully!');
+
+        return redirect()->back();
+    }
+    
+    public function details_post(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'pasal' => 'required',
+            'isi' => 'required',
+        ], [
+            'pasal.required' => 'Laws number is required!',
+            'isi.required' => 'Years of law is required!',
+        ]);
+
+        if ($validator->errors()->count() > 0) {
+            $errors = Helpers::error_processor($validator);
+            foreach ($errors as $e) {
+                Toastr::warning($e['message']);
+            }
+
+            return redirect()->back();
+        }
+
+        $service = new LawIsi();
+        $service->pasal = $request->pasal;
+        $service->isi = $request->isi;
+        $service->law_id = $request->law_id;
+
+        $service->save();
+
+        Toastr::success('Chapter added successfully!');
 
         return redirect()->back();
     }
@@ -90,6 +132,41 @@ class LawsController extends Controller
 
         return redirect()->back();
     }
+    
+    public function details_update(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'pasal' => 'required',
+            'isi' => 'required',
+        ], [
+            'pasal.required' => 'Laws number is required!',
+            'isi.required' => 'Years of law is required!',
+        ]);
+
+        if ($validator->errors()->count() > 0) {
+            $errors = Helpers::error_processor($validator);
+            foreach ($errors as $e) {
+                Toastr::warning($e['message']);
+            }
+
+            return redirect()->back();
+        }
+
+        $service = LawIsi::find($request->id);
+        if (!$service) {
+            Toastr::warning('Chapters not found!');
+
+            return redirect()->back();
+        }
+
+        $service->pasal = $request->pasal;
+        $service->isi = $request->isi;
+        $service->save();
+
+        Toastr::success('Chapters updated Successfully!');
+
+        return redirect()->back();
+    }
 
     public function delete($id)
     {
@@ -100,6 +177,19 @@ class LawsController extends Controller
 
         $service->delete();
         Toastr::success('Laws deleted successfully!');
+
+        return redirect()->back();
+    }
+    
+    public function details_delete($id)
+    {
+        $service = LawIsi::find($id);
+        if (!$service) {
+            Toastr::warning('Chapters not found!');
+        }
+
+        $service->delete();
+        Toastr::success('Chapters deleted successfully!');
 
         return redirect()->back();
     }

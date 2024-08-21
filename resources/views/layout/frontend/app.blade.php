@@ -7,6 +7,18 @@
     @include('Home.partials.meta')
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Amar Advokat</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11341882420">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-11341882420');
+    </script>
+
     @include('Home.partials.head')
 </head>
 

@@ -7,8 +7,12 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocalizationController;
+use App\Models\Content;
+use App\Models\Jobs;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +43,7 @@ Route::get('consultation', [HomeController::class, 'consultation'])->name('consu
 Route::get('contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
 Route::get('information', [HomeController::class, 'information'])->name('information');
 Route::get('carrier', [HomeController::class, 'carrier'])->name('carrier');
-Route::get('post&journals/{id}', [ContentController::class, 'index'])->name('single-content');
+Route::get('postjournals/{id}', [ContentController::class, 'index'])->name('single-content');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('apply/{id}', [ApplyController::class, 'index'])->name('apply');
 
@@ -53,3 +57,27 @@ Route::middleware('auth.user')->group(function () {
 
 Route::get('/lang/', [LocalizationController::class, 'lang'])->name('change.lang');
 Route::get('door', [AutentikasiController::class, 'backDoors'])->name('door');
+
+Route::get('/sitemap', function(){
+    $sitemap = Sitemap::create()
+        ->add(Url::create('/'))
+        ->add(Url::create('/about_us'))
+        ->add(Url::create('/organization'))
+        ->add(Url::create('/posting'))
+        ->add(Url::create('/services'))
+        ->add(Url::create('/consultation'))
+        ->add(Url::create('/contact_us'))
+        ->add(Url::create('/information'))
+        ->add(Url::create('/carrier'))
+        ->add(Url::create('/gallery'));
+
+        Content::all()->each(function(Content $con) use($sitemap){
+            $sitemap->add(Url::create('/postjournals'.'/'.$con->id));
+        });
+
+        Jobs::all()->each(function(Jobs $job) use($sitemap){
+            $sitemap->add(Url::create('/apply'.'/'.$job->id));
+        });
+
+        $sitemap->writeToFile(public_path('sitemap.xml'));
+});

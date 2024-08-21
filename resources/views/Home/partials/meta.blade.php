@@ -1,5 +1,5 @@
 <meta name="title" content="Amar Advokat || Website Hukum Advokat" />
-<meta name="description" content="Amar Advokat, amaradvokat Hukum Perusahaan,  Hak Kekayaan Intelektual, Investasi, Properti, Pertambangan & Energi, Dokumentasi Notaris, Perbankan & Keuangan, Asuransi, Ketenagakerjaan, Hukum Keluarga dan Perkawinan, Hukum Perdata & Pidana, Pengacara Retainer" />
+<meta name="description" content="Amar Advokat, amaradvokat Hukum Perusahaan,  Hak Kekayaan Intelektual, Investasi, Properti, Pertambangan & Energi, Dokumentasi Notaris" />
 <meta name="keyword" content="amar advokat amaradvokat Hukum Perusahaan Kekayaan Intelektual Investasi Properti Telekomunikasi Notaris" />
 <link rel="canonical" href="https://amaradvokat.com">
 <meta property="og:image" content="{{ asset('storage/company'.'/'.$web_config['web_logo']) }}" />

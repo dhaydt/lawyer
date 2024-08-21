@@ -27,6 +27,15 @@ use Spatie\Sitemap\Tags\Url;
 Route::get('/storage-link', function () {
     Artisan::call('storage:link');
 });
+
+Route::get('/config-cache', function () {
+    Artisan::call('config:cache');
+});
+
+Route::get('/optimize', function () {
+    Artisan::call('optimize');
+});
+
 Route::get('/migrate', function () {
     Artisan::call('migrate', [
         '--force' => true,

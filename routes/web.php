@@ -26,14 +26,17 @@ use Spatie\Sitemap\Tags\Url;
 */
 Route::get('/storage-link', function () {
     Artisan::call('storage:link');
+    dd('linked!');
 });
 
 Route::get('/config-cache', function () {
     Artisan::call('config:cache');
+    dd('cleared!');
 });
 
 Route::get('/optimize', function () {
     Artisan::call('optimize');
+    dd('optimized!');
 });
 
 Route::get('/migrate', function () {
@@ -49,7 +52,7 @@ Route::get('organization', [HomeController::class, 'organization'])->name('organ
 Route::get('posting', [HomeController::class, 'posting'])->name('posting');
 Route::get('services', [HomeController::class, 'services'])->name('services');
 Route::get('consultation', [HomeController::class, 'consultation'])->name('consultation');
-Route::get('contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
+Route::get('contactus', [HomeController::class, 'contact_us'])->name('contact_us');
 Route::get('information', [HomeController::class, 'information'])->name('information');
 Route::get('carrier', [HomeController::class, 'carrier'])->name('carrier');
 Route::get('postjournals/{id}', [ContentController::class, 'index'])->name('single-content');
@@ -70,12 +73,12 @@ Route::get('door', [AutentikasiController::class, 'backDoors'])->name('door');
 Route::get('/sitemap', function(){
     $sitemap = Sitemap::create()
         ->add(Url::create('/'))
-        ->add(Url::create('/about_us'))
+        ->add(Url::create('/aboutus'))
         ->add(Url::create('/organization'))
         ->add(Url::create('/posting'))
         ->add(Url::create('/services'))
         ->add(Url::create('/consultation'))
-        ->add(Url::create('/contact_us'))
+        ->add(Url::create('/contactus'))
         ->add(Url::create('/information'))
         ->add(Url::create('/carrier'))
         ->add(Url::create('/gallery'));

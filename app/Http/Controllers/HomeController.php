@@ -15,7 +15,7 @@ class HomeController extends Controller
         if(!$lang){
             session()->put('locale', 'en');
         }
-        $data['title'] = 'AMAR Lawyer';
+        $data['title'] = 'Amar Advokat';
         $data['active'] = 'home';
         $data['services'] = Services::where('status', 1)->get();
 

@@ -4,7 +4,7 @@
     <div id="top"></div>
     <!-- section begin -->
     <section id="subheader" class="jarallax text-white">
-        <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="">
+        <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="amaradvokat">
         <div class="center-y relative text-center">
             <div class="container">
                 <div class="row">
@@ -25,7 +25,7 @@
                 @foreach ($services as $s)
                 <div class="col-lg-4 col-md-6 mb30">
                     <div class="feature-box f-boxed style-3 text-center">
-                        <img src="{{ asset('storage/services'.'/'.$s->logo) }}" alt="" class="icofont-group bg-color text-light" style="height: 100px;">
+                        <img src="{{ asset('storage/services'.'/'.$s->logo) }}" alt="amaradvokat" class="icofont-group bg-color text-light" style="height: 100px;">
                         <div class="text mt-4">
                             <h4>{{ translate::translate($s->title) }}</h4>
                             {{ translate::translate($s->description) }}

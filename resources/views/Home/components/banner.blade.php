@@ -28,7 +28,7 @@
     <div class="owl-carousel">
         @foreach ($banners as $banner)
         <div class="img-banner">
-            <img src="{{ asset('storage/banner'.'/'.$banner['photo']) }}" class="carousel-img" alt="">
+            <img src="{{ asset('storage/banner'.'/'.$banner['photo']) }}" class="carousel-img" alt="amaradvokat">
         </div>
         @endforeach
     </div>

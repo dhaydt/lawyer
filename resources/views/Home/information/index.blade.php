@@ -15,7 +15,7 @@
     </div>
 </section>
 <section aria-label="section" class="jarallax text-light">
-    <img src="{{ asset('assets/images/background/bgNotif.jpg') }}" class="jarallax-img" alt="">
+    <img src="{{ asset('assets/images/background/bgNotif.jpg') }}" class="jarallax-img" alt="amaradvokat">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

@@ -16,7 +16,7 @@
     <div id="top"></div>
     <!-- section begin -->
     <section id="subheader" class="jarallax text-white">
-        <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="">
+        <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="amaradvokat">
         <div class="center-y relative text-center">
             <div class="container">
                 <div class="row">
@@ -45,8 +45,8 @@
                             <h1>{{ $web_config['case_count'] }}</h1><span>{{ translate::translate("Solved Cases") }}</span>
                         </div>
                         {{-- {{ dd($web_config) }} --}}
-                        <img class="di-small-2" src="{{ asset($web_config['secondary_image']) }}" onerror="this.src='{{ asset('assets/images/misc/d2.jpg') }}'" alt="" />
-                        <img class="di-big img-fluid" src="{{ asset($web_config['primary_image']) }}" onerror="this.src='{{ asset('assets/images/misc/d1.jpg') }}'" alt="" />
+                        <img class="di-small-2" src="{{ asset($web_config['secondary_image']) }}" onerror="this.src='{{ asset('assets/images/misc/d2.jpg') }}'" alt="amaradvokat" />
+                        <img class="di-big img-fluid" src="{{ asset($web_config['primary_image']) }}" onerror="this.src='{{ asset('assets/images/misc/d1.jpg') }}'" alt="amaradvokat" />
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                             </div>
                             <div class="fpw-overlay-btm"></div>
                             <div class="img-frame">
-                                <img src="{{ asset('/' . $c['img']) }}" class="fp-image img-fluid" alt="">
+                                <img src="{{ asset('/' . $c['img']) }}" class="fp-image img-fluid" alt="amaradvokat">
                             </div>
                         </div>
                         <h4>{{ $c['name'] }}</h4>

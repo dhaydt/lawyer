@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="widget">
-                    <a href="index.html"><img alt="" class="img-fluid mb20" src="images/logo-light.png"></a>
+                    <a href="index.html"><img alt="amaradvokat" class="img-fluid mb20" src="images/logo-light.png"></a>
                     <address class="s1">
                         <span><i class="id-color fa fa-map-marker fa-lg text-capitalize"></i>{{ $web_config['address'] }}</span>
                         <span><i class="id-color fa fa-phone fa-lg"></i>+62{{ (int)$web_config['phone'] }}</span>
@@ -49,7 +49,7 @@
                         id="form_subscribe" method="post" name="form_subscribe">
                         <div class="col text-center">
                             <input class="form-control" id="name_1" name="name_1" placeholder="enter your email"
-                                type="text" /> 
+                                type="text" />
                                 <a href="#" id="btn-submit"><i
                                     class="fa fa-long-arrow-right"></i></a>
                             <div class="clearfix"></div>
@@ -85,7 +85,7 @@
                                 <a href="{{ $web_config['ig'] }}" target="_blank" data-bs-toggle="tooltip" title="Instagram"><i class="fa fa-instagram fa-lg"></i></a>
                                 @endif
                                 @if ($web_config['tiktok'] != '')
-                                <a href="{{ $web_config['tiktok'] }}" class="tiktok" target="_blank" data-bs-toggle="tooltip" title="Tiktok"><img src="{{ asset('assets/images/tiktok.png') }}" class="fa-tiktok fa-lg" /></a>
+                                <a href="{{ $web_config['tiktok'] }}" class="tiktok" target="_blank" data-bs-toggle="tooltip" title="Tiktok"><img alt="amaradvokat" src="{{ asset('assets/images/tiktok.png') }}" class="fa-tiktok fa-lg" /></a>
                                 @endif
                             </div>
                         </div>

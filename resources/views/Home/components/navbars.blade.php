@@ -28,9 +28,9 @@
                         <!-- logo begin -->
                         <div id="logo">
                             <a href="{{ route('home') }}">
-                                <img alt="" class="logo"
+                                <img alt="amaradvokat" class="logo"
                                     src="{{ asset('storage/company'.'/'.$web_config['web_logo']) }}" />
-                                <img alt="" class="logo-2"
+                                <img alt="amaradvokat" class="logo-2"
                                     src="{{ asset('storage/company'.'/'.$web_config['web_logo']) }}" />
                             </a>
                         </div>

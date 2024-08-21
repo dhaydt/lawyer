@@ -122,7 +122,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-14.jpg') }}" alt="img" />
+                                            <img src="{{ asset('assets_metronic/media/avatars/300-14.jpg') }}" alt="amaradvokat" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -148,12 +148,12 @@
                                         <div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px pe-2">
                                             <!--begin::User-->
                                             <div class="symbol symbol-circle symbol-25px">
-                                                <img src="{{ asset('assets_metronic/media/avatars/300-2.jpg') }}" alt="img" />
+                                                <img src="{{ asset('assets_metronic/media/avatars/300-2.jpg') }}" alt="amaradvokat" />
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
                                             <div class="symbol symbol-circle symbol-25px">
-                                                <img src="{{ asset('assets_metronic/media/avatars/300-14.jpg') }}" alt="img" />
+                                                <img src="{{ asset('assets_metronic/media/avatars/300-14.jpg') }}" alt="amaradvokat" />
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
@@ -193,7 +193,7 @@
                                         <div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px">
                                             <!--begin::User-->
                                             <div class="symbol symbol-circle symbol-25px">
-                                                <img src="{{ asset('assets_metronic/media/avatars/300-20.jpg') }}" alt="img" />
+                                                <img src="{{ asset('assets_metronic/media/avatars/300-20.jpg') }}" alt="amaradvokat" />
                                             </div>
                                             <!--end::User-->
                                             <!--begin::User-->
@@ -262,7 +262,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Alan Nilson">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-1.jpg') }}" alt="img" />
+                                            <img src="{{ asset('assets_metronic/media/avatars/300-1.jpg') }}" alt="amaradvokat" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -313,7 +313,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Jan Hummer">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-23.jpg') }}" alt="img" />
+                                            <img src="{{ asset('assets_metronic/media/avatars/300-23.jpg') }}" alt="amaradvokat" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -327,7 +327,7 @@
                                         <!--begin::Item-->
                                         <div class="d-flex flex-aligns-center pe-10 pe-lg-20">
                                             <!--begin::Icon-->
-                                            <img alt="" class="w-30px me-3" src="{{ asset('assets_metronic/media/svg/files/pdf.svg') }}" />
+                                            <img alt="amaradvokat" class="w-30px me-3" src="{{ asset('assets_metronic/media/svg/files/pdf.svg') }}" />
                                             <!--end::Icon-->
                                             <!--begin::Info-->
                                             <div class="ms-1 fw-semibold">
@@ -393,7 +393,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-14.jpg') }}" alt="img" />
+                                            <img src="{{ asset('assets_metronic/media/avatars/300-14.jpg') }}" alt="amaradvokat" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -443,7 +443,7 @@
                                         <!--begin::User-->
                                         <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip"
                                             data-bs-boundary="window" data-bs-placement="top" title="Marcus Dotson">
-                                            <img src="{{ asset('assets_metronic/media/avatars/300-2.jpg') }}" alt="img" />
+                                            <img src="{{ asset('assets_metronic/media/avatars/300-2.jpg') }}" alt="amaradvokat" />
                                         </div>
                                         <!--end::User-->
                                     </div>
@@ -458,7 +458,7 @@
                                         <div class="overlay me-10">
                                             <!--begin::Image-->
                                             <div class="overlay-wrapper">
-                                                <img alt="img" class="rounded w-150px" src="{{ asset('assets_metronic/media/stock/600x400/img-29.jpg') }}" />
+                                                <img alt="amaradvokat" class="rounded w-150px" src="{{ asset('assets_metronic/media/stock/600x400/img-29.jpg') }}" />
                                             </div>
                                             <!--end::Image-->
                                             <!--begin::Link-->
@@ -472,7 +472,7 @@
                                         <div class="overlay me-10">
                                             <!--begin::Image-->
                                             <div class="overlay-wrapper">
-                                                <img alt="img" class="rounded w-150px" src="{{ asset('assets_metronic/media/stock/600x400/img-31.jpg') }}" />
+                                                <img alt="amaradvokat" class="rounded w-150px" src="{{ asset('assets_metronic/media/stock/600x400/img-31.jpg') }}" />
                                             </div>
                                             <!--end::Image-->
                                             <!--begin::Link-->
@@ -486,7 +486,7 @@
                                         <div class="overlay">
                                             <!--begin::Image-->
                                             <div class="overlay-wrapper">
-                                                <img alt="img" class="rounded w-150px" src="{{ asset('assets_metronic/media/stock/600x400/img-40.jpg') }}" />
+                                                <img alt="amaradvokat" class="rounded w-150px" src="{{ asset('assets_metronic/media/stock/600x400/img-40.jpg') }}" />
                                             </div>
                                             <!--end::Image-->
                                             <!--begin::Link-->

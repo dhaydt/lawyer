@@ -91,7 +91,7 @@
                                             }}</a>
                                     </td>
                                     <td>
-                                        <img width="100" height="100" src="{{ asset('storage/services'.'/'.$u['logo']) }}" alt="">
+                                        <img width="100" height="100" src="{{ asset('storage/services'.'/'.$u['logo']) }}" alt="amaradvokat">
                                     </td>
                                     <td class="text-end">
                                         <button class="btn btn-sm btn-warning" data-bs-toggle="modal" title="Edit Admin"
@@ -200,7 +200,7 @@
                                 <tr class="text-center">
                                     <td colspan="5">
                                         <img src="{{ asset('assets_metronic/image/nodata.png') }}" class="h-200px"
-                                            alt="">
+                                            alt="amaradvokat">
                                     </td>
                                 </tr>
                                 @endif

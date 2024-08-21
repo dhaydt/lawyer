@@ -4,7 +4,7 @@
     <div id="top"></div>
     <!-- section begin -->
     <section id="subheader" class="jarallax text-white">
-        <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="">
+        <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="amaradvokat">
         <div class="center-y relative text-center">
             <div class="container">
                 <div class="row">
@@ -98,7 +98,7 @@
         </div>
     </section> --}}
     <section class="jarallax text-light">
-        <img src="{{ asset('assets/images/background/2.jpg') }}" class="jarallax-img" alt="">
+        <img src="{{ asset('assets/images/background/2.jpg') }}" class="jarallax-img" alt="amaradvokat">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-12 wow fadeInRight" data-wow-delay=".2s">

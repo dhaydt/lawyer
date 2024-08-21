@@ -174,7 +174,7 @@
                                 <tr class="text-center">
                                     <td colspan="6">
                                         <img src="{{ asset('assets_metronic/image/nodata.png') }}" class="h-200px"
-                                            alt="">
+                                            alt="amaradvokat">
                                     </td>
                                 </tr>
                                 @endif

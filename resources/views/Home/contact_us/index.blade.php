@@ -4,7 +4,7 @@
     <div id="top"></div>
     <!-- section begin -->
     <section id="subheader" class="jarallax text-white">
-        <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="">
+        <img src="{{ asset('storage/banner/'. $web_config['hero_banner']) }}" class="jarallax-img" alt="amaradvokat">
         <div class="center-y relative text-center">
             <div class="container">
                 <div class="row">
@@ -22,7 +22,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="{{ asset('assets/images/misc/p1.jpg') }}" alt="" class="img-fluid mb30">
+                    <img src="{{ asset('assets/images/misc/p1.jpg') }}" alt="amaradvokat" class="img-fluid mb30">
                     <h3>US Office</h3>
                     <address class="s1">
                         <span><i class="id-color fa fa-map-marker fa-lg"></i>08 W 36th St, New York, NY 10001</span>
@@ -32,7 +32,7 @@
                     </address>
                 </div>
                 <div class="col-md-4">
-                    <img src="{{ asset('assets/images/misc/p2.jpg') }}" alt="" class="img-fluid mb30">
+                    <img src="{{ asset('assets/images/misc/p2.jpg') }}" alt="amaradvokat" class="img-fluid mb30">
                     <h3>UK Office</h3>
                     <address class="s1">
                         <span><i class="id-color fa fa-map-marker fa-lg"></i>100 Mainstreet Center, Sydney</span>
@@ -42,7 +42,7 @@
                     </address>
                 </div>
                 <div class="col-md-4">
-                    <img src="{{ asset('assets/images/misc/p3.jpg') }}" alt="" class="img-fluid mb30">
+                    <img src="{{ asset('assets/images/misc/p3.jpg') }}" alt="amaradvokat" class="img-fluid mb30">
                     <h3>AU Office</h3>
                     <address class="s1">
                         <span><i class="id-color fa fa-map-marker fa-lg"></i>100 Mainstreet Center, Sydney</span>
@@ -86,7 +86,7 @@
         </div>
     </section>
     <section class="jarallax text-light">
-        <img src="{{ asset('assets/images/background/2.jpg') }}" class="jarallax-img" alt="">
+        <img src="{{ asset('assets/images/background/2.jpg') }}" class="jarallax-img" alt="amaradvokat">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-12 wow fadeInRight" data-wow-delay=".2s">

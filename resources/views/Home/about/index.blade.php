@@ -65,7 +65,7 @@
         </div>
     </div>
     <div class="jarallax image-container col-md-6 pull-right">
-        <img src="{{ asset('/'.$web_config['about_image']) }}" class="jarallax-img" alt="">
+        <img src="{{ asset('/'.$web_config['about_image']) }}" class="jarallax-img" alt="amaradvokat">
     </div>
 </section>
 <!-- section close -->

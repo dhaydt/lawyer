@@ -26,7 +26,7 @@
                             <div class="d text-capitalize">{{ App\CPU\Helpers::monthChange($c->created_at) }}</div>
                         </div>
                         <div class="post-image">
-                            <img alt="" src="{{ asset($c->image) }}">
+                            <img alt="amaradvokat" src="{{ asset($c->image) }}">
                         </div>
                         <div class="post-text">
                             <span class="p-tagline text-capitalize">{{ translate::translate($c->category) }}</span>

@@ -93,7 +93,7 @@
                                         <img src="{{ asset('storage/banner'.'/'.$u->photo) }}"
                                             class="rounded-3 mb-4 w-150px h-150px w-xxl-350px h-xxl-200px"
                                             onerror="this.src='{{asset('assets_metronic/image/placeholder.png')}}'"
-                                            alt="">
+                                            alt="amaradvokat">
                                     </td>
                                     <td>
                                         {{ $u->banner_type }}
@@ -212,7 +212,7 @@
                                 @else
                                 <tr class="text-center">
                                     <td colspan="4">
-                                        <img src="{{ asset('assets_metronic/image/nodata.png') }}" class="h-200px" alt="">
+                                        <img src="{{ asset('assets_metronic/image/nodata.png') }}" class="h-200px" alt="amaradvokat">
                                     </td>
                                 </tr>
                                 @endif

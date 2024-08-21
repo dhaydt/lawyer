@@ -10,7 +10,7 @@
             @foreach ($services as $service)
             <div class="col-lg-4 col-md-6 mb30">
                 <div class="f-box f-icon-left f-icon-rounded">
-                    <img src="{{ asset('storage/services'.'/'.$service->logo) }}" alt="" class="icofont-group bg-color text-light">
+                    <img src="{{ asset('storage/services'.'/'.$service->logo) }}" alt="amaradvokat" class="icofont-group bg-color text-light">
                     <div class="fb-text">
                         <h4>{{ translate::translate($service->title) }}</h4>
                         <p>{{ translate::translate($service->description) }}</p>

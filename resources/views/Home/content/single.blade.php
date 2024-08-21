@@ -1,7 +1,7 @@
 @extends('layout.frontend.app')
 @section('content')
 <section id="subheader" class="jarallax text-white">
-    <img src="{{ asset('assets/images/background/subheader.jpg') }}" class="jarallax-img" alt="">
+    <img src="{{ asset('assets/images/background/subheader.jpg') }}" class="jarallax-img" alt="amaradvokat">
     <div class="center-y relative text-center">
         <div class="container">
             <div class="row">
@@ -20,7 +20,7 @@
             <div class="col-md-8">
                 <div class="blog-read">
                     @if ($content->image != null)
-                    <img alt="" src="{{ asset($content->image) }}" class="img-fullwidth">
+                    <img alt="amaradvokat" src="{{ asset($content->image) }}" class="img-fullwidth">
                     @endif
                     <div class="post-text">{!! $content->content !!}
                         <span class="post-date">{{ $content->created_at }}</span>

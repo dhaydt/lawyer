@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\LawName;
 use App\Models\Pengumuman;
 use App\Models\Services;
 use App\Models\Team;
@@ -50,6 +51,35 @@ class HomeController extends Controller
         $data['client'] = Client::get();
 
         return view('Home.organization.index', $data);
+    }
+
+    public function undang()
+    {
+        $data['title'] = 'Undang Undang / Hukum';
+        $data['active'] = 'undang';
+        $data['client'] = Client::get();
+
+        return view('Home.undang.index', $data);
+    }
+
+    public function undang_detail($id)
+    {
+        $locale = session()->get('locale');
+        if(!$locale){
+            session()->put('locale', 'id');
+        }
+        $content = LawName::find($id);
+        if (!$content) {
+            return redirect()->route('home');
+        } else {
+            $data['title'] = $content['tentang'];
+            $data['judul'] = $content['tentang'];
+            $data['content'] = $content;
+            $data['active'] = 'undang_detail';
+
+            return view('Home.undang.detail', $data);
+        }
+
     }
 
     public function posting()

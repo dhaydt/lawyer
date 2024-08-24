@@ -19,7 +19,7 @@ class LawsController extends Controller
 
         return view('admin.laws.index', $data);
     }
-    
+
     public function details($id)
     {
         $law = LawName::with('isi')->find($id);
@@ -55,6 +55,7 @@ class LawsController extends Controller
         $service->nomor = $request->nomor;
         $service->tahun = $request->year;
         $service->tentang = $request->about;
+        $service->keterangan = $request->keterangan;
         $service->status = 1;
 
         $service->save();
@@ -63,7 +64,7 @@ class LawsController extends Controller
 
         return redirect()->back();
     }
-    
+
     public function details_post(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -126,13 +127,14 @@ class LawsController extends Controller
         $service->nomor = $request->number;
         $service->tahun = $request->year;
         $service->tentang = $request->about;
+        $service->keterangan = $request->keterangan;
         $service->save();
 
         Toastr::success('Laws updated Successfully!');
 
         return redirect()->back();
     }
-    
+
     public function details_update(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -180,7 +182,7 @@ class LawsController extends Controller
 
         return redirect()->back();
     }
-    
+
     public function details_delete($id)
     {
         $service = LawIsi::find($id);

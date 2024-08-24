@@ -50,8 +50,9 @@
                                 </ul>
                             </li>
                             <li><a href="{{ route('carrier') }}" class="text-capitalize {{ $active == 'carrier' ? 'active' : '' }}">{{ translate::translate('career') }}</a>
-                            <li><a href="#" class="text-capitalize {{ $active == 'information' || $active == 'contact_us' ? 'active' : ($active == 'gallery' ? 'active' : '') }}">{{ translate::translate('Other') }}</a>
+                            <li><a href="#" class="text-capitalize {{ $active == 'information' || $active == 'contact_us' ? 'active' : ($active == 'gallery' ? 'active' : ($active == 'undang' ? 'active' : '')) }}">{{ translate::translate('Other') }}</a>
                                 <ul>
+                                    <li><a href="{{ route('undang') }}" class="text-capitalize">{{ translate::translate('Law') }}</a></li>
                                     <li><a href="{{ route('information') }}" class="text-capitalize">{{ translate::translate('Other Infromation') }}</a></li>
                                     <li><a href="{{ route('gallery') }}" class="text-capitalize">{{ translate::translate('Gallery') }}</a></li>
                                     {{-- <li><a href="{{ route('contact_us') }}" class="text-capitalize">{{ translate::translate('Contact Us') }}</a></li> --}}

@@ -1,6 +1,20 @@
 @extends('layout.backend.app')
 @section('title',$title)
-
+@push('style')
+<style>
+    .min-w-150px{
+        min-width: 150px;
+    }
+</style>
+<script src="https://cdn.tiny.cloud/1/u47kfksuqwukzijd1s6p8t554e4173266hphc7j6plaur4wa/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+tinymce.init({
+    selector: 'textarea#myeditorinstance', // Replace this CSS selector to match the placeholder element for TinyMCE
+    plugins: 'code table lists quickbars link',
+    toolbar: 'undo redo | blocks | bold italic | quicklink | quicklink | quicklink blockquote | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+});
+</script>
+@endpush
 @section('content')
 <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
     <div class="wrapper d-flex flex-column flex-row-fluid pt-2" id="kt_wrapper">
@@ -71,9 +85,9 @@
                                     <th class="min-w-50px">No</th>
                                     <th class="min-w-125px">Number</th>
                                     <th class="min-w-125px">Year</th>
-                                    <th class="min-w-125px">About</th>
+                                    <th class="min-w-125px">Title</th>
                                     <th class="min-w-125px">Status</th>
-                                    <th class="text-end min-w-125px">Actions</th>
+                                    <th class="text-center min-w-175px">Actions</th>
                                 </tr>
                             </thead>
                             <tbody class="fw-semibold text-gray-600">
@@ -95,17 +109,21 @@
                                         {{ $u->tentang }}
                                     </td>
                                     <td>
-                                        {{ $u->status }}
+                                        @if ($u->status == 1)
+                                            <span class="badge bg-success">Active</span>
+                                        @else
+                                            <span class="badge bg-danger">Non Active</span>
+                                        @endif
                                     </td>
-                                    <td class="text-end">
+                                    <td class="text-center">
                                         <button class="btn btn-sm btn-warning" data-bs-toggle="modal" title="Edit"
                                             data-bs-target="#editAdmin{{ $u->id }}">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                         </button>
-                                        <a href="{{ route('admin.laws.detail', [$u->id]) }}" class="btn btn-sm btn-primary" title="View"
+                                        {{-- <a href="{{ route('admin.laws.detail', [$u->id]) }}" class="btn btn-sm btn-primary" title="View"
                                             data-bs-target="#editAdmin{{ $u->id }}">
                                             <i class="fa-solid fa-eye"></i>
-                                        </a>
+                                        </a> --}}
                                         <button onclick="hapus({{ $u->id }})" data-bs-toggle="tooltip"
                                             title="Delete" class="btn btn-sm btn-danger">
                                             <i class="fa-solid fa-trash"></i>
@@ -113,7 +131,7 @@
                                     </td>
 
                                     <div class="modal fade" id="editAdmin{{ $u->id }}" tabindex="-1" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered mw-650px">
+                                        <div class="modal-dialog modal-fullscreen">
                                             <div class="modal-content">
                                                 <form class="form"
                                                     action="{{ route('admin.laws.update', ['id' => $u->id]) }}"
@@ -134,24 +152,31 @@
                                                             data-kt-scroll-offset="300px">
                                                             <div class="row mb-6">
                                                                 <label
-                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws number</label>
+                                                                    class="col-lg-4 col-form-label required fw-semibold fs-6">Laws number</label>
                                                                 <input type="number"
                                                                     class="form-control form-control-lg form-control-solid"
                                                                     name="number" value="{{ $u->nomor }}">
                                                             </div>
                                                             <div class="row mb-6">
                                                                 <label
-                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws year</label>
+                                                                    class="col-lg-4 col-form-label required fw-semibold fs-6">Laws year</label>
                                                                 <input type="number"
                                                                     class="form-control form-control-lg form-control-solid"
                                                                     name="year" value="{{ $u->tahun }}">
                                                             </div>
                                                             <div class="row mb-6">
                                                                 <label
-                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws about</label>
+                                                                    class="col-lg-4 col-form-label required fw-semibold fs-6">Laws Title</label>
                                                                 <textarea
                                                                     class="form-control form-control-lg form-control-solid"
                                                                     name="about">{{ $u->tentang }}</textarea>
+                                                            </div>
+                                                            <div class="fv-row mb-7">
+                                                                <label class="fs-6 fw-semibold mb-2">
+                                                                    <span class="required">Law Content</span>
+                                                                </label>
+                                                                <textarea class="form-control form-control-solid"
+                                                                    name="keterangan" id="myeditorinstance" rows="10">{!! $u->keterangan !!}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>

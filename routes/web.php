@@ -55,6 +55,8 @@ Route::get('consultation', [HomeController::class, 'consultation'])->name('consu
 Route::get('contactus', [HomeController::class, 'contact_us'])->name('contact_us');
 Route::get('information', [HomeController::class, 'information'])->name('information');
 Route::get('carrier', [HomeController::class, 'carrier'])->name('carrier');
+Route::get('undangundang', [HomeController::class, 'undang'])->name('undang');
+Route::get('undangdetail/{id}', [HomeController::class, 'undang_detail'])->name('undang_detail');
 Route::get('postjournals/{id}', [ContentController::class, 'index'])->name('single-content');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('apply/{id}', [ApplyController::class, 'index'])->name('apply');
@@ -75,6 +77,7 @@ Route::get('/sitemap', function(){
         ->add(Url::create('/'))
         ->add(Url::create('/aboutus'))
         ->add(Url::create('/organization'))
+        ->add(Url::create('/undangundang'))
         ->add(Url::create('/posting'))
         ->add(Url::create('/services'))
         ->add(Url::create('/consultation'))

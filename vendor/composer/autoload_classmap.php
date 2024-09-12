@@ -57,6 +57,7 @@ return array(
     'App\\Http\\Livewire\\Home\\Carrier' => $baseDir . '/app/Http/Livewire/Home/Carrier.php',
     'App\\Http\\Livewire\\Home\\Content' => $baseDir . '/app/Http/Livewire/Home/Content.php',
     'App\\Http\\Livewire\\Home\\Gallery' => $baseDir . '/app/Http/Livewire/Home/Gallery.php',
+    'App\\Http\\Livewire\\Home\\Undang' => $baseDir . '/app/Http/Livewire/Home/Undang.php',
     'App\\Http\\Middleware\\Autentikasi' => $baseDir . '/app/Http/Middleware/Autentikasi.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',

@@ -17,7 +17,7 @@ class Undang extends Component
 
     public function render()
     {
-        $this->content = LawName::where('status', 1)->paginate($this->total_show);
+        $this->content = LawName::where('status', 1)->orderBy('created_at', 'desc')->paginate($this->total_show);
         $data['content'] = $this->content;
         return view('livewire.home.undang', $data);
     }

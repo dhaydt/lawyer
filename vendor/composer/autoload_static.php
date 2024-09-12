@@ -675,6 +675,7 @@ class ComposerStaticInit656a5d5e16912f29905722bd16d1729c
         'App\\Http\\Livewire\\Home\\Carrier' => __DIR__ . '/../..' . '/app/Http/Livewire/Home/Carrier.php',
         'App\\Http\\Livewire\\Home\\Content' => __DIR__ . '/../..' . '/app/Http/Livewire/Home/Content.php',
         'App\\Http\\Livewire\\Home\\Gallery' => __DIR__ . '/../..' . '/app/Http/Livewire/Home/Gallery.php',
+        'App\\Http\\Livewire\\Home\\Undang' => __DIR__ . '/../..' . '/app/Http/Livewire/Home/Undang.php',
         'App\\Http\\Middleware\\Autentikasi' => __DIR__ . '/../..' . '/app/Http/Middleware/Autentikasi.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',

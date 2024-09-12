@@ -171,6 +171,14 @@ tinymce.init({
                                                                     class="form-control form-control-lg form-control-solid"
                                                                     name="about">{{ $u->tentang }}</textarea>
                                                             </div>
+                                                            <div class="row mb-6">
+                                                                <label
+                                                                    class="col-lg-4 col-form-label required fw-semibold fs-6">Laws PDF</label>
+                                                                    <div class="d-flex justify-content-center mb-3">
+                                                                        <embed src="{{ asset('storage/'.$u->file) }}" type="application/pdf" style="height: 450px; width: 400px">
+                                                                    </div>
+                                                                <input type="file" class="form-control" name="file" accept="application/pdf">
+                                                            </div>
                                                             <div class="fv-row mb-7">
                                                                 <label class="fs-6 fw-semibold mb-2">
                                                                     <span class="required">Law Content</span>
@@ -181,6 +189,7 @@ tinymce.init({
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer flex-center">
+                                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
                                                         <button type="submit" id="kt_modal_add_customer_submit"
                                                             class="btn btn-primary">
                                                             <span class="indicator-label">Update</span>

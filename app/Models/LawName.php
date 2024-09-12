@@ -10,7 +10,7 @@ class LawName extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nomoer', 'tahun', 'tentang', 'status', 'keterangan'];
+    protected $fillable = ['nomoer', 'tahun', 'tentang', 'status', 'keterangan', 'file'];
 
     /**
      * Get all of the isi for the LawName

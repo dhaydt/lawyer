@@ -9,6 +9,9 @@
             height: 228px;
             width: 228px;
         }
+        .h-600{
+            height: 600px;
+        }
     </style>
 @endpush
 @section('content')
@@ -36,7 +39,13 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="blog-read">
-                        <div class="post-text">{!! $content->keterangan !!}
+                        <div class="post-text">
+                            {!! $content->keterangan !!}
+                            @if($content->file)
+                            <div class="d-flex w-100">
+                                <embed src="{{ asset('storage/'.$content->file) }}" type="application/pdf" class="w-100 h-600">
+                            </div>
+                            @endif
                             <span class="post-date">{{ \Carbon\Carbon::parse($content->created_at)->format('d M Y') }}</span>
                         </div>
                     </div>

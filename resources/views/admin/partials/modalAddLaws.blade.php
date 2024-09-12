@@ -49,6 +49,16 @@
                                 name="about"></textarea>
                             <!--end::Input-->
                         </div>
+                        <div class="fv-row mb-7">
+                            <!--begin::Label-->
+                            <label class="fs-6 fw-semibold mb-2">
+                                <span class="">File PDF</span>
+                            </label>
+                            <!--end::Label-->
+                            <!--begin::Input-->
+                            <input type="file" name="file" accept="application/pdf" class="form-control">
+                            <!--end::Input-->
+                        </div>
                         <!--begin::Input group-->
                         <div class="fv-row mb-7">
                             <!--begin::Label-->
@@ -58,7 +68,7 @@
                             <!--end::Label-->
                             <!--begin::Input-->
                             <textarea class="form-control form-control-solid"
-                                name="keterangan" id="myeditorinstance" rows="10"></textarea>
+                                name="keterangan" id="myeditorinstance" rows="3"></textarea>
                             <!--end::Input-->
                         </div>
                     </div>

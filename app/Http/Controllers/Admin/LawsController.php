@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\LawIsi;
 use App\Models\LawName;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Yoeunes\Toastr\Facades\Toastr;
 
@@ -24,7 +25,7 @@ class LawsController extends Controller
     {
         $law = LawName::with('isi')->find($id);
         $data['data'] = $law;
-        $data['title'] = 'Undang undang No. '.$law['nomor'].' tentang '.$law['tentang'].' Tahun '.$law['tahun'];
+        $data['title'] = 'Undang undang No. ' . $law['nomor'] . ' tentang ' . $law['tentang'] . ' Tahun ' . $law['tahun'];
         $data['law_id'] = $id;
 
         return view('admin.laws.details.index', $data);
@@ -57,6 +58,25 @@ class LawsController extends Controller
         $service->tentang = $request->about;
         $service->keterangan = $request->keterangan;
         $service->status = 1;
+
+        if ($request->hasFile('file')) {
+
+            // Storage::delete('public/laws/'.$service->file);
+
+            // Get filename with the extension
+            $filenameWithExt = $request->file('file')->getClientOriginalName();
+            //Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('file')->getClientOriginalExtension();
+            // Filename to store
+            $fileNameToStore = 'law_' . time() . '.' . $extension;
+            // Upload Image
+            $request->file('file')->storeAs('public/laws', $fileNameToStore);
+
+            $service->file = 'laws/'. $fileNameToStore;
+
+        }
 
         $service->save();
 
@@ -122,6 +142,25 @@ class LawsController extends Controller
             Toastr::warning('Laws not found!');
 
             return redirect()->back();
+        }
+
+        if ($request->hasFile('file')) {
+
+            Storage::delete('public/laws/'.$service->file);
+
+            // Get filename with the extension
+            $filenameWithExt = $request->file('file')->getClientOriginalName();
+            //Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('file')->getClientOriginalExtension();
+            // Filename to store
+            $fileNameToStore = 'law_' . time() . '.' . $extension;
+            // Upload Image
+            $request->file('file')->storeAs('public/laws', $fileNameToStore);
+
+            $service->file = 'laws/'. $fileNameToStore;
+
         }
 
         $service->nomor = $request->number;

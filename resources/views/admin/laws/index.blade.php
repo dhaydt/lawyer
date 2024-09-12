@@ -173,7 +173,7 @@ tinymce.init({
                                                             </div>
                                                             <div class="row mb-6">
                                                                 <label
-                                                                    class="col-lg-4 col-form-label required fw-semibold fs-6">Laws PDF</label>
+                                                                    class="col-lg-4 col-form-label fw-semibold fs-6">Laws PDF</label>
                                                                     @if ($u->file)
                                                                     <div class="d-flex justify-content-center mb-3">
                                                                         <embed src="{{ asset('storage/'.$u->file) }}" type="application/pdf" style="height: 450px; width: 400px">
